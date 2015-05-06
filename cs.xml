@@ -1,0 +1,734 @@
+<?xml version="1.0"?>
+<cs>
+    <alias name="linq" source="IEnumerator<T>" /> 
+
+
+        
+        
+        
+
+
+    <class name="Math">
+        <!-- これはコメント -->
+        <url>https://msdn.microsoft.com/ja-jp/library/system.math%28v=vs.110%29.aspx</url>
+        
+        <field>
+            <name>E</name>
+            <desc></desc>            
+        </field>
+
+        <field>
+            <name>PI</name>
+        </field>
+
+        <staticmethod>
+            <name>Abs</name>
+        </staticmethod>
+
+        <staticmethod>
+            <name>Acos</name>            
+        </staticmethod>
+
+        <staticmethod>
+            <name>Asin</name>
+        </staticmethod>
+ 
+        <staticmethod>
+            <name>Atan</name>
+        </staticmethod>
+ 
+        <staticmethod>
+            <name>Atan2</name>
+        </staticmethod>
+ 
+        <staticmethod>
+            <name>BigMul</name>
+        </staticmethod>
+ 
+        <staticmethod>
+            <name>Celling</name>
+        </staticmethod>
+ 
+        <staticmethod>
+            <name>Cos</name>
+        </staticmethod>
+ 
+        <staticmethod>
+            <name>Cosh</name>
+        </staticmethod>
+ 
+        <staticmethod>
+            <name>DivRem</name>
+        </staticmethod>
+ 
+        <staticmethod>
+            <name>Exp</name>
+        </staticmethod>
+ 
+        <staticmethod>
+            <name>Floor</name>
+        </staticmethod>
+ 
+        <staticmethod>
+            <name>IEEERemainder</name>
+        </staticmethod>
+ 
+        <staticmethod>
+            <name>Log</name>
+        </staticmethod>
+ 
+        <staticmethod>
+            <name>Log10</name>
+        </staticmethod>
+ 
+        <staticmethod>
+            <name>Max</name>
+        </staticmethod>
+ 
+        <staticmethod>
+            <name>Min</name>
+        </staticmethod>
+ 
+        <staticmethod>
+            <name>Pow</name>
+        </staticmethod>
+ 
+        <staticmethod>
+            <name>Round</name>
+        </staticmethod>
+ 
+        <staticmethod>
+            <name>Sign</name>
+        </staticmethod>
+ 
+        <staticmethod>
+            <name>Sin</name>
+        </staticmethod>
+ 
+        <staticmethod>
+            <name>Sinh</name>
+        </staticmethod>
+ 
+        <staticmethod>
+            <name>Sqrt</name>
+        </staticmethod>
+ 
+        <staticmethod>
+            <name>Tan</name>
+        </staticmethod>
+ 
+        <staticmethod>
+            <name>Tanh</name>
+        </staticmethod>
+ 
+        <staticmethod>
+            <name>Truncate</name>
+        </staticmethod>
+ 
+    </class>
+
+    <class name="List">
+        <url>https://msdn.microsoft.com/ja-jp/library/6sh2ey19%28v=vs.110%29.aspx</url>
+
+        <constructor>
+            <arg>()</arg>
+            <arg>(IEnumerable&tl;T&gt;)</arg>
+            <arg>(Int32)</arg>
+        </constructor>
+
+        <property>
+            <name>Capacity</name>
+        </property>
+
+        <property>
+            <name>Count</name>
+        </property>
+
+        <property>
+            <name>Item</name>
+        </property>
+
+        <method>
+            <name>Add</name>
+        </method>
+
+        <method>
+            <name>AddRange</name>
+        </method>
+
+        <method>
+            <name>AsReadOnly</name>
+        </method>
+
+        <method>
+            <name>BinarySearch</name>
+        </method>
+
+        <method>
+            <name>Clear</name>
+        </method>
+
+        <method>
+            <name>Contains</name>
+        </method>
+
+        <method>
+            <name>ConvertAll</name>
+        </method>
+
+        <method>
+            <name>CopyTo</name>
+        </method>
+
+        <method>
+            <name>Equals</name>
+        </method>
+
+        <method>
+            <name>Exists</name>
+        </method>
+
+        <method>
+            <name>Finalize</name>
+        </method>
+
+        <method>
+            <name>Find</name>
+        </method>
+
+        <method>
+            <name>FindAll</name>
+        </method>
+
+        <method>
+            <name>FindIndex</name>
+        </method>
+
+        <method>
+            <name>FindLast</name>
+        </method>
+
+        <method>
+            <name>FindLastIndex</name>
+        </method>
+
+        <method>
+            <name>ForEach</name>
+        </method>
+
+        <method>
+            <name>GetEnumerator</name>
+        </method>
+
+        <method>
+            <name>GetHashCode</name>
+        </method>
+
+        <method>
+            <name>GetRange</name>
+        </method>
+
+        <method>
+            <name>GetType</name>
+        </method>
+
+        <method>
+            <name>IndexOf</name>
+        </method>
+
+        <method>
+            <name>Insert</name>
+        </method>
+
+        <method>
+            <name>InsertRange</name>
+        </method>
+
+        <method>
+            <name>LastIndexOf</name>
+        </method>
+
+        <method>
+            <name>MemberwiseClone</name>
+        </method>
+
+        <method>
+            <name>Remove</name>
+        </method>
+
+        <method>
+            <name>RemoveAll</name>
+        </method>
+
+        <method>
+            <name>RemoveAt</name>
+        </method>
+
+        <method>
+            <name>RemoveRange</name>
+        </method>
+
+        <method>
+            <name>Reverse</name>
+        </method>
+
+        <method>
+            <name>Sort</name>
+        </method>
+
+        <method>
+            <name>ToArray</name>
+        </method>
+
+        <method>
+            <name>ToString</name>
+        </method>
+
+        <method>
+            <name>TrimExcess</name>
+        </method>
+
+        <method>
+            <name>TrueForAll</name>
+        </method>
+    </class>
+
+    <class name="String">
+        <url>https://msdn.microsoft.com/ja-jp/library/system.string(v=vs.110).aspx</url>
+        
+        <constructor>
+            <arg>(Char*)</arg>
+            <arg>(Char[])</arg>
+            <arg>(SByte*)</arg>
+            <arg>(Char, Int32)</arg>
+            <arg>(Char*, Int32)</arg>
+            <arg>(Char[], Int32, Int32)</arg>
+            <!-- 再確認 -->
+        </constructor>
+
+        <field>
+            <name>Empty</name>
+        </field>
+
+        <property>
+            <name>Chars</name>
+        </property>
+
+        <property>
+            <name>Length</name>
+        </property>
+
+        <method>
+            <name>Clone</name>
+        </method>
+
+        <method>
+            <name>Compare</name>
+        </method>
+
+        <method>
+            <name>CompareTo</name>
+        </method>
+
+        <method>
+            <name>Concat</name>
+        </method>
+
+        <method>
+            <name>Contains</name>
+        </method>
+
+        <method>
+            <name>Copy</name>
+        </method>
+
+
+        <method>
+            <name>CopyTo</name>
+        </method>
+
+        <method>
+            <name>EndsWith</name>
+        </method>
+
+        <method>
+            <name>Equals</name>
+        </method>
+
+        <method>
+            <name>Format</name>
+        </method>
+
+        <method>
+            <name>GetEnumerator</name>
+        </method>
+
+        <method>
+            <name>GetHashCode</name>
+        </method>
+
+        <method>
+            <name>GetType</name>
+        </method>
+
+        <method>
+            <name>GetTypeCode</name>
+        </method>
+
+        <method>
+            <name>IndexOf</name>
+        </method>
+
+        <method>
+            <name>IndexOfAny</name>
+        </method>
+
+        <method>
+            <name>Insert</name>
+        </method>
+
+        <method>
+            <name>Intern</name>
+        </method>
+
+        <method>
+            <name>IsInterned</name>
+        </method>
+
+        <method>
+            <name>IsNormalized</name>
+        </method>
+
+        <method>
+            <name>IsNullOrEmpty</name>
+        </method>
+
+        <method>
+            <name>IsNullOrWhiteSpace</name>
+        </method>
+
+        <method>
+            <name>Join</name>
+        </method>
+
+        <method>
+            <name>LastIndexOf</name>
+        </method>
+
+
+        <method>
+            <name>LastIndexOfAny</name>
+        </method>
+
+        <method>
+            <name>Normalize</name>
+        </method>
+
+        <method>
+            <name>PadLeft</name>
+        </method>
+
+        <method>
+            <name>PadRight</name>
+        </method>
+
+        <method>
+            <name>Remove</name>
+        </method>
+
+        <method>
+            <name>Replace</name>
+        </method>
+
+        <method>
+            <name>Split</name>
+        </method>
+
+        <method>
+            <name>StartsWith</name>
+        </method>
+
+        <method>
+            <name>SubString</name>
+        </method>
+
+        <method>
+            <name>ToCharArray</name>
+        </method>
+
+        <method>
+            <name>ToLower</name>
+        </method>
+
+        <method>
+            <name>ToLowerInvariant</name>
+        </method>
+
+        <method>
+            <name>ToString</name>
+        </method>
+
+        <method>
+            <name>ToUpper</name>
+        </method>
+
+        <method>
+            <name>ToUpperInvariant</name>
+        </method>
+
+        <method>
+            <name>Trim</name>
+        </method>
+
+        <method>
+            <name>TrimEnd</name>
+        </method>
+
+        <method>
+            <name>TrimStart</name>
+        </method>
+
+    </class>
+
+    <alias name="linq" source="IEnumerator&lt;T&gt;" />
+    
+    <interface name="IEnumerator<T>">            
+        <url>https://msdn.microsoft.com/ja-jp/library/ckzcawb8(v=vs.110).aspx</url>
+
+        <method>
+            <name>GetEnumerator</name>
+        </method>
+
+        <method>
+            <name>Aggregate</name>
+        </method>
+ 
+        <method>
+            <name>All</name>
+        </method>
+ 
+        <method>
+            <name>Ancestors</name>
+        </method>
+ 
+        <method>
+            <name>Any</name>
+        </method>
+ 
+        <method>
+            <name>AsEnumerable</name>
+        </method>
+ 
+        <method>
+            <name>AsParallel</name>
+        </method>
+ 
+        <method>
+            <name>AsQueryable</name>
+        </method>
+ 
+        <method>
+            <name>Average</name>
+        </method>
+ 
+        <method>
+            <name>Cast</name>
+        </method>
+ 
+        <method>
+            <name>Concat</name>
+        </method>
+ 
+        <method>
+            <name>Contains</name>
+        </method>
+ 
+        <method>
+            <name>CopyToDataTable</name>
+        </method>
+ 
+        <method>
+            <name>Count</name>
+        </method>
+ 
+        <method>
+            <name>DefaultIfEmpty</name>
+        </method>
+ 
+        <method>
+            <name>DescendantNodes</name>
+        </method>
+ 
+        <method>
+            <name>Distinct</name>
+        </method>
+ 
+        <method>
+            <name>ElementAt</name>
+        </method>
+ 
+        <method>
+            <name>ElementAtOrDefault</name>
+        </method>
+ 
+        <method>
+            <name>Elements</name>
+        </method>
+ 
+        <method>
+            <name>Except</name>
+        </method>
+ 
+        <method>
+            <name>First</name>
+        </method>
+ 
+        <method>
+            <name>FirstOrDefault</name>
+        </method>
+ 
+        <method>
+            <name>GroupBy</name>
+        </method>
+ 
+        <method>
+            <name>GroupJoin</name>
+        </method>
+ 
+        <method>
+            <name>InDocumentOrder</name>
+        </method>
+ 
+        <method>
+            <name>Intersect</name>
+        </method>
+ 
+        <method>
+            <name>Join</name>
+        </method>
+ 
+        <method>
+            <name>Last</name>
+        </method>
+ 
+        <method>
+            <name>LastOrDefault</name>
+        </method>
+ 
+        <method>
+            <name>LongCount</name>
+        </method>
+ 
+        <method>
+            <name>Max</name>
+        </method>
+ 
+        <method>
+            <name>Min</name>
+        </method>
+ 
+        <method>
+            <name>Nodes</name>
+        </method>
+ 
+        <method>
+            <name>OfType</name>
+        </method>
+  
+        <method>
+            <name>OrderBy</name>
+        </method>
+   
+        <method>
+            <name>OrderByDescending</name>
+        </method>
+    
+        <method>
+            <name>Remove</name>
+        </method>
+  
+        <method>
+            <name>Reverse</name>
+        </method>
+   
+        <method>
+            <name>Select</name>
+        </method>
+    
+        <method>
+            <name>SelectMany</name>
+        </method>
+ 
+        <method>
+            <name>SequenceEqual</name>
+        </method>
+ 
+        <method>
+            <name>Single</name>
+        </method>
+ 
+        <method>
+            <name>SingleOrDefault</name>
+        </method>
+ 
+        <method>
+            <name>Skip</name>
+        </method>
+ 
+        <method>
+            <name>SkipWhile</name>
+        </method>
+ 
+        <method>
+            <name>Subscribe</name>
+        </method>
+ 
+        <method>
+            <name>Sum</name>
+        </method>
+ 
+        <method>
+            <name>Take</name>
+        </method>
+ 
+        <method>
+            <name>TakeWhile</name>
+        </method>
+ 
+        <method>
+            <name>ToArray</name>
+        </method>
+ 
+        <method>
+            <name>ToDictionary</name>
+        </method>
+ 
+        <method>
+            <name>ToList</name>
+        </method>
+ 
+        <method>
+            <name>ToLookup</name>
+        </method>
+ 
+        <method>
+            <name>ToObservable</name>
+        </method>
+ 
+        <method>
+            <name>Union</name>
+        </method>
+ 
+        <method>
+            <name>Where</name>
+        </method>
+ 
+        <method>
+            <name>Zip</name>
+        </method>
+    </interafce>
+    
+
+</cs>
+
+
