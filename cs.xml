@@ -1,20 +1,39 @@
 <?xml version="1.0"?>
 <cs>
-    <alias name="linq" source="IEnumerator<T>" /> 
+    <!--
+
+    class : クラス名
+    interface : インターフェース名
+    url : MSDN の URL
+
+    constructor : コンストラクタ
+    field : フィールド
+    property : プロパティ
+    staticmethod : static メソッド
+    method : インスタンスメソッド
+
+      -->
+
+    <!--
+
+    TODO:
+    Stack, Queue, HashSet, SortedSet, Dictionary, BigInteger,
+    Regex, Random, Array
 
 
-        
-        
-        
+
+      -->
+
+    <alias name="linq" source="IEnumerator&lt;T&gt;" />
 
 
     <class name="Math">
         <!-- これはコメント -->
         <url>https://msdn.microsoft.com/ja-jp/library/system.math%28v=vs.110%29.aspx</url>
-        
+
         <field>
             <name>E</name>
-            <desc></desc>            
+            <desc></desc>
         </field>
 
         <field>
@@ -26,105 +45,105 @@
         </staticmethod>
 
         <staticmethod>
-            <name>Acos</name>            
+            <name>Acos</name>
         </staticmethod>
 
         <staticmethod>
             <name>Asin</name>
         </staticmethod>
- 
+
         <staticmethod>
             <name>Atan</name>
         </staticmethod>
- 
+
         <staticmethod>
             <name>Atan2</name>
         </staticmethod>
- 
+
         <staticmethod>
             <name>BigMul</name>
         </staticmethod>
- 
+
         <staticmethod>
             <name>Celling</name>
         </staticmethod>
- 
+
         <staticmethod>
             <name>Cos</name>
         </staticmethod>
- 
+
         <staticmethod>
             <name>Cosh</name>
         </staticmethod>
- 
+
         <staticmethod>
             <name>DivRem</name>
         </staticmethod>
- 
+
         <staticmethod>
             <name>Exp</name>
         </staticmethod>
- 
+
         <staticmethod>
             <name>Floor</name>
         </staticmethod>
- 
+
         <staticmethod>
             <name>IEEERemainder</name>
         </staticmethod>
- 
+
         <staticmethod>
             <name>Log</name>
         </staticmethod>
- 
+
         <staticmethod>
             <name>Log10</name>
         </staticmethod>
- 
+
         <staticmethod>
             <name>Max</name>
         </staticmethod>
- 
+
         <staticmethod>
             <name>Min</name>
         </staticmethod>
- 
+
         <staticmethod>
             <name>Pow</name>
         </staticmethod>
- 
+
         <staticmethod>
             <name>Round</name>
         </staticmethod>
- 
+
         <staticmethod>
             <name>Sign</name>
         </staticmethod>
- 
+
         <staticmethod>
             <name>Sin</name>
         </staticmethod>
- 
+
         <staticmethod>
             <name>Sinh</name>
         </staticmethod>
- 
+
         <staticmethod>
             <name>Sqrt</name>
         </staticmethod>
- 
+
         <staticmethod>
             <name>Tan</name>
         </staticmethod>
- 
+
         <staticmethod>
             <name>Tanh</name>
         </staticmethod>
- 
+
         <staticmethod>
             <name>Truncate</name>
         </staticmethod>
- 
+
     </class>
 
     <class name="List">
@@ -132,7 +151,7 @@
 
         <constructor>
             <arg>()</arg>
-            <arg>(IEnumerable&tl;T&gt;)</arg>
+            <arg>(IEnumerable&lt;T&gt;)</arg>
             <arg>(Int32)</arg>
         </constructor>
 
@@ -295,7 +314,7 @@
 
     <class name="String">
         <url>https://msdn.microsoft.com/ja-jp/library/system.string(v=vs.110).aspx</url>
-        
+
         <constructor>
             <arg>(Char*)</arg>
             <arg>(Char[])</arg>
@@ -450,6 +469,11 @@
 
         <method>
             <name>SubString</name>
+            <arg>(int startIndex)</arg>
+            <arg>(int startIndex, int length)</arg>
+            <example>
+            </example>
+
         </method>
 
         <method>
@@ -490,9 +514,8 @@
 
     </class>
 
-    <alias name="linq" source="IEnumerator&lt;T&gt;" />
-    
-    <interface name="IEnumerator<T>">            
+
+    <interface name="IEnumerator&lt;T&gt;">
         <url>https://msdn.microsoft.com/ja-jp/library/ckzcawb8(v=vs.110).aspx</url>
 
         <method>
@@ -502,232 +525,233 @@
         <method>
             <name>Aggregate</name>
         </method>
- 
+
         <method>
             <name>All</name>
         </method>
- 
+
         <method>
             <name>Ancestors</name>
         </method>
- 
+
         <method>
             <name>Any</name>
         </method>
- 
+
         <method>
             <name>AsEnumerable</name>
         </method>
- 
+
         <method>
             <name>AsParallel</name>
         </method>
- 
+
         <method>
             <name>AsQueryable</name>
         </method>
- 
+
         <method>
             <name>Average</name>
         </method>
- 
+
         <method>
             <name>Cast</name>
         </method>
- 
+
         <method>
             <name>Concat</name>
         </method>
- 
+
         <method>
             <name>Contains</name>
         </method>
- 
+
         <method>
             <name>CopyToDataTable</name>
         </method>
- 
+
         <method>
             <name>Count</name>
         </method>
- 
+
         <method>
             <name>DefaultIfEmpty</name>
         </method>
- 
+
         <method>
             <name>DescendantNodes</name>
         </method>
- 
+
         <method>
             <name>Distinct</name>
         </method>
- 
+
         <method>
             <name>ElementAt</name>
         </method>
- 
+
         <method>
             <name>ElementAtOrDefault</name>
         </method>
- 
+
         <method>
             <name>Elements</name>
         </method>
- 
+
         <method>
             <name>Except</name>
         </method>
- 
+
         <method>
             <name>First</name>
         </method>
- 
+
         <method>
             <name>FirstOrDefault</name>
         </method>
- 
+
         <method>
             <name>GroupBy</name>
         </method>
- 
+
         <method>
             <name>GroupJoin</name>
         </method>
- 
+
         <method>
             <name>InDocumentOrder</name>
         </method>
- 
+
         <method>
             <name>Intersect</name>
         </method>
- 
+
         <method>
             <name>Join</name>
         </method>
- 
+
         <method>
             <name>Last</name>
         </method>
- 
+
         <method>
             <name>LastOrDefault</name>
         </method>
- 
+
         <method>
             <name>LongCount</name>
         </method>
- 
+
         <method>
             <name>Max</name>
         </method>
- 
+
         <method>
             <name>Min</name>
         </method>
- 
+
         <method>
             <name>Nodes</name>
         </method>
- 
+
         <method>
             <name>OfType</name>
         </method>
-  
+
         <method>
             <name>OrderBy</name>
         </method>
-   
+
         <method>
             <name>OrderByDescending</name>
         </method>
-    
+
         <method>
             <name>Remove</name>
         </method>
-  
+
         <method>
             <name>Reverse</name>
         </method>
-   
+
         <method>
             <name>Select</name>
         </method>
-    
+
         <method>
             <name>SelectMany</name>
         </method>
- 
+
         <method>
             <name>SequenceEqual</name>
         </method>
- 
+
         <method>
             <name>Single</name>
         </method>
- 
+
         <method>
             <name>SingleOrDefault</name>
         </method>
- 
+
         <method>
             <name>Skip</name>
         </method>
- 
+
         <method>
             <name>SkipWhile</name>
         </method>
- 
+
         <method>
             <name>Subscribe</name>
         </method>
- 
+
         <method>
             <name>Sum</name>
         </method>
- 
+
         <method>
             <name>Take</name>
         </method>
- 
+
         <method>
             <name>TakeWhile</name>
         </method>
- 
+
         <method>
             <name>ToArray</name>
         </method>
- 
+
         <method>
             <name>ToDictionary</name>
         </method>
- 
+
         <method>
             <name>ToList</name>
         </method>
- 
+
         <method>
             <name>ToLookup</name>
         </method>
- 
+
         <method>
             <name>ToObservable</name>
         </method>
- 
+
         <method>
             <name>Union</name>
         </method>
- 
+
         <method>
             <name>Where</name>
         </method>
- 
+
         <method>
             <name>Zip</name>
         </method>
-    </interafce>
-    
+    </interface>
+
+
 
 </cs>
 

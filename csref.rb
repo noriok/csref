@@ -3,18 +3,13 @@
 require 'nokogiri'
 
 # csref -- コマンドラインから参照する C# 簡易リファレンス ---
-# 『Unixプログラミング環境』に書いてあったことを思い出す(mm にメモしておこう)
-#
-# - まず役に立つもっともシンプルなもの作る
-# - つぎに必要になるものを足していく
-# 
 # - クラス一覧を知りたい。
 #   C++ の map に相当するものは C# ではどれ？
 #
 # - そのクラスで定義されている field, property, method, staticmethod を知りたい
 #   使い方:
 #   $ csref List
-# 
+#
 #   [必要ないかも]
 # - そのクラスのメソッド一覧が知りたい
 #   List に要素を追加するのは Add だっけ？それとも Append だろうか
@@ -29,12 +24,14 @@ require 'nokogiri'
 #   使い方:
 #   $ csref List Add # List の Add をリファレンスを表示する(field, property, method, staticmethod区別しない)
 #     - 前方一致とか必要だろうか
-#   
+#
 #
 # - 検索関連
-# 
+#
 
-class Ref < Struct.new(:classname, 
+XML_FILENAME = 'cs.xml'
+
+class Ref < Struct.new(:classname,
                        :constructor,
                        :fields,
                        :properties,
@@ -44,10 +41,15 @@ class Ref < Struct.new(:classname,
                       )
 end
 
+def get_xml_path(xml_filename)
+  dir = File.expand_path(File.dirname(__FILE__))
+  File.join(dir, xml_filename)
+end
+
 def parse(xml_filename)
-  doc = Nokogiri::HTML(File.open(xml_filename))
-  
-  refs = []  
+  doc = Nokogiri::HTML(File.open(get_xml_path(xml_filename)))
+
+  refs = []
   classes(doc).each {|classname|
     ref = Ref.new(classname,
                   [],
@@ -61,9 +63,9 @@ def parse(xml_filename)
   }
 
   interfaces(doc).each {|interfacename|
-    p interfacename
+    # p interfacename
   }
-  
+
   aliases = []
   return [refs, aliases]
 end
@@ -77,7 +79,7 @@ end
 def interfaces(doc)
   # interface 一覧を返す
   ns = doc.xpath('//cs/interface')
-  ns.map {|e| e.attribute('name').value }  
+  ns.map {|e| e.attribute('name').value }
 end
 
 def url(doc, class_name)
@@ -132,12 +134,12 @@ def open_official_site(url)
 end
 
 def get_doc()
-  Nokogiri::HTML(File.open('cs.xml'))
+  Nokogiri::HTML(File.open(get_xml_path(XML_FILENAME)))
 end
 
 def test
   doc = get_doc()
-  p classes(doc) 
+  p classes(doc)
 end
 
 def test_info(class_name)
@@ -159,13 +161,11 @@ def test_info(class_name)
 end
 
 def info_classes
-  classes(get_doc)  
+  classes(get_doc)
 end
 
 def test_main
-  refs, aliases = parse('cs.xml')
-
-  
+  refs, aliases = parse(XML_FILENAME)
 
   case ARGV.size
   when 0
@@ -191,7 +191,7 @@ def test_main
 end
 
 def test_refs
-  refs, aliases = parse('cs.xml')
+  refs, aliases = parse(XML_FILENAME)
 
   ref = refs.find {|e| e.classname == 'List' }
 
@@ -207,11 +207,11 @@ def main
   # test_info('Math')
 
   # test_main
-  
+
   # parse('cs.xml')
 
   # test_refs
-  
+
   test_main
 end
 
