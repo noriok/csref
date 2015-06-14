@@ -150,9 +150,9 @@
         <url>https://msdn.microsoft.com/ja-jp/library/6sh2ey19%28v=vs.110%29.aspx</url>
 
         <constructor>
-            <arg>()</arg>
-            <arg>(IEnumerable&lt;T&gt;)</arg>
-            <arg>(Int32)</arg>
+            <sig>()</sig>
+            <sig>(IEnumerable&lt;T&gt;)</sig>
+            <sig>(Int32)</sig>
         </constructor>
 
         <property>
@@ -316,12 +316,12 @@
         <url>https://msdn.microsoft.com/ja-jp/library/system.string(v=vs.110).aspx</url>
 
         <constructor>
-            <arg>(Char*)</arg>
-            <arg>(Char[])</arg>
-            <arg>(SByte*)</arg>
-            <arg>(Char, Int32)</arg>
-            <arg>(Char*, Int32)</arg>
-            <arg>(Char[], Int32, Int32)</arg>
+            <sig>(Char*)</sig>
+            <sig>(Char[])</sig>
+            <sig>(SByte*)</sig>
+            <sig>(Char, Int32)</sig>
+            <sig>(Char*, Int32)</sig>
+            <sig>(Char[], Int32, Int32)</sig>
             <!-- 再確認 -->
         </constructor>
 
@@ -469,11 +469,10 @@
 
         <method>
             <name>SubString</name>
-            <arg>(int startIndex)</arg>
-            <arg>(int startIndex, int length)</arg>
+            <sig>string(int startIndex)</sig>
+            <sig>string(int startIndex, int length)</sig>
             <example>
             </example>
-
         </method>
 
         <method>
@@ -511,6 +510,165 @@
         <method>
             <name>TrimStart</name>
         </method>
+
+    </class>
+
+    <class name="Array">
+        <staticmethod>
+            <name>AsReadOnly</name>
+        </staticmethod>
+
+        <staticmethod>
+            <name>BinarySearch</name>
+        </staticmethod>
+
+        <staticmethod>
+            <name>Clear</name>
+        </staticmethod>
+
+        <staticmethod>
+            <name>Clone</name>
+        </staticmethod>
+
+        <staticmethod>
+            <name>ConstrainedCopy</name>
+        </staticmethod>
+
+        <staticmethod>
+            <name>ConvertAll</name>
+        </staticmethod>
+
+        <staticmethod>
+            <name>Copy</name>
+        </staticmethod>
+
+        <staticmethod>
+            <name>CopyTo</name>
+        </staticmethod>
+
+        <staticmethod>
+            <name>CreateInstance</name>
+        </staticmethod>
+
+        <staticmethod>
+            <name>Equals</name>
+        </staticmethod>
+
+        <staticmethod>
+            <name>Exists</name>
+        </staticmethod>
+
+        <staticmethod>
+            <name>Finalize</name>
+        </staticmethod>
+
+        <staticmethod>
+            <name>Find</name>
+        </staticmethod>
+
+        <staticmethod>
+            <name>FindAll</name>
+        </staticmethod>
+
+        <staticmethod>
+            <name>FindIndex</name>
+        </staticmethod>
+
+        <staticmethod>
+            <name>FindLast</name>
+        </staticmethod>
+
+        <staticmethod>
+            <name>FindLastIndex</name>
+        </staticmethod>
+
+        <staticmethod>
+            <name>ForEach</name>
+        </staticmethod>
+
+        <method>
+            <name>GetEnumerator</name>
+        </method>
+
+        <method>
+            <name>GetHashCode</name>
+        </method>
+
+        <method>
+            <name>GetLength</name>
+        </method>
+
+        <method>
+            <name>GetongLength</name>
+        </method>
+
+        <method>
+            <name>GetLowerBound</name>
+        </method>
+
+        <method>
+            <name>GetType</name>
+        </method>
+
+        <method>
+            <name>GetUpperBound</name>
+        </method>
+
+        <method>
+            <name>GetValue</name>
+        </method>
+
+        <staticmethod>
+            <name>IndexOf</name>
+        </staticmethod>
+
+        <method>
+            <name>Initialize</name>
+        </method>
+
+        <staticmethod>
+            <name>LastIndexOf</name>
+        </staticmethod>
+
+        <method>
+            <name>MemberwiseClone</name>
+        </method>
+
+        <staticmethod>
+            <name>Resize</name>
+        </staticmethod>
+
+        <staticmethod>
+            <name>Reverse</name>
+        </staticmethod>
+
+        <method>
+            <name>SetValue</name>
+        </method>
+
+        <staticmethod>
+            <name>Sort</name>
+        </staticmethod>
+
+        <method>
+            <name>ToString</name>
+        </method>
+
+        <staticmethod>
+            <name>TrueForAll</name>
+        </staticmethod>
+
+
+
+
+
+
+
+
+
+
+
+
 
     </class>
 
