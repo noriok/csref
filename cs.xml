@@ -9,7 +9,7 @@
     constructor : コンストラクタ
     field : フィールド
     property : プロパティ
-    staticmethod : static メソッド
+    static-method : static メソッド
     method : インスタンスメソッド
 
       -->
@@ -20,12 +20,7 @@
     Stack, Queue, HashSet, SortedSet, Dictionary, BigInteger,
     Regex, Random, Array
 
-
-
       -->
-
-    <alias name="linq" source="IEnumerator&lt;T&gt;" />
-
 
     <class name="Math">
         <!-- これはコメント -->
@@ -40,120 +35,114 @@
             <name>PI</name>
         </field>
 
-        <staticmethod>
+        <static-method>
             <name>Abs</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>Acos</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>Asin</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>Atan</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>Atan2</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>BigMul</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>Celling</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>Cos</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>Cosh</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>DivRem</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>Exp</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>Floor</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>IEEERemainder</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>Log</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>Log10</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>Max</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>Min</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>Pow</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>Round</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>Sign</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>Sin</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>Sinh</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>Sqrt</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>Tan</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>Tanh</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>Truncate</name>
-        </staticmethod>
+        </static-method>
 
     </class>
 
     <class name="List">
         <url>https://msdn.microsoft.com/ja-jp/library/6sh2ey19%28v=vs.110%29.aspx</url>
-
-        <constructor>
-            <sig>()</sig>
-            <sig>(IEnumerable&lt;T&gt;)</sig>
-            <sig>(Int32)</sig>
-        </constructor>
 
         <property>
             <name>Capacity</name>
@@ -213,6 +202,20 @@
 
         <method>
             <name>Find</name>
+            <sig>T (Predicate&lt;T&gt; match)</sig>
+            <desc>
+                match にマッチする最初の要素を返します。
+                見つからない場合は、T の既定値を返します。
+            </desc>
+            <example>
+csharp> var ls = new List&lt;int&gt;() { 3, 22 };
+csharp> ls.Find(e => e == 3);
+3
+csharp> ls.Find(e => e > 10);
+22
+csharp> ls.Find(e => e == 10); // int の既定値が返る
+0
+            </example>
         </method>
 
         <method>
@@ -257,6 +260,7 @@
 
         <method>
             <name>Insert</name>
+            <sig>void (int index, T item)</sig>
         </method>
 
         <method>
@@ -273,6 +277,7 @@
 
         <method>
             <name>Remove</name>
+            <sig>bool (T item)</sig>
         </method>
 
         <method>
@@ -281,6 +286,7 @@
 
         <method>
             <name>RemoveAt</name>
+            <sig>void (int index)</sig>
         </method>
 
         <method>
@@ -316,13 +322,6 @@
         <url>https://msdn.microsoft.com/ja-jp/library/system.string(v=vs.110).aspx</url>
 
         <constructor>
-            <sig>(Char*)</sig>
-            <sig>(Char[])</sig>
-            <sig>(SByte*)</sig>
-            <sig>(Char, Int32)</sig>
-            <sig>(Char*, Int32)</sig>
-            <sig>(Char[], Int32, Int32)</sig>
-            <!-- 再確認 -->
         </constructor>
 
         <field>
@@ -331,6 +330,9 @@
 
         <property>
             <name>Chars</name>
+            <desc>
+                public char this[int index] { get; }
+            </desc>
         </property>
 
         <property>
@@ -349,9 +351,9 @@
             <name>CompareTo</name>
         </method>
 
-        <method>
+        <static-method>
             <name>Concat</name>
-        </method>
+        </static-method>
 
         <method>
             <name>Contains</name>
@@ -368,15 +370,18 @@
 
         <method>
             <name>EndsWith</name>
+            <sig>bool (string value)</sig>
+            <sig>bool (string value, StringComparison type)</sig>
+            <sig>bool (string value, bool ignoreCase, CultureInfo culture)</sig>
         </method>
 
         <method>
             <name>Equals</name>
         </method>
 
-        <method>
+        <static-method>
             <name>Format</name>
-        </method>
+        </static-method>
 
         <method>
             <name>GetEnumerator</name>
@@ -396,47 +401,105 @@
 
         <method>
             <name>IndexOf</name>
+            <sig>int (char   value)</sig>
+            <sig>int (string value)</sig>
+            <sig>int (char   value, int startIndex)</sig>
+            <sig>int (string value, int startIndex)</sig>
+            <sig>int (string value, StringComparison type)</sig>
+            <sig>int (char   value, int startIndex, int count)</sig>
+            <sig>int (string value, int startIndex, int count)</sig>
+            <sig>int (string value, int startIndex, StringComparison type)</sig>
+            <sig>int (string value, int startIndex, int count, StringComparison type)</sig>
+            <desc>
+                文字、または文字列を検索する。最初に見つかったインデックスを返します。
+                見つからなければ、-1 を返します。
+            </desc>
+            <example>
+csharp> var s = "abcd-abcd";
+csharp> s.IndexOf('-');
+4
+csharp> s.IndexOf("zz");
+-1
+csharp> s.IndexOf("a", 1); // インデックス 1 から検索する
+5
+csharp> s.IndexOf('a');
+0
+            </example>
         </method>
 
         <method>
             <name>IndexOfAny</name>
+            <sig>int (char[] anyOf)</sig>
+            <sig>int (char[] anyOf, int startIndex)</sig>
+            <sig>int (char[] anyOf, int startIndex, int count)</sig>
+            <desc>
+                引数の文字配列のいずれかの文字を検索する。
+                最初に見つかった文字のインデックスを返す。
+                見つからなければ、-1 を返す。
+            </desc>
+            <example>
+sharp> var s = "hello world";
+csharp> s.IndexOfAny("or".ToCharArray());
+4
+csharp> s.IndexOfAny("ab".ToCharArray());
+-1
+            </example>
         </method>
 
         <method>
             <name>Insert</name>
+            <sig>string (int startIndex, string value)</sig>
+            <desc>
+                startIndex に文字列 value を挿入した新しい文字列を返します。
+                元の文字列は変更されません。
+            </desc>
+            <example>
+csharp> var s = "hello world"
+csharp> s.Insert(2, "abc");
+"heabcllo world"
+csharp> s
+"hello world"
+            </example>
         </method>
 
-        <method>
+        <static-method>
             <name>Intern</name>
-        </method>
+        </static-method>
 
-        <method>
+        <static-method>
             <name>IsInterned</name>
-        </method>
+        </static-method>
 
         <method>
             <name>IsNormalized</name>
         </method>
 
-        <method>
+        <static-method>
             <name>IsNullOrEmpty</name>
-        </method>
+        </static-method>
 
-        <method>
+        <static-method>
             <name>IsNullOrWhiteSpace</name>
-        </method>
+        </static-method>
 
-        <method>
+        <static-method>
             <name>Join</name>
-        </method>
+        </static-method>
 
         <method>
             <name>LastIndexOf</name>
+            <desc>
+                IndexOf() と同じだが、最後に見つかった文字、文字列のインデックスを返す。
+                見つからなければ、-1 を返す。
+            </desc>
         </method>
-
 
         <method>
             <name>LastIndexOfAny</name>
+            <desc>
+                IndexOfAny() と同じだが、再顔に見つかった文字、文字列のインデックスを返す。
+                見つからなければ、-1 を返す。
+            </desc>
         </method>
 
         <method>
@@ -445,18 +508,58 @@
 
         <method>
             <name>PadLeft</name>
+            <sig>string (int totalWidth)</sig>
+            <sig>string (int totalWidth, char paddingChar)</sig>
+            <example>
+csharp> var s = "abc";
+csharp> s.PadLeft(5);
+"  abc"
+csharp> s.PadLeft(5, '-');
+"--abc"
+            </example>
         </method>
 
         <method>
             <name>PadRight</name>
+            <sig>string (int totalWidth)</sig>
+            <sig>string (int totalWidth, char paddingChar)</sig>
+            <example>
+csharp> var s = "abc";
+csharp> s.PadRight(5);
+"abc  "
+csharp> s.PadRight(5, '-');
+"abc--"
+            </example>
         </method>
 
         <method>
             <name>Remove</name>
+            <sig>string (int startIndex)</sig>
+            <sig>string (int startIndex, int count)</sig>
+            <desc>
+                startIndex 以降の文字列を取り除いた新しい文字列を返します。
+            </desc>
+            <example>
+csharp> var s = "helloworld";
+csharp> s.Remove(2);
+"he"
+csharp> s
+"helloworld"
+csharp> s.Remove(2, 3);
+"heworld"
+            </example>
         </method>
 
         <method>
             <name>Replace</name>
+            <sig>string (char oldChar, char newChar)</sig>
+            <sig>string (string oldValue, string newValue)</sig>
+            <example>
+csharp> "abcabc".Replace("abc", "def"); // 全ての文字列が置換される
+"defdef"
+csharp> "hello world".Replace('o', '-'); // 全ての文字が置換される
+"hell- w-rld"
+            </example>
         </method>
 
         <method>
@@ -465,13 +568,21 @@
 
         <method>
             <name>StartsWith</name>
+            <sig>bool (string value)</sig>
+            <sig>bool (string value, StringComparison type)</sig>
+            <sig>bool (string value, bool ignoreCase, CultureInfo culture)</sig>
         </method>
 
         <method>
-            <name>SubString</name>
-            <sig>string(int startIndex)</sig>
-            <sig>string(int startIndex, int length)</sig>
+            <name>Substring</name>
+            <sig>string (int startIndex)</sig>
+            <sig>string (int startIndex, int length)</sig>
             <example>
+csharp> var s = "abc-def";
+csharp> s.Substring(3);
+"-def"
+csharp> s.Substring(3, 2);
+"-d"
             </example>
         </method>
 
@@ -514,77 +625,77 @@
     </class>
 
     <class name="Array">
-        <staticmethod>
+        <static-method>
             <name>AsReadOnly</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>BinarySearch</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>Clear</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>Clone</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>ConstrainedCopy</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>ConvertAll</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>Copy</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>CopyTo</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>CreateInstance</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>Equals</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>Exists</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>Finalize</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>Find</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>FindAll</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>FindIndex</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>FindLast</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>FindLastIndex</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>ForEach</name>
-        </staticmethod>
+        </static-method>
 
         <method>
             <name>GetEnumerator</name>
@@ -618,58 +729,380 @@
             <name>GetValue</name>
         </method>
 
-        <staticmethod>
+        <static-method>
             <name>IndexOf</name>
-        </staticmethod>
+        </static-method>
 
         <method>
             <name>Initialize</name>
         </method>
 
-        <staticmethod>
+        <static-method>
             <name>LastIndexOf</name>
-        </staticmethod>
+        </static-method>
 
         <method>
             <name>MemberwiseClone</name>
         </method>
 
-        <staticmethod>
+        <static-method>
             <name>Resize</name>
-        </staticmethod>
+        </static-method>
 
-        <staticmethod>
+        <static-method>
             <name>Reverse</name>
-        </staticmethod>
+        </static-method>
 
         <method>
             <name>SetValue</name>
         </method>
 
-        <staticmethod>
+        <static-method>
             <name>Sort</name>
-        </staticmethod>
+        </static-method>
 
         <method>
             <name>ToString</name>
         </method>
 
-        <staticmethod>
+        <static-method>
             <name>TrueForAll</name>
-        </staticmethod>
+        </static-method>
+    </class>
+
+    <class name="Dictionary">
+        <method>
+            <name>Add</name>
+        </method>
+
+        <method>
+            <name>Clear</name>
+        </method>
+
+        <method>
+            <name>ContainsKey</name>
+        </method>
+
+        <method>
+            <name>ContainsValue</name>
+        </method>
+
+        <method>
+            <name>Equals</name>
+        </method>
+
+        <method>
+            <name>Finalize</name>
+        </method>
+
+        <method>
+            <name>GetEnumerator</name>
+        </method>
+
+        <method>
+            <name>GetHashCode</name>
+        </method>
+
+        <method>
+            <name>GetObjectData</name>
+        </method>
+
+        <method>
+            <name>GetType</name>
+        </method>
+
+        <method>
+            <name>MemberwiseClone</name>
+        </method>
+
+        <method>
+            <name>OnDeserialization</name>
+        </method>
+
+        <method>
+            <name>Remove</name>
+        </method>
+
+        <method>
+            <name>ToString</name>
+        </method>
+
+        <method>
+            <name>TryGetValue</name>
+        </method>
+
+        <property>
+            <name>Comparer</name>
+        </property>
+
+        <property>
+            <name>Count</name>
+        </property>
+
+        <property>
+            <name>Item</name>
+        </property>
+
+        <property>
+            <name>Keys</name>
+        </property>
+
+        <property>
+            <name>Values</name>
+        </property>
+
+    </class>
+
+    <class name="HashSet">
+        <method>
+            <name>Add</name>
+        </method>
+
+        <method>
+            <name>Clear</name>
+        </method>
+
+        <method>
+            <name>Contains</name>
+        </method>
+
+        <method>
+            <name>CopyTo</name>
+        </method>
+
+        <static-method>
+            <name>CreateSetComparer</name>
+        </static-method>
+
+        <method>
+            <name>Equals</name>
+        </method>
+
+        <method>
+            <name>ExceptWith</name>
+        </method>
+
+        <method>
+            <name>Finalize</name>
+        </method>
+
+        <method>
+            <name>GetEnumerator</name>
+        </method>
+
+        <method>
+            <name>GetHashCode</name>
+        </method>
+
+        <method>
+            <name>GetObjectData</name>
+        </method>
+
+        <method>
+            <name>GetType</name>
+        </method>
+
+        <method>
+            <name>IntersectWith</name>
+        </method>
+
+        <method>
+            <name>IsProperSubsetOf</name>
+        </method>
+
+        <method>
+            <name>IsProperSupersetOf</name>
+        </method>
+
+        <method>
+            <name>IsSubsetOf</name>
+        </method>
+
+        <method>
+            <name>IsSupersetOf</name>
+        </method>
+
+        <method>
+            <name>MemberwiseClone</name>
+        </method>
+
+        <method>
+            <name>OnDeserialization</name>
+        </method>
+
+        <method>
+            <name>Overlaps</name>
+        </method>
+
+        <method>
+            <name>Remove</name>
+        </method>
+
+        <method>
+            <name>RemoveWhere</name>
+        </method>
+
+        <method>
+            <name>SetEquals</name>
+        </method>
+
+        <method>
+            <name>SymmetricExceptWith</name>
+        </method>
+
+        <method>
+            <name>ToString</name>
+        </method>
+
+        <method>
+            <name>TrimExcess</name>
+        </method>
+
+        <method>
+            <name>UnionWith</name>
+        </method>
+
+        <property>
+            <name>Comparer</name>
+        </property>
+
+        <property>
+            <name>Count</name>
+        </property>
+
+    </class>
 
 
+    <class name="Stack">
+        <method>
+            <name>Clear</name>
+        </method>
 
+        <method>
+            <name>Contains</name>
+        </method>
 
+        <method>
+            <name>CopyTo</name>
+        </method>
 
+        <method>
+            <name>Equals</name>
+        </method>
 
+        <method>
+            <name>Finalize</name>
+        </method>
 
+        <method>
+            <name>GetEnumerator</name>
+        </method>
 
+        <method>
+            <name>GetHashCode</name>
+        </method>
 
+        <method>
+            <name>GetType</name>
+        </method>
 
+        <method>
+            <name>MemberwiseClone</name>
+        </method>
 
+        <method>
+            <name>Peek</name>
+        </method>
 
+        <method>
+            <name>Pop</name>
+        </method>
 
+        <method>
+            <name>Push</name>
+        </method>
+
+        <method>
+            <name>ToArray</name>
+        </method>
+
+        <method>
+            <name>ToString</name>
+        </method>
+
+        <method>
+            <name>TrimExcess</name>
+        </method>
+
+        <property>
+            <name>Count</name>
+        </property>
+    </class>
+
+    <class name="Queue">
+        <method>
+            <name>Clear</name>
+        </method>
+
+        <method>
+            <name>Contains</name>
+        </method>
+
+        <method>
+            <name>CopyTo</name>
+        </method>
+
+        <method>
+            <name>Dequeue</name>
+        </method>
+
+        <method>
+            <name>Enqueue</name>
+        </method>
+
+        <method>
+            <name>Equals</name>
+        </method>
+
+        <method>
+            <name>Finalize</name>
+        </method>
+
+        <method>
+            <name>GetEnumerator</name>
+        </method>
+
+        <method>
+            <name>GetHashCode</name>
+        </method>
+
+        <method>
+            <name>GetType</name>
+        </method>
+
+        <method>
+            <name>MemberwiseClone</name>
+        </method>
+
+        <method>
+            <name>Peek</name>
+        </method>
+
+        <method>
+            <name>ToArray</name>
+        </method>
+
+        <method>
+            <name>ToString</name>
+        </method>
+
+        <method>
+            <name>TrimExcess</name>
+        </method>
+
+        <property>
+            <name>Count</name>
+        </property>
     </class>
 
 
@@ -912,5 +1345,6 @@
 
 
 </cs>
+
 
 

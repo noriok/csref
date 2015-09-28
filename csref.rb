@@ -2,93 +2,54 @@
 
 require 'nokogiri'
 
-# csref -- コマンドラインから参照する C# 簡易リファレンス ---
-# - クラス一覧を知りたい。
-#   C++ の map に相当するものは C# ではどれ？
+# -----
+# TODO:大文字小文字は区別しない
 #
-# - そのクラスで定義されている field, property, method, staticmethod を知りたい
-#   使い方:
-#   $ csref List
+# $ csref
+# => クラス名一覧を表示
 #
-#   [必要ないかも]
-# - そのクラスのメソッド一覧が知りたい
-#   List に要素を追加するのは Add だっけ？それとも Append だろうか
-#   (使い方が難しいものに関しては、サンプルコードも欲しい)
-#   使い方:
-#   $ csref List# # クラス名の後ろに「#」をつけるとメソッド一覧
+# $ csref クラス名
+# => クラス名のメソッド一覧を表示
 #
-# - メソッドの詳しい情報がしりたい
-#   - 引数
-#   - 戻り値
-#   - サンプル
-#   使い方:
-#   $ csref List Add # List の Add をリファレンスを表示する(field, property, method, staticmethod区別しない)
-#     - 前方一致とか必要だろうか
+# $ csref クラス名 メソッド名
+# => クラス名のメソッドのシグネチャとサンプルを表示
 #
-#
-# - 検索関連
+# クラス名、メソッド名は前方一致で検索
+# 複数の候補が存在する場合には、その候補の一覧を出力するのみ。
+# 完全マッチする項目が一つの場合は、それを出力する(List.Remove, List.RemoveAt での Remove)
 #
 
 XML_FILENAME = 'cs.xml'
-
-class Ref < Struct.new(:classname,
-                       :constructor,
-                       :fields,
-                       :properties,
-                       :methods,
-                       :staticmethods,
-                       :url # MSDN
-                      )
-end
 
 def get_xml_path(xml_filename)
   dir = File.expand_path(File.dirname(__FILE__))
   File.join(dir, xml_filename)
 end
 
-def parse(xml_filename)
-  doc = Nokogiri::HTML(File.open(get_xml_path(xml_filename)))
-
-  refs = []
-  classes(doc).each {|classname|
-    ref = Ref.new(classname,
-                  [],
-                  fields(doc, classname),
-                  properties(doc, classname),
-                  methods(doc, classname),
-                  staticmethods(doc, classname),
-                  url(doc, classname)
-                 )
-    refs << ref
-  }
-
-  interfaces(doc).each {|interfacename|
-    # p interfacename
-  }
-
-  aliases = []
-  return [refs, aliases]
+def parse_xml()
+  Nokogiri::HTML(File.open(get_xml_path(XML_FILENAME)))
 end
 
-def classes(doc)
+def find_classes(doc)
   # class 一覧を返す
   ns = doc.xpath('//cs/class')
   ns.map {|e| e.attribute('name').value }
 end
 
-def interfaces(doc)
+def find_interfaces(doc)
   # interface 一覧を返す
   ns = doc.xpath('//cs/interface')
   ns.map {|e| e.attribute('name').value }
 end
 
-def url(doc, class_name)
+def find_url(doc, class_name)
   ns = doc.xpath("//cs/class[@name='#{class_name}']/url")
   ns.map {|e| e.text }.join('')
 end
 
-def fields(doc, class_name)
+def find_fields(doc, class_name)
   ns = doc.xpath("//cs/class[@name='#{class_name}']/field")
+
   ret = []
   ns.each {|e|
     a = e.at('name')
@@ -97,8 +58,9 @@ def fields(doc, class_name)
   ret
 end
 
-def properties(doc, class_name)
+def find_properties(doc, class_name)
   ns = doc.xpath("//cs/class[@name='#{class_name}']/property")
+
   ret = []
   ns.each {|e|
     a = e.at('name')
@@ -107,7 +69,7 @@ def properties(doc, class_name)
   ret
 end
 
-def methods(doc, class_name)
+def find_methods(doc, class_name)
   ns = doc.xpath("//cs/class[@name='#{class_name}']/method")
 
   ret = []
@@ -118,8 +80,8 @@ def methods(doc, class_name)
   ret
 end
 
-def staticmethods(doc, class_name)
-  ns = doc.xpath("//cs/class[@name='#{class_name}']/staticmethod")
+def find_static_methods(doc, class_name)
+  ns = doc.xpath("//cs/class[@name='#{class_name}']/static-method")
 
   ret = []
   ns.each {|e|
@@ -129,94 +91,164 @@ def staticmethods(doc, class_name)
   ret
 end
 
-def open_official_site(url)
-  system("open #{url}")
-end
+def disp_method_content(doc, class_name, method_name)
+  # puts "FIND: #{class_name} #{method_name}"
 
-def get_doc()
-  Nokogiri::HTML(File.open(get_xml_path(XML_FILENAME)))
-end
-
-def test
-  doc = get_doc()
-  p classes(doc)
-end
-
-def test_info(class_name)
-  doc = get_doc()
-  ns = doc.xpath("//cs/class[@name='#{class_name}']")
+  # 「..」 で親ノードに上る
+  ns = doc.xpath("//cs/class[@name='#{class_name}']/method/name[text()='#{method_name}']/..")
   if ns.size == 0
-    puts "not found: '#{class_name}'"
-    exit
+    # static method を探す
+    ns = doc.xpath("//cs/class[@name='#{class_name}']/static-method/name[text()='#{method_name}']/..")
   end
 
-  puts "--- fields ---"
-  puts fields(doc, class_name).join(', ')
-  puts "--- properties ---"
-  puts properties(doc, class_name).join(', ')
-  puts "--- methods ---"
-  puts methods(doc, class_name).join(', ')
-  puts "--- staticmethods ---"
-  puts staticmethods(doc, class_name).join(', ')
+  if ns.size == 0
+    # 見つからなかった
+    puts "見つかりませんでした class_name:#{class_name} method_name:#{method_name}"
+    return
+  elsif ns.size == 1
+    # マッチする項目が一つだけ見つかった
+  else
+    # 複数の候補が見つかった
+    puts "候補が複数見つかりました class_name:#{class_name} method_name:#{method_name}"
+    p ns
+    raise
+  end
+
+  sigs = []
+  desc = ""
+  example = ""
+  ns.children.each {|e|
+    # puts "e.name = <#{e.name}>"
+
+    case e.name
+    when 'sig'
+      # puts "sig=> #{e.text}"
+      sigs << e.text
+
+    when 'desc'
+      desc = e.text
+      ss = e.text.sub(/^( *\n)+/) { '' }.split("\n")
+      # p ss
+      if ss.size > 0
+        # 一行目の先頭空白文字分だけ各行から取り除く(マッチする場合のみ)
+        ret = ss[0].scan(/^ +/)
+        if ret.size > 0
+          desc = ss.map {|e|
+            if e.start_with?(ret[0])
+              e.slice(ret[0].size, e.length)
+            else
+              e
+            end
+          }.join("\n")
+        end
+      end
+
+    when 'example'
+      # puts "example=> #{e.text}"
+      example = e.text
+    end
+  }
+
+  puts "#{class_name}.#{method_name}"
+
+  puts
+  puts "Signature:"
+  sigs.each {|sig| puts "    " + sig }
+
+  if desc.length > 0
+    puts
+    puts desc
+  end
+
+  if example.length > 0
+    puts
+    puts "Example:"
+    example.strip.split("\n").each {|line|
+      puts "    " + line
+    }
+  end
 end
 
-def info_classes
-  classes(get_doc)
+# 文字列のリストを出力するときに、80 カラムで折り返すようにする
+# 文字列の途中では改行しない
+def format_list(slist)
+  ret = []
+  s = ''
+  slist.each {|e|
+    s += ' ' if s.length > 0
+    s += e
+    if s.length >= 80
+      ret << s
+      s = ''
+    end
+  }
+
+  ret << s if s.length > 0
+  ret.join("\n")
 end
 
-def test_main
-  refs, aliases = parse(XML_FILENAME)
+def main
+  doc = parse_xml()
 
   case ARGV.size
   when 0
+    # クラス名一覧を表示する
     # class, interface, alias 一覧
-    puts info_classes().join(', ')
-  when 1
-    # (class|interface|alias)
-    class_name = ARGV[0]
-    # test_info(class_name)
+    puts format_list(find_classes(doc))
 
-    puts "----- methods -----"
-    puts refs.find {|e| e.classname == class_name }.methods.join(', ')
-    puts "----- static methods -----"
-    puts refs.find {|e| e.classname == class_name }.staticmethods.join(', ')
+  when 1
+    # クラス名のメソッド一覧を表示する
+    class_name = ARGV[0]
+
+    sm = find_static_methods(doc, class_name)
+    if sm.size > 0
+      puts '--- static methods ---'
+      puts format_list(sm.sort)
+      puts
+    end
+
+    m = find_methods(doc, class_name)
+    if m.size > 0
+      puts '--- methos ---'
+      puts format_list(m.sort)
+      puts
+    end
+
+    pr = find_properties(doc, class_name)
+    if pr.size > 0
+      puts '--- property ---'
+      puts format_list(pr.sort)
+      puts
+    end
+
   when 2
+    # クラス名.メソッドのシグネチャとサンプルを表示する
     # (class|interface|alias) (field|method|staticmethod)
     class_name = ARGV[0]
-    word = ARGV[1]
-    test_info_anything(class_name, word)
+    method_name = ARGV[1]
+
+    disp_method_content(doc, class_name, method_name)
   else
     puts "usage"
   end
 end
 
-def test_refs
-  refs, aliases = parse(XML_FILENAME)
+def test
+#  doc = get_doc()
+#  p classes(doc)
+  doc = parse_xml()
+  puts "\n--- find_classes(doc) ---"
+  p find_classes(doc)
 
-  ref = refs.find {|e| e.classname == 'List' }
+  puts "\n--- find_methods(doc, 'Array') ---"
+  p find_methods(doc, 'Array')
 
-  puts ref.classname
-  puts ref.methods
-
-  # doc = get_doc
+  puts "\n--- test ---"
+  find_method_content(doc, 'String', 'Substring')
 end
-
-def main
-  # test_open_official()
-
-  # test_info('Math')
-
-  # test_main
-
-  # parse('cs.xml')
-
-  # test_refs
-
-  test_main
-end
-
 
 if $0 == __FILE__
   main
 end
+
 
