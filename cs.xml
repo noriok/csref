@@ -16,127 +16,96 @@
 
     <!--
 
-    TODO:
-    Stack, Queue, HashSet, SortedSet, Dictionary, BigInteger,
-    Regex, Random, Array
+    TODO: SortedSet, BigInteger, Regex
 
       -->
 
     <class name="Math">
-        <!-- これはコメント -->
         <url>https://msdn.microsoft.com/ja-jp/library/system.math%28v=vs.110%29.aspx</url>
 
-        <field>
-            <name>E</name>
+        <field name="E">
             <desc></desc>
         </field>
 
-        <field>
-            <name>PI</name>
+        <field name="PI">
         </field>
 
-        <static-method>
-            <name>Abs</name>
+        <static-method name="Abs">
         </static-method>
 
-        <static-method>
-            <name>Acos</name>
+        <static-method name="Acos">
         </static-method>
 
-        <static-method>
-            <name>Asin</name>
+        <static-method name="Asin">
         </static-method>
 
-        <static-method>
-            <name>Atan</name>
+        <static-method name="Atan">
         </static-method>
 
-        <static-method>
-            <name>Atan2</name>
+        <static-method name="Atan2">
         </static-method>
 
-        <static-method>
-            <name>BigMul</name>
+        <static-method name="BigMul">
         </static-method>
 
-        <static-method>
-            <name>Celling</name>
+        <static-method name="Celling">
         </static-method>
 
-        <static-method>
-            <name>Cos</name>
+        <static-method name="Cos">
         </static-method>
 
-        <static-method>
-            <name>Cosh</name>
+        <static-method name="Cosh">
         </static-method>
 
-        <static-method>
-            <name>DivRem</name>
+        <static-method name="DivRem">
         </static-method>
 
-        <static-method>
-            <name>Exp</name>
+        <static-method name="Exp">
         </static-method>
 
-        <static-method>
-            <name>Floor</name>
+        <static-method name="Floor">
         </static-method>
 
-        <static-method>
-            <name>IEEERemainder</name>
+        <static-method name="IEEERemainder">
         </static-method>
 
-        <static-method>
-            <name>Log</name>
+        <static-method name="Log">
         </static-method>
 
-        <static-method>
-            <name>Log10</name>
+        <static-method name="Log10">
         </static-method>
 
-        <static-method>
-            <name>Max</name>
+        <static-method name="Max">
         </static-method>
 
-        <static-method>
-            <name>Min</name>
+        <static-method name="Min">
         </static-method>
 
-        <static-method>
-            <name>Pow</name>
+        <static-method name="Pow">
         </static-method>
 
-        <static-method>
-            <name>Round</name>
+        <static-method name="Round">
         </static-method>
 
-        <static-method>
-            <name>Sign</name>
+        <static-method name="Sign">
         </static-method>
 
-        <static-method>
-            <name>Sin</name>
+        <static-method name="Sin">
         </static-method>
 
-        <static-method>
-            <name>Sinh</name>
+        <static-method name="Sinh">
         </static-method>
 
-        <static-method>
-            <name>Sqrt</name>
+        <static-method name="Sqrt">
         </static-method>
 
-        <static-method>
-            <name>Tan</name>
+        <static-method name="Tan">
         </static-method>
 
-        <static-method>
-            <name>Tanh</name>
+        <static-method name="Tanh">
         </static-method>
 
-        <static-method>
-            <name>Truncate</name>
+        <static-method name="Truncate">
         </static-method>
 
     </class>
@@ -144,64 +113,49 @@
     <class name="List">
         <url>https://msdn.microsoft.com/ja-jp/library/6sh2ey19%28v=vs.110%29.aspx</url>
 
-        <property>
-            <name>Capacity</name>
+        <property name="Capacity">
         </property>
 
-        <property>
-            <name>Count</name>
+        <property name="Count">
         </property>
 
-        <property>
-            <name>Item</name>
+        <property name="Item">
         </property>
 
-        <method>
-            <name>Add</name>
+        <method name="Add">
         </method>
 
-        <method>
-            <name>AddRange</name>
+        <method name="AddRange">
         </method>
 
-        <method>
-            <name>AsReadOnly</name>
+        <method name="AsReadOnly">
         </method>
 
-        <method>
-            <name>BinarySearch</name>
+        <method name="BinarySearch">
         </method>
 
-        <method>
-            <name>Clear</name>
+        <method name="Clear">
         </method>
 
-        <method>
-            <name>Contains</name>
+        <method name="Contains">
         </method>
 
-        <method>
-            <name>ConvertAll</name>
+        <method name="ConvertAll">
         </method>
 
-        <method>
-            <name>CopyTo</name>
+        <method name="CopyTo">
         </method>
 
-        <method>
-            <name>Equals</name>
+        <method name="Equals">
         </method>
 
-        <method>
-            <name>Exists</name>
+        <method name="Exists">
         </method>
 
-        <method>
-            <name>Finalize</name>
+        <method name="Finalize">
         </method>
 
-        <method>
-            <name>Find</name>
+        <method name="Find">
             <sig>T (Predicate&lt;T&gt; match)</sig>
             <desc>
                 match にマッチする最初の要素を返します。
@@ -218,103 +172,79 @@ csharp> ls.Find(e => e == 10); // int の既定値が返る
             </example>
         </method>
 
-        <method>
-            <name>FindAll</name>
+        <method name="FindAll">
         </method>
 
-        <method>
-            <name>FindIndex</name>
+        <method name="FindIndex">
         </method>
 
-        <method>
-            <name>FindLast</name>
+        <method name="FindLast">
         </method>
 
-        <method>
-            <name>FindLastIndex</name>
+        <method name="FindLastIndex">
         </method>
 
-        <method>
-            <name>ForEach</name>
+        <method name="ForEach">
         </method>
 
-        <method>
-            <name>GetEnumerator</name>
+        <method name="GetEnumerator">
         </method>
 
-        <method>
-            <name>GetHashCode</name>
+        <method name="GetHashCode">
         </method>
 
-        <method>
-            <name>GetRange</name>
+        <method name="GetRange">
         </method>
 
-        <method>
-            <name>GetType</name>
+        <method name="GetType">
         </method>
 
-        <method>
-            <name>IndexOf</name>
+        <method name="IndexOf">
         </method>
 
-        <method>
-            <name>Insert</name>
+        <method name="Insert">
             <sig>void (int index, T item)</sig>
         </method>
 
-        <method>
-            <name>InsertRange</name>
+        <method name="InsertRange">
         </method>
 
-        <method>
-            <name>LastIndexOf</name>
+        <method name="LastIndexOf">
         </method>
 
-        <method>
-            <name>MemberwiseClone</name>
+        <method name="MemberwiseClone">
         </method>
 
-        <method>
-            <name>Remove</name>
+        <method name="Remove">
             <sig>bool (T item)</sig>
         </method>
 
-        <method>
-            <name>RemoveAll</name>
+        <method name="RemoveAll">
         </method>
 
-        <method>
-            <name>RemoveAt</name>
+        <method name="RemoveAt">
             <sig>void (int index)</sig>
         </method>
 
-        <method>
-            <name>RemoveRange</name>
+        <method name="RemoveRange">
         </method>
 
-        <method>
-            <name>Reverse</name>
+        <method name="Reverse">
         </method>
 
-        <method>
-            <name>Sort</name>
+        <method name="Sort">
         </method>
 
-        <method>
-            <name>ToArray</name>
+        <method name="ToArray">
         </method>
 
-        <method>
-            <name>ToString</name>
+        <method name="ToString">
         </method>
 
-        <method>
-            <name>TrimExcess</name>
+        <method name="TrimExcess">
         </method>
 
-        <method>
-            <name>TrueForAll</name>
+        <method name="TrueForAll">
         </method>
     </class>
 
@@ -324,83 +254,65 @@ csharp> ls.Find(e => e == 10); // int の既定値が返る
         <constructor>
         </constructor>
 
-        <field>
-            <name>Empty</name>
+        <field name="Empty">
         </field>
 
-        <property>
-            <name>Chars</name>
+        <property name="Chars">
             <desc>
                 public char this[int index] { get; }
             </desc>
         </property>
 
-        <property>
-            <name>Length</name>
+        <property name="Length">
         </property>
 
-        <method>
-            <name>Clone</name>
+        <method name="Clone">
         </method>
 
-        <method>
-            <name>Compare</name>
+        <method name="Compare">
         </method>
 
-        <method>
-            <name>CompareTo</name>
+        <method name="CompareTo">
         </method>
 
-        <static-method>
-            <name>Concat</name>
+        <static-method name="Concat">
         </static-method>
 
-        <method>
-            <name>Contains</name>
+        <method name="Contains">
         </method>
 
-        <method>
-            <name>Copy</name>
+        <method name="Copy">
         </method>
 
 
-        <method>
-            <name>CopyTo</name>
+        <method name="CopyTo">
         </method>
 
-        <method>
-            <name>EndsWith</name>
+        <method name="EndsWith">
             <sig>bool (string value)</sig>
             <sig>bool (string value, StringComparison type)</sig>
             <sig>bool (string value, bool ignoreCase, CultureInfo culture)</sig>
         </method>
 
-        <method>
-            <name>Equals</name>
+        <method name="Equals">
         </method>
 
-        <static-method>
-            <name>Format</name>
+        <static-method name="Format">
         </static-method>
 
-        <method>
-            <name>GetEnumerator</name>
+        <method name="GetEnumerator">
         </method>
 
-        <method>
-            <name>GetHashCode</name>
+        <method name="GetHashCode">
         </method>
 
-        <method>
-            <name>GetType</name>
+        <method name="GetType">
         </method>
 
-        <method>
-            <name>GetTypeCode</name>
+        <method name="GetTypeCode">
         </method>
 
-        <method>
-            <name>IndexOf</name>
+        <method name="IndexOf">
             <sig>int (char   value)</sig>
             <sig>int (string value)</sig>
             <sig>int (char   value, int startIndex)</sig>
@@ -427,8 +339,7 @@ csharp> s.IndexOf('a');
             </example>
         </method>
 
-        <method>
-            <name>IndexOfAny</name>
+        <method name="IndexOfAny">
             <sig>int (char[] anyOf)</sig>
             <sig>int (char[] anyOf, int startIndex)</sig>
             <sig>int (char[] anyOf, int startIndex, int count)</sig>
@@ -446,8 +357,7 @@ csharp> s.IndexOfAny("ab".ToCharArray());
             </example>
         </method>
 
-        <method>
-            <name>Insert</name>
+        <method name="Insert">
             <sig>string (int startIndex, string value)</sig>
             <desc>
                 startIndex に文字列 value を挿入した新しい文字列を返します。
@@ -462,52 +372,42 @@ csharp> s
             </example>
         </method>
 
-        <static-method>
-            <name>Intern</name>
+        <static-method name="Intern">
         </static-method>
 
-        <static-method>
-            <name>IsInterned</name>
+        <static-method name="IsInterned">
         </static-method>
 
-        <method>
-            <name>IsNormalized</name>
+        <method name="IsNormalized">
         </method>
 
-        <static-method>
-            <name>IsNullOrEmpty</name>
+        <static-method name="IsNullOrEmpty">
         </static-method>
 
-        <static-method>
-            <name>IsNullOrWhiteSpace</name>
+        <static-method name="IsNullOrWhiteSpace">
         </static-method>
 
-        <static-method>
-            <name>Join</name>
+        <static-method name="Join">
         </static-method>
 
-        <method>
-            <name>LastIndexOf</name>
+        <method name="LastIndexOf">
             <desc>
                 IndexOf() と同じだが、最後に見つかった文字、文字列のインデックスを返す。
                 見つからなければ、-1 を返す。
             </desc>
         </method>
 
-        <method>
-            <name>LastIndexOfAny</name>
+        <method name="LastIndexOfAny">
             <desc>
                 IndexOfAny() と同じだが、再顔に見つかった文字、文字列のインデックスを返す。
                 見つからなければ、-1 を返す。
             </desc>
         </method>
 
-        <method>
-            <name>Normalize</name>
+        <method name="Normalize">
         </method>
 
-        <method>
-            <name>PadLeft</name>
+        <method name="PadLeft">
             <sig>string (int totalWidth)</sig>
             <sig>string (int totalWidth, char paddingChar)</sig>
             <example>
@@ -519,8 +419,7 @@ csharp> s.PadLeft(5, '-');
             </example>
         </method>
 
-        <method>
-            <name>PadRight</name>
+        <method name="PadRight">
             <sig>string (int totalWidth)</sig>
             <sig>string (int totalWidth, char paddingChar)</sig>
             <example>
@@ -532,8 +431,7 @@ csharp> s.PadRight(5, '-');
             </example>
         </method>
 
-        <method>
-            <name>Remove</name>
+        <method name="Remove">
             <sig>string (int startIndex)</sig>
             <sig>string (int startIndex, int count)</sig>
             <desc>
@@ -550,8 +448,7 @@ csharp> s.Remove(2, 3);
             </example>
         </method>
 
-        <method>
-            <name>Replace</name>
+        <method name="Replace">
             <sig>string (char oldChar, char newChar)</sig>
             <sig>string (string oldValue, string newValue)</sig>
             <example>
@@ -562,19 +459,16 @@ csharp> "hello world".Replace('o', '-'); // 全ての文字が置換される
             </example>
         </method>
 
-        <method>
-            <name>Split</name>
+        <method name="Split">
         </method>
 
-        <method>
-            <name>StartsWith</name>
+        <method name="StartsWith">
             <sig>bool (string value)</sig>
             <sig>bool (string value, StringComparison type)</sig>
             <sig>bool (string value, bool ignoreCase, CultureInfo culture)</sig>
         </method>
 
-        <method>
-            <name>Substring</name>
+        <method name="Substring">
             <sig>string (int startIndex)</sig>
             <sig>string (int startIndex, int length)</sig>
             <example>
@@ -586,765 +480,632 @@ csharp> s.Substring(3, 2);
             </example>
         </method>
 
-        <method>
-            <name>ToCharArray</name>
+        <method name="ToCharArray">
         </method>
 
-        <method>
-            <name>ToLower</name>
+        <method name="ToLower">
         </method>
 
-        <method>
-            <name>ToLowerInvariant</name>
+        <method name="ToLowerInvariant">
         </method>
 
-        <method>
-            <name>ToString</name>
+        <method name="ToString">
         </method>
 
-        <method>
-            <name>ToUpper</name>
+        <method name="ToUpper">
         </method>
 
-        <method>
-            <name>ToUpperInvariant</name>
+        <method name="ToUpperInvariant">
         </method>
 
-        <method>
-            <name>Trim</name>
+        <method name="Trim">
         </method>
 
-        <method>
-            <name>TrimEnd</name>
+        <method name="TrimEnd">
         </method>
 
-        <method>
-            <name>TrimStart</name>
+        <method name="TrimStart">
         </method>
 
     </class>
 
     <class name="Array">
-        <static-method>
-            <name>AsReadOnly</name>
+        <static-method name="AsReadOnly">
         </static-method>
 
-        <static-method>
-            <name>BinarySearch</name>
+        <static-method name="BinarySearch">
         </static-method>
 
-        <static-method>
-            <name>Clear</name>
+        <static-method name="Clear">
         </static-method>
 
-        <static-method>
-            <name>Clone</name>
+        <static-method name="Clone">
         </static-method>
 
-        <static-method>
-            <name>ConstrainedCopy</name>
+        <static-method name="ConstrainedCopy">
         </static-method>
 
-        <static-method>
-            <name>ConvertAll</name>
+        <static-method name="ConvertAll">
         </static-method>
 
-        <static-method>
-            <name>Copy</name>
+        <static-method name="Copy">
         </static-method>
 
-        <static-method>
-            <name>CopyTo</name>
+        <static-method name="CopyTo">
         </static-method>
 
-        <static-method>
-            <name>CreateInstance</name>
+        <static-method name="CreateInstance">
         </static-method>
 
-        <static-method>
-            <name>Equals</name>
+        <static-method name="Equals">
         </static-method>
 
-        <static-method>
-            <name>Exists</name>
+        <static-method name="Exists">
         </static-method>
 
-        <static-method>
-            <name>Finalize</name>
+        <static-method name="Finalize">
         </static-method>
 
-        <static-method>
-            <name>Find</name>
+        <static-method name="Find">
         </static-method>
 
-        <static-method>
-            <name>FindAll</name>
+        <static-method name="FindAll">
         </static-method>
 
-        <static-method>
-            <name>FindIndex</name>
+        <static-method name="FindIndex">
         </static-method>
 
-        <static-method>
-            <name>FindLast</name>
+        <static-method name="FindLast">
         </static-method>
 
-        <static-method>
-            <name>FindLastIndex</name>
+        <static-method name="FindLastIndex">
         </static-method>
 
-        <static-method>
-            <name>ForEach</name>
+        <static-method name="ForEach">
         </static-method>
 
-        <method>
-            <name>GetEnumerator</name>
+        <method name="GetEnumerator">
         </method>
 
-        <method>
-            <name>GetHashCode</name>
+        <method name="GetHashCode">
         </method>
 
-        <method>
-            <name>GetLength</name>
+        <method name="GetLength">
         </method>
 
-        <method>
-            <name>GetongLength</name>
+        <method name="GetongLength">
         </method>
 
-        <method>
-            <name>GetLowerBound</name>
+        <method name="GetLowerBound">
         </method>
 
-        <method>
-            <name>GetType</name>
+        <method name="GetType">
         </method>
 
-        <method>
-            <name>GetUpperBound</name>
+        <method name="GetUpperBound">
         </method>
 
-        <method>
-            <name>GetValue</name>
+        <method name="GetValue">
         </method>
 
-        <static-method>
-            <name>IndexOf</name>
+        <static-method name="IndexOf">
         </static-method>
 
-        <method>
-            <name>Initialize</name>
+        <method name="Initialize">
         </method>
 
-        <static-method>
-            <name>LastIndexOf</name>
+        <static-method name="LastIndexOf">
         </static-method>
 
-        <method>
-            <name>MemberwiseClone</name>
+        <method name="MemberwiseClone">
         </method>
 
-        <static-method>
-            <name>Resize</name>
+        <static-method name="Resize">
         </static-method>
 
-        <static-method>
-            <name>Reverse</name>
+        <static-method name="Reverse">
         </static-method>
 
-        <method>
-            <name>SetValue</name>
+        <method name="SetValue">
         </method>
 
-        <static-method>
-            <name>Sort</name>
+        <static-method name="Sort">
         </static-method>
 
-        <method>
-            <name>ToString</name>
+        <method name="ToString">
         </method>
 
-        <static-method>
-            <name>TrueForAll</name>
+        <static-method name="TrueForAll">
         </static-method>
     </class>
 
     <class name="Dictionary">
-        <method>
-            <name>Add</name>
+        <method name="Add">
         </method>
 
-        <method>
-            <name>Clear</name>
+        <method name="Clear">
         </method>
 
-        <method>
-            <name>ContainsKey</name>
+        <method name="ContainsKey">
         </method>
 
-        <method>
-            <name>ContainsValue</name>
+        <method name="ContainsValue">
         </method>
 
-        <method>
-            <name>Equals</name>
+        <method name="Equals">
         </method>
 
-        <method>
-            <name>Finalize</name>
+        <method name="Finalize">
         </method>
 
-        <method>
-            <name>GetEnumerator</name>
+        <method name="GetEnumerator">
         </method>
 
-        <method>
-            <name>GetHashCode</name>
+        <method name="GetHashCode">
         </method>
 
-        <method>
-            <name>GetObjectData</name>
+        <method name="GetObjectData">
         </method>
 
-        <method>
-            <name>GetType</name>
+        <method name="GetType">
         </method>
 
-        <method>
-            <name>MemberwiseClone</name>
+        <method name="MemberwiseClone">
         </method>
 
-        <method>
-            <name>OnDeserialization</name>
+        <method name="OnDeserialization">
         </method>
 
-        <method>
-            <name>Remove</name>
+        <method name="Remove">
         </method>
 
-        <method>
-            <name>ToString</name>
+        <method name="ToString">
         </method>
 
-        <method>
-            <name>TryGetValue</name>
+        <method name="TryGetValue">
         </method>
 
-        <property>
-            <name>Comparer</name>
+        <property name="Comparer">
         </property>
 
-        <property>
-            <name>Count</name>
+        <property name="Count">
         </property>
 
-        <property>
-            <name>Item</name>
+        <property name="Item">
         </property>
 
-        <property>
-            <name>Keys</name>
+        <property name="Keys">
         </property>
 
-        <property>
-            <name>Values</name>
+        <property name="Values">
         </property>
 
     </class>
 
     <class name="HashSet">
-        <method>
-            <name>Add</name>
+        <method name="Add">
         </method>
 
-        <method>
-            <name>Clear</name>
+        <method name="Clear">
         </method>
 
-        <method>
-            <name>Contains</name>
+        <method name="Contains">
         </method>
 
-        <method>
-            <name>CopyTo</name>
+        <method name="CopyTo">
         </method>
 
-        <static-method>
-            <name>CreateSetComparer</name>
+        <static-method name="CreateSetComparer">
         </static-method>
 
-        <method>
-            <name>Equals</name>
+        <method name="Equals">
         </method>
 
-        <method>
-            <name>ExceptWith</name>
+        <method name="ExceptWith">
         </method>
 
-        <method>
-            <name>Finalize</name>
+        <method name="Finalize">
         </method>
 
-        <method>
-            <name>GetEnumerator</name>
+        <method name="GetEnumerator">
         </method>
 
-        <method>
-            <name>GetHashCode</name>
+        <method name="GetHashCode">
         </method>
 
-        <method>
-            <name>GetObjectData</name>
+        <method name="GetObjectData">
         </method>
 
-        <method>
-            <name>GetType</name>
+        <method name="GetType">
         </method>
 
-        <method>
-            <name>IntersectWith</name>
+        <method name="IntersectWith">
         </method>
 
-        <method>
-            <name>IsProperSubsetOf</name>
+        <method name="IsProperSubsetOf">
         </method>
 
-        <method>
-            <name>IsProperSupersetOf</name>
+        <method name="IsProperSupersetOf">
         </method>
 
-        <method>
-            <name>IsSubsetOf</name>
+        <method name="IsSubsetOf">
         </method>
 
-        <method>
-            <name>IsSupersetOf</name>
+        <method name="IsSupersetOf">
         </method>
 
-        <method>
-            <name>MemberwiseClone</name>
+        <method name="MemberwiseClone">
         </method>
 
-        <method>
-            <name>OnDeserialization</name>
+        <method name="OnDeserialization">
         </method>
 
-        <method>
-            <name>Overlaps</name>
+        <method name="Overlaps">
         </method>
 
-        <method>
-            <name>Remove</name>
+        <method name="Remove">
         </method>
 
-        <method>
-            <name>RemoveWhere</name>
+        <method name="RemoveWhere">
         </method>
 
-        <method>
-            <name>SetEquals</name>
+        <method name="SetEquals">
         </method>
 
-        <method>
-            <name>SymmetricExceptWith</name>
+        <method name="SymmetricExceptWith">
         </method>
 
-        <method>
-            <name>ToString</name>
+        <method name="ToString">
         </method>
 
-        <method>
-            <name>TrimExcess</name>
+        <method name="TrimExcess">
         </method>
 
-        <method>
-            <name>UnionWith</name>
+        <method name="UnionWith">
         </method>
 
-        <property>
-            <name>Comparer</name>
+        <property name="Comparer">
         </property>
 
-        <property>
-            <name>Count</name>
+        <property name="Count">
         </property>
 
     </class>
 
 
     <class name="Stack">
-        <method>
-            <name>Clear</name>
+        <method name="Clear">
         </method>
 
-        <method>
-            <name>Contains</name>
+        <method name="Contains">
         </method>
 
-        <method>
-            <name>CopyTo</name>
+        <method name="CopyTo">
         </method>
 
-        <method>
-            <name>Equals</name>
+        <method name="Equals">
         </method>
 
-        <method>
-            <name>Finalize</name>
+        <method name="Finalize">
         </method>
 
-        <method>
-            <name>GetEnumerator</name>
+        <method name="GetEnumerator">
         </method>
 
-        <method>
-            <name>GetHashCode</name>
+        <method name="GetHashCode">
         </method>
 
-        <method>
-            <name>GetType</name>
+        <method name="GetType">
         </method>
 
-        <method>
-            <name>MemberwiseClone</name>
+        <method name="MemberwiseClone">
         </method>
 
-        <method>
-            <name>Peek</name>
+        <method name="Peek">
         </method>
 
-        <method>
-            <name>Pop</name>
+        <method name="Pop">
         </method>
 
-        <method>
-            <name>Push</name>
+        <method name="Push">
         </method>
 
-        <method>
-            <name>ToArray</name>
+        <method name="ToArray">
         </method>
 
-        <method>
-            <name>ToString</name>
+        <method name="ToString">
         </method>
 
-        <method>
-            <name>TrimExcess</name>
+        <method name="TrimExcess">
         </method>
 
-        <property>
-            <name>Count</name>
+        <property name="Count">
         </property>
     </class>
 
     <class name="Queue">
-        <method>
-            <name>Clear</name>
+        <method name="Clear">
         </method>
 
-        <method>
-            <name>Contains</name>
+        <method name="Contains">
         </method>
 
-        <method>
-            <name>CopyTo</name>
+        <method name="CopyTo">
         </method>
 
-        <method>
-            <name>Dequeue</name>
+        <method name="Dequeue">
         </method>
 
-        <method>
-            <name>Enqueue</name>
+        <method name="Enqueue">
         </method>
 
-        <method>
-            <name>Equals</name>
+        <method name="Equals">
         </method>
 
-        <method>
-            <name>Finalize</name>
+        <method name="Finalize">
         </method>
 
-        <method>
-            <name>GetEnumerator</name>
+        <method name="GetEnumerator">
         </method>
 
-        <method>
-            <name>GetHashCode</name>
+        <method name="GetHashCode">
         </method>
 
-        <method>
-            <name>GetType</name>
+        <method name="GetType">
         </method>
 
-        <method>
-            <name>MemberwiseClone</name>
+        <method name="MemberwiseClone">
         </method>
 
-        <method>
-            <name>Peek</name>
+        <method name="Peek">
         </method>
 
-        <method>
-            <name>ToArray</name>
+        <method name="ToArray">
         </method>
 
-        <method>
-            <name>ToString</name>
+        <method name="ToString">
         </method>
 
-        <method>
-            <name>TrimExcess</name>
+        <method name="TrimExcess">
         </method>
 
-        <property>
-            <name>Count</name>
+        <property name="Count">
         </property>
     </class>
 
+    <class name="Random">
+        <method name="Equals">
+        </method>
 
-    <interface name="IEnumerator&lt;T&gt;">
+        <method name="Finalize">
+        </method>
+
+        <method name="GetHashCode">
+        </method>
+
+        <method name="GetType">
+        </method>
+
+        <method name="MemberwiseClone">
+        </method>
+
+        <method name="Next">
+            <sig>int ()</sig>
+            <sig>int (int maxValue)</sig>
+            <sig>int (int minValue, int maxValue)</sig>
+            <desc>
+                引数なしの場合は、0 以上、int.MaxValue 未満の int を返します。
+                引数一つの場合は、0 以上、maxValue 未満の int を返します。
+                引数二つの場合は、minValue 以上、maxValue 未満の int を返します。
+            </desc>
+        </method>
+
+        <method name="NextBytes">
+            <sig>void (byte[] buffer)</sig>
+            <desc>
+                引数 buffer にランダムなバイトを格納します。
+            </desc>
+        </method>
+
+        <method name="NextDouble">
+            <sig>double ()</sig>
+            <desc>
+                0.0 以上、1.0 未満の double を返します。
+            </desc>
+        </method>
+
+        <method name="Sample">
+            <sig>double ()</sig>
+            <desc>
+                0.0 以上、1.0 未満の double を返します。
+
+                (このメソッドは protected です。代わりに NextDouble メソッドを使用します)
+            </desc>
+        </method>
+
+        <method name="ToString">
+        </method>
+
+    </class>
+
+    <!-- 便宜的に Linq クラスとする -->
+    <class name="Linq">
         <url>https://msdn.microsoft.com/ja-jp/library/ckzcawb8(v=vs.110).aspx</url>
 
-        <method>
-            <name>GetEnumerator</name>
+        <method name="GetEnumerator">
         </method>
 
-        <method>
-            <name>Aggregate</name>
+        <method name="Aggregate">
         </method>
 
-        <method>
-            <name>All</name>
+        <method name="All">
         </method>
 
-        <method>
-            <name>Ancestors</name>
+        <method name="Ancestors">
         </method>
 
-        <method>
-            <name>Any</name>
+        <method name="Any">
         </method>
 
-        <method>
-            <name>AsEnumerable</name>
+        <method name="AsEnumerable">
         </method>
 
-        <method>
-            <name>AsParallel</name>
+        <method name="AsParallel">
         </method>
 
-        <method>
-            <name>AsQueryable</name>
+        <method name="AsQueryable">
         </method>
 
-        <method>
-            <name>Average</name>
+        <method name="Average">
         </method>
 
-        <method>
-            <name>Cast</name>
+        <method name="Cast">
         </method>
 
-        <method>
-            <name>Concat</name>
+        <method name="Concat">
         </method>
 
-        <method>
-            <name>Contains</name>
+        <method name="Contains">
         </method>
 
-        <method>
-            <name>CopyToDataTable</name>
+        <method name="CopyToDataTable">
         </method>
 
-        <method>
-            <name>Count</name>
+        <method name="Count">
         </method>
 
-        <method>
-            <name>DefaultIfEmpty</name>
+        <method name="DefaultIfEmpty">
         </method>
 
-        <method>
-            <name>DescendantNodes</name>
+        <method name="DescendantNodes">
         </method>
 
-        <method>
-            <name>Distinct</name>
+        <method name="Distinct">
         </method>
 
-        <method>
-            <name>ElementAt</name>
+        <method name="ElementAt">
         </method>
 
-        <method>
-            <name>ElementAtOrDefault</name>
+        <method name="ElementAtOrDefault">
         </method>
 
-        <method>
-            <name>Elements</name>
+        <method name="Elements">
         </method>
 
-        <method>
-            <name>Except</name>
+        <method name="Except">
         </method>
 
-        <method>
-            <name>First</name>
+        <method name="First">
         </method>
 
-        <method>
-            <name>FirstOrDefault</name>
+        <method name="FirstOrDefault">
         </method>
 
-        <method>
-            <name>GroupBy</name>
+        <method name="GroupBy">
         </method>
 
-        <method>
-            <name>GroupJoin</name>
+        <method name="GroupJoin">
         </method>
 
-        <method>
-            <name>InDocumentOrder</name>
+        <method name="InDocumentOrder">
         </method>
 
-        <method>
-            <name>Intersect</name>
+        <method name="Intersect">
         </method>
 
-        <method>
-            <name>Join</name>
+        <method name="Join">
         </method>
 
-        <method>
-            <name>Last</name>
+        <method name="Last">
         </method>
 
-        <method>
-            <name>LastOrDefault</name>
+        <method name="LastOrDefault">
         </method>
 
-        <method>
-            <name>LongCount</name>
+        <method name="LongCount">
         </method>
 
-        <method>
-            <name>Max</name>
+        <method name="Max">
         </method>
 
-        <method>
-            <name>Min</name>
+        <method name="Min">
         </method>
 
-        <method>
-            <name>Nodes</name>
+        <method name="Nodes">
         </method>
 
-        <method>
-            <name>OfType</name>
+        <method name="OfType">
         </method>
 
-        <method>
-            <name>OrderBy</name>
+        <method name="OrderBy">
         </method>
 
-        <method>
-            <name>OrderByDescending</name>
+        <method name="OrderByDescending">
         </method>
 
-        <method>
-            <name>Remove</name>
+        <method name="Remove">
         </method>
 
-        <method>
-            <name>Reverse</name>
+        <method name="Reverse">
         </method>
 
-        <method>
-            <name>Select</name>
+        <method name="Select">
         </method>
 
-        <method>
-            <name>SelectMany</name>
+        <method name="SelectMany">
         </method>
 
-        <method>
-            <name>SequenceEqual</name>
+        <method name="SequenceEqual">
         </method>
 
-        <method>
-            <name>Single</name>
+        <method name="Single">
         </method>
 
-        <method>
-            <name>SingleOrDefault</name>
+        <method name="SingleOrDefault">
         </method>
 
-        <method>
-            <name>Skip</name>
+        <method name="Skip">
         </method>
 
-        <method>
-            <name>SkipWhile</name>
+        <method name="SkipWhile">
         </method>
 
-        <method>
-            <name>Subscribe</name>
+        <method name="Subscribe">
         </method>
 
-        <method>
-            <name>Sum</name>
+        <method name="Sum">
         </method>
 
-        <method>
-            <name>Take</name>
+        <method name="Take">
         </method>
 
-        <method>
-            <name>TakeWhile</name>
+        <method name="TakeWhile">
         </method>
 
-        <method>
-            <name>ToArray</name>
+        <method name="ToArray">
         </method>
 
-        <method>
-            <name>ToDictionary</name>
+        <method name="ToDictionary">
         </method>
 
-        <method>
-            <name>ToList</name>
+        <method name="ToList">
         </method>
 
-        <method>
-            <name>ToLookup</name>
+        <method name="ToLookup">
         </method>
 
-        <method>
-            <name>ToObservable</name>
+        <method name="ToObservable">
         </method>
 
-        <method>
-            <name>Union</name>
+        <method name="Union">
         </method>
 
-        <method>
-            <name>Where</name>
+        <method name="Where">
         </method>
 
-        <method>
-            <name>Zip</name>
+        <method name="Zip">
         </method>
     </interface>
 
-
-
 </cs>
-
-
 
