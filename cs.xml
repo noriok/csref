@@ -552,8 +552,32 @@ csharp> ys
 
         </static-method>
 
-        <static-method name="CopyTo">
-        </static-method>
+		<method name="CopyTo">
+			<sig>void (Array dst, int dstStartIndex)</sig>
+			<sig>void (Array dst, long dstStartIndex)</sig>
+			<desc>
+				配列をコピーします。
+				引数には、コピー先の配列と、コピー先のコピー開始位置を指定します。
+				コピー先の要素数が足りない場合は、System.ArgumentException が生成されます。
+			</desc>
+			<example>
+csharp> var xs = new int[] { 1, 23, 456 };
+csharp> var ys = new int[xs.Length];
+csharp> ys
+{ 0, 0, 0 }
+csharp> xs.CopyTo(ys, 0); // xs を ys の 0 番目からコピーする
+
+csharp> var zs = new int[xs.Length + 1];
+csharp> zs
+{ 0, 0, 0, 0 }
+csharp> xs.CopyTo(zs, 1); // xs を zs の 1 番目からコピーする
+csharp> zs
+{ 0, 1, 23, 456 }
+csharp> xs.CopyTo(zs, 2); // System.ArgumentException が発生する(要素数が足りないため)。
+			</example>
+
+
+        </method>
 
         <static-method name="CreateInstance">
         </static-method>
