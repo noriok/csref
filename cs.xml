@@ -528,7 +528,28 @@ csharp> s.Substring(3, 2);
         <static-method name="ConvertAll">
         </static-method>
 
-        <static-method name="Copy">
+		<static-method name="Copy">
+			<sig>void (Array src, Array dst, int length)</sig>
+			<sig>void (Array src, Array dst, long length)</sig>
+			<sig>void (Array src, int srcIndex, Array dst, int dstIndex, int length)</sig>
+			<sig>void (Array src, long srcIndex, Array dst, long dstIndex, long length)</sig>
+			<desc>
+				配列をコピーします。
+			</desc>
+			<example>
+csharp> var xs = new int[] { 1, 23, 456 };
+csharp> var ys = new int[xs.Length];
+csharp> ys
+{ 0, 0, 0 }
+csharp> Array.Copy(xs, ys, xs.Length); // xs を ys へコピーする
+csharp> ys
+{ 1, 23, 456 }
+csharp> Array.Copy(xs, 1, ys, 0, 2); //  xs の 1 番目から、ys の 0 番目へ
+                                     //  要素 2 つ分コピーする
+csharp> ys
+{ 23, 456, 456 }
+			</example>
+
         </static-method>
 
         <static-method name="CopyTo">
