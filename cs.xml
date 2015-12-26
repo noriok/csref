@@ -794,7 +794,20 @@ csharp> xs.CopyTo(zs, 2); // System.ArgumentException が発生する(要素数�
         <method name="RemoveWhere">
         </method>
 
-        <method name="SetEquals">
+		<method name="SetEquals">
+			<sig>bool (IEnumerable&lt;T&gt; other)</sig>
+			<desc>other の要素と一致するなら true を返します。</desc>
+			<example>
+csharp> var hs = new HashSet&lt;int&gt;() { 1, 2, 3 };
+csharp> hs.SetEquals(hs);
+true
+csharp> hs.SetEquals(new[] { 2, 3, 1 });
+true
+csharp> hs.SetEquals(new[] { 2, 3 });
+false
+csharp> hs.SetEquals(new[] { 2, 3, 1, 4 });
+false
+			</example>
         </method>
 
         <method name="SymmetricExceptWith">
@@ -1016,7 +1029,17 @@ csharp> xs.CopyTo(zs, 2); // System.ArgumentException が発生する(要素数�
         <method name="CopyToDataTable">
         </method>
 
-        <method name="Count">
+		<method name="Count">
+			<sig>int (this IEnumerable&lt;T&gt; xs)</sig>
+			<sig>int (this IEnumerable&lt;T&gt; xs, Func&lt;T, bool&gt; pred</sig>
+			<desc>要素数を返します。</desc>
+			<example>
+csharp> var xs = new List&lt;int&gt;() { -9, 9, 34, 9 }
+csharp> xs.Count();
+4
+csharp> xs.Count(e => e == 9);
+2
+			</example>
         </method>
 
         <method name="DefaultIfEmpty">
@@ -1110,6 +1133,17 @@ csharp> xs.CopyTo(zs, 2); // System.ArgumentException が発生する(要素数�
         </method>
 
         <method name="Skip">
+            <sig>IEnumerable&lt;T&gt; (this IEnumerable&lt;T&gt; xs, int count)</sig>
+            <desc>
+                先頭の count 要素を捨てて、残りの要素を返します。
+            </desc>
+            <example>
+csharp> var xs = new[] { 1, 2, 3, 4, 5 };
+csharp> xs.Skip(3);
+{ 4, 5 }
+csharp> xs.Skip(12);
+{  }
+            </example>
         </method>
 
         <method name="SkipWhile">
@@ -1119,6 +1153,18 @@ csharp> xs.CopyTo(zs, 2); // System.ArgumentException が発生する(要素数�
         </method>
 
         <method name="Sum">
+            <sig>T (this IEnumerable&lt;T&gt; xs)</sig>
+            <sig>U (this IEnumerable&lt;T&gt; xs, Func&lt;T, U&gt;)</sig>
+            <desc>
+                和を求めます。
+            </desc>
+            <example>
+csharp> var xs = new[] { 1, 2, 3, 4, 5 };
+csharp> xs.Sum();
+15
+csharp> xs.Sum(e => e + 1); // キーの指定も可能
+20
+            </example>
         </method>
 
         <method name="Take">
@@ -1150,7 +1196,7 @@ csharp> xs.CopyTo(zs, 2); // System.ArgumentException が発生する(要素数�
 
         <method name="Zip">
         </method>
-    </interface>
+    </class>
 
 </cs>
 
