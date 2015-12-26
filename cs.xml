@@ -58,6 +58,15 @@
         </static-method>
 
         <static-method name="DivRem">
+            <sig>int (int a, int b, out int m)</sig>
+            <desc>商と余りを求めます。</desc>
+            <example>
+csharp> var m = 0;
+csharp> Math.DivRem(10, 3, out m);
+3
+csharp> m
+1
+            </example>
         </static-method>
 
         <static-method name="Exp">
