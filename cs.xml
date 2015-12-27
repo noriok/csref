@@ -1075,7 +1075,11 @@ csharp> xs.Count(e => e == 9);
         <method name="First">
             <sig>T (this IEnumerable&lt;T&gt; xs)</sig>
             <sig>T (this IEnumerable&lt;T&gt; xs, Func&lt;T, bool&gt; pred)</sig>
-            <desc>最初の要素を返します。</desc>
+            <desc>
+                最初の要素を返します。
+                シーケンスが空だったり、pred にマッチする要素が見つからない場合は、
+                InvalidOperationException 例外が生成されます。
+            </desc>
             <example>
 csharp> var xs = new[] { 1, 2, 3, 4, 5 };
 csharp> xs.First();
@@ -1086,6 +1090,23 @@ csharp> xs.First(e => e >= 3);
         </method>
 
         <method name="FirstOrDefault">
+            <sig>T (this IEnumerable&lt;T&gt; xs)</sig>
+            <sig>T (this IEnumerable&lt;T&gt; xs, Func&lt;T, bool&gt; pred)</sig>
+            <desc>
+                最初の要素を返します。
+                シーケンスが空だったり、pred にマッチする要素が見つからない場合は、
+                規定値を返します。
+                規定値を指定するには、DefaultIfEmpty() を使います。
+            </desc>
+            <example>
+csharp> var xs = new int[0];
+csharp> xs.FirstOrDefault();
+0
+csharp> new[] { 1, 2, 3 }.FirstOrDefault(e => e > 100);
+0
+csharp> xs.DefaultIfEmpty(100).First();
+100
+            </example>
         </method>
 
         <method name="GroupBy">
@@ -1104,9 +1125,41 @@ csharp> xs.First(e => e >= 3);
         </method>
 
         <method name="Last">
+            <sig>T (this IEnumerable&lt;T&gt; xs)</sig>
+            <sig>T (this IEnumerable&lt;T&gt; xs, Func&lt;T, bool&gt; pred)</sig>
+            <desc>
+                最後の要素を返します。
+                シーケンスが空だったり、pred にマッチする要素が見つからない場合は、
+                InvalidOperationException 例外が生成されます。
+            </desc>
+            <example>
+csharp> var xs = new[] { 1, 2, 3, 4, 5 };
+csharp> xs.Last();
+5
+csharp> xs.Last(e => e &lt;= 3);
+3
+            </example>
+
         </method>
 
         <method name="LastOrDefault">
+            <sig>T (this IEnumerable&lt;T&gt; xs)</sig>
+            <sig>T (this IEnumerable&lt;T&gt; xs, Func&lt;T, bool&gt; pred)</sig>
+            <desc>
+                最後の要素を返します。
+                シーケンスが空だったり、pred にマッチする要素が見つからない場合は、
+                規定値を返します。
+                規定値を指定するには、DefaultIfEmpty() を使います。
+            </desc>
+            <example>
+csharp> var xs = new int[0];
+csharp> xs.LastOrDefault();
+0
+csharp> new[] { 1, 2, 3 }.LastOrDefault(e => e > 100);
+0
+csharp> xs.DefaultIfEmpty(100).Last();
+100
+            </example>
         </method>
 
         <method name="LongCount">
