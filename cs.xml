@@ -1073,6 +1073,16 @@ csharp> xs.Count(e => e == 9);
         </method>
 
         <method name="First">
+            <sig>T (this IEnumerable&lt;T&gt; xs)</sig>
+            <sig>T (this IEnumerable&lt;T&gt; xs, Func&lt;T, bool&gt; pred)</sig>
+            <desc>最初の要素を返します。</desc>
+            <example>
+csharp> var xs = new[] { 1, 2, 3, 4, 5 };
+csharp> xs.First();
+1
+csharp> xs.First(e => e >= 3);
+3
+            </example>
         </method>
 
         <method name="FirstOrDefault">
