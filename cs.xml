@@ -135,6 +135,16 @@ csharp> m
         </method>
 
         <method name="AddRange">
+            <sig>void (IEnumerable&lt;T&gt; xs)</sig>
+            <desc>
+                指定したシーケンスの要素を末尾に追加します。
+            </desc>
+            <example>
+csharp> var xs = new List&lt;int&gt;();
+csharp> xs.AddRange(new[] { 1, 2, 3 });
+csharp> xs
+{ 1, 2, 3 }
+            </example>
         </method>
 
         <method name="AsReadOnly">
