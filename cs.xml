@@ -295,6 +295,26 @@ csharp> ls.Find(e => e == 10); // int の既定値が返る
         </method>
 
         <static-method name="Concat">
+            <sig>string (object o)</sig>
+            <sig>string (object o, object o2)</sig>
+            <sig>string (object o, object o2, object o3)</sig>
+            <sig>string (object o, object o2, object o3, object o4)</sig>
+            <sig>string (object[] objs)</sig>
+            <sig>string (string s)</sig>
+            <sig>string (string s, string s2)</sig>
+            <sig>string (string s, string s2, string s3)</sig>
+            <sig>string (string s, string s2, string s3, string s4)</sig>
+            <sig>string (string[] ss)</sig>
+            <sig>string (IEnumerable&lt;T&gt; xs)</sig>
+            <desc>
+                指定したオブジェクトを文字列形式で連結します。
+            </desc>
+            <example>
+csharp> string.Concat(1, "foo");
+"1foo"
+csharp> string.Concat(new[] { 1, 2, 3 });
+"123"
+            </example>
         </static-method>
 
         <method name="Contains">
