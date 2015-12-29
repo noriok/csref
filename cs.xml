@@ -252,6 +252,23 @@ csharp> ls.Find(e => e == 10); // int の既定値が返る
         </method>
 
         <method name="Sort">
+            <sig>void ()</sig>
+            <sig>void (Comparison&lt;T&gt; comparison)</sig>
+            <sig>void (IComparer&lt;T&gt; comparer)</sig>
+            <sig>void (int index, int count, IComparer&lt;T&gt; comparer)</sig>
+            <desc>
+                ソートします。
+            </desc>
+            <example>
+csharp> var xs = new List&lt;string&gt;() { "class", "string", "list" };
+csharp> xs.Sort();
+csharp> xs
+{ "class", "list", "string" }
+csharp> xs.Sort((a, b) => a.Length.CompareTo(b.Length));
+csharp> xs
+{ "list", "class", "string" }
+csharp>
+            </example>
         </method>
 
         <method name="ToArray">
