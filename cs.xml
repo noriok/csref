@@ -175,9 +175,9 @@ csharp> xs
         </method>
 
         <method name="Find">
-            <sig>T (Predicate&lt;T&gt; match)</sig>
+            <sig>T (Predicate&lt;T&gt; pred)</sig>
             <desc>
-                match にマッチする最初の要素を返します。
+                pred にマッチする最初の要素を返します。
                 見つからない場合は、T の既定値を返します。
             </desc>
             <example>
@@ -192,6 +192,15 @@ csharp> ls.Find(e => e == 10); // int の既定値が返る
         </method>
 
         <method name="FindAll">
+            <sig>List&lt;T&gt; (Predicate&lt;T&gt; pred)</sig>
+            <desc>
+                pred にマッチする全ての要素をリストにして返します。
+            </desc>
+            <example>
+csharp> var xs = new List&lt;int&gt;() { 1, 2, 3, 4, 5 };
+csharp> xs.FindAll(e => e % 2 == 0);
+{ 2, 4 }
+            </example>
         </method>
 
         <method name="FindIndex">
