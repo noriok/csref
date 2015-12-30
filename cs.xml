@@ -219,6 +219,26 @@ csharp> ls.Find(e => e == 10); // int の既定値が返る
         </method>
 
         <method name="IndexOf">
+            <sig>int (T item)</sig>
+            <sig>int (T item, int startIndex)</sig>
+            <sig>int (T item, int startIndex, int count)</sig>
+            <desc>
+                指定したオブジェクトを検索します。
+                最初に見つかったオブジェクトのインデックスを返します。
+                見つからなければ -1 を返します。
+
+                引数 startIndex: 検索の開始位置インデックス
+                引数 count: 検索する要素数
+            </desc>
+            <example>
+csharp> var xs = new List&lt;int&gt;() { 1, 2, 3, 4, 5 };
+csharp> xs.IndexOf(3);
+2
+csharp> xs.IndexOf(3, 3);
+-1
+csharp> xs.IndexOf(5, 0, 1);
+-1
+            </example>
         </method>
 
         <method name="Insert">
