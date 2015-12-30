@@ -252,6 +252,15 @@ csharp> xs.IndexOf(5, 0, 1);
 
         <method name="Insert">
             <sig>void (int index, T item)</sig>
+            <desc>
+                指定したインデックスに要素を挿入します。
+            </desc>
+            <example>
+csharp> var xs = new List&lt;int&gt;() { 1, 2, 3 };
+csharp> xs.Insert(1, 100);
+csharp> xs
+{ 1, 100, 2, 3 }
+            </example>
         </method>
 
         <method name="InsertRange">
