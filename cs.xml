@@ -204,6 +204,27 @@ csharp> xs.FindAll(e => e % 2 == 0);
         </method>
 
         <method name="FindIndex">
+            <sig>int (Predicate&gt;T&gt; pred)</sig>
+            <sig>int (int startIndex, Predicate&lt;T&gt; pred)</sig>
+            <sig>int (int startIndex, int count, Predicate&lt;T&gt; pred)</sig>
+            <desc>
+                pred にマッチする要素を検索します。
+                最初に見つかる要素のインデックスを返します。
+                見つからなければ -1 を返します。
+
+                引数 startIndex: 検索の開始インデックス
+                引数 count: 検索する要素数
+            </desc>
+
+            <example>
+csharp> var xs = new List&lt;int&gt;() { 1, 2, 3, 4, 5 };
+csharp> xs.FindIndex(e => e > 2);
+2
+csharp> xs.FindIndex(2, e => e > 3); // xs[2] 以降の要素を検索
+3
+csharp> xs.FindIndex(2, e => e &lt; 3); // xs[2] 以降で 3 より小さな要素は存在しない
+-1
+            </example>
         </method>
 
         <method name="FindLast">
