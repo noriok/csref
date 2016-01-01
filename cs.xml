@@ -1130,6 +1130,23 @@ false
         </method>
 
         <method name="Any">
+            <sig>bool Any()</sig>
+            <sig>bool Any(this IEnumerable&lt;T&gt; xs, Func&lt;T, bool&gt; pred)</sig>
+            <desc>
+                シーケンスに要素が含まれるか調べます。
+
+                引数 pred: pred を満たす要素が含まれるか調べます。
+            </desc>
+            <example>
+csharp> new[] { false }.Any();
+true
+csharp> new int[0].Any();
+false
+csharp> new[] { 1, 3, 5 }.Any(e => e % 2 == 0);
+false
+csharp> new[] { 1, 3, 5 }.Any(e => e == 3);
+true
+            </example>
         </method>
 
         <method name="AsEnumerable">
