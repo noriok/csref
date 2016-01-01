@@ -1112,6 +1112,18 @@ false
         </method>
 
         <method name="All">
+            <sig>bool (this IEnumerable&lt;T&gt; xs, Func&lt;T, bool&gt; pred)</sig>
+            <desc>
+                全ての要素が pred を満たすかどうか調べます。
+            </desc>
+            <example>
+csharp> var xs = new[] { 1, 2, 3, 4, 5 };
+csharp> xs.All(e => e > 0); // 全ての要素は、0 より大きいか
+true
+csharp> xs.All(e => e % 2 == 0); // 全ての要素は、偶数か
+false
+            </example>
+
         </method>
 
         <method name="Ancestors">
