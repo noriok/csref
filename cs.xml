@@ -1396,6 +1396,17 @@ csharp> xs.Sum(e => e + 1); // キーの指定も可能
         </method>
 
         <method name="Union">
+            <sig>IEnumerable&lt;T&gt; (this IEnumerable&lt;T&gt; xs, IEnumerable&lt;T&gt; ys)</sig>
+            <sig>IEnumerable&lt;T&gt; (this IEnumerable&lt;T&gt;, IEnumerable&lt;T&gt; ys, IEqualityComparer&lt;T&gt; comparer)</sig>
+            <desc>
+                二つのシーケンスの和集合を生成します。
+            </desc>
+            <example>
+csharp> var xs = new[] { 1, 2, 3 };
+csharp> var ys = new[] { 2, 3, 4 };
+csharp> xs.Union(ys);
+{ 1, 2, 3, 4 }
+            </example>
         </method>
 
         <method name="Where">
