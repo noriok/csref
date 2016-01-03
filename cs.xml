@@ -1195,6 +1195,15 @@ csharp> xs.Count(e => e == 9);
         </method>
 
         <method name="ElementAt">
+            <sig>T (this IEnumerable&lt;T&gt; xs, int index)</sig>
+            <desc>指定されたインデックスの要素を返します。</desc>
+            <example>
+csharp> var xs = new[] { 1, 2, 3 };
+csharp> xs.ElementAt(0);
+1
+csharp> xs.ElementAt(1);
+2
+            </example>
         </method>
 
         <method name="ElementAtOrDefault">
