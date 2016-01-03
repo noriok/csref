@@ -1101,8 +1101,7 @@ false
 
     </class>
 
-    <!-- 便宜的に Linq クラスとする -->
-    <class name="Linq">
+    <class name="Enumerable">
         <url>https://msdn.microsoft.com/ja-jp/library/ckzcawb8(v=vs.110).aspx</url>
 
         <method name="GetEnumerator">
