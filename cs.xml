@@ -1186,6 +1186,23 @@ csharp> xs.Count(e => e == 9);
         </method>
 
         <method name="DefaultIfEmpty">
+            <sig>IEnumerable&lt;T&gt; (IEnumerable&lt;T&gt; xs)</sig>
+            <sig>IEnumerable&lt;T&gt; (IEnumerable&lt;T&gt; xs, T defaultValue)</sig>
+            <desc>
+                シーケンスが空ならば、T の規定値をひとつ含むシーケンスを返します。
+                シーケンスが空でなければ、シーケンスをそのまま返します。
+
+                引数 defaultValue: シーケンスが空の場合の規定値
+            </desc>
+            <example>
+csharp> var xs = new List&lt;int&gt;();
+csharp> xs.DefaultIfEmpty();
+{ 0 }
+csharp> xs.DefaultIfEmpty(123);
+{ 123 }
+csharp> new[] { 10, 20 }.DefaultIfEmpty();
+{ 10, 20 }
+            </example>
         </method>
 
         <method name="DescendantNodes">
