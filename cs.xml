@@ -1353,6 +1353,44 @@ csharp> xs.DefaultIfEmpty(100).Last();
         </method>
 
         <method name="SelectMany">
+            <sig>IEnumerable&lt;U&gt; (this IEnumerable&lt;T&gt; xs, Func&lt;T, IEnumerable&lt;U&gt;&gt; fn)</sig>
+            <sig>IEnumerable&lt;U&gt; (this IEnumerable&lt;T&gt; xs, Func&lt;T, int, IEnumerable&lt;U&gt;&gt; fn)</sig>
+            <sig>IEnumerable&lt;U&gt; (this IEnumerable&lt;T&gt; xs,
+                    Func&lt;T, IEnumerable&lt;M&gt; mfn,
+                    Func&lt;T, M, U&gt; rfn)</sig>
+            <sig>IEnumerable&lt;U&gt; (this IEnumerable&lt;T&gt; xs,
+                    Func&lt;T, int, IEnumerable&lt;M&gt; mfm,
+                    Func&lt;T, M, U&gt; rfn)</sig>
+            <desc>
+                シーケンスのシーケンスを平坦化して返します。
+            </desc>
+            <example>
+class Program {
+    static void Main() {
+        var xss = new List&lt;int[]&gt;() { new[] { 10, 20, 30 }, new[] { 40, 50 } };
+
+        var a = xss.SelectMany(e => e);
+        Console.WriteLine(string.Join(" ", a));
+        //=> 10 20 30 40 50
+
+        var b = xss.SelectMany((e, index) => e.Select(v => index));
+        Console.WriteLine(string.Join(" ", b));
+        //=> 0 0 0 1 1
+
+        var c = xss.SelectMany((e, index) => e.Select(v => Tuple.Create(v, index)));
+        Console.WriteLine(string.Join(" ", c));
+        //=> (10, 0) (20, 0) (30, 0) (40, 1) (50, 1)
+
+        Func&lt;int[], IEnumerable&lt;int&gt;&gt; identity = e => e;
+        Func&lt;int[], int, int&gt; rfn = (xs, v) => xs.Sum() == 60 ? v+1 : v-1;
+        // rfn には引数として xss と identity が返すシーケンスが渡されます。
+        // rfn の戻り値が SelectMany が返す要素になります。
+        var d = xss.SelectMany(identity, rfn);
+        Console.WriteLine(string.Join(" ", d));
+        //=> 11 21 31 39 49
+    }
+}
+            </example>
         </method>
 
         <method name="SequenceEqual">
