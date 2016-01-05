@@ -1102,10 +1102,7 @@ false
     </class>
 
     <class name="Enumerable">
-        <url>https://msdn.microsoft.com/ja-jp/library/ckzcawb8(v=vs.110).aspx</url>
-
-        <static-method name="GetEnumerator">
-        </static-method>
+        <url>https://msdn.microsoft.com/ja-jp/library/system.linq.enumerable_methods(v=vs.110).aspx</url>
 
         <static-method name="Aggregate">
         </static-method>
@@ -1123,9 +1120,6 @@ csharp> xs.All(e => e % 2 == 0); // 全ての要素は、偶数か
 false
             </example>
 
-        </static-method>
-
-        <static-method name="Ancestors">
         </static-method>
 
         <static-method name="Any">
@@ -1151,12 +1145,6 @@ true
         <static-method name="AsEnumerable">
         </static-method>
 
-        <static-method name="AsParallel">
-        </static-method>
-
-        <static-method name="AsQueryable">
-        </static-method>
-
         <static-method name="Average">
         </static-method>
 
@@ -1180,9 +1168,6 @@ csharp> xs.Contains(5);
 true
             </example>
 
-        </static-method>
-
-        <static-method name="CopyToDataTable">
         </static-method>
 
 		<static-method name="Count">
@@ -1218,9 +1203,6 @@ csharp> new[] { 10, 20 }.DefaultIfEmpty();
             </example>
         </static-method>
 
-        <static-method name="DescendantNodes">
-        </static-method>
-
         <static-method name="Distinct">
         </static-method>
 
@@ -1237,9 +1219,6 @@ csharp> xs.ElementAt(1);
         </static-method>
 
         <static-method name="ElementAtOrDefault">
-        </static-method>
-
-        <static-method name="Elements">
         </static-method>
 
         <static-method name="Except">
@@ -1286,9 +1265,6 @@ csharp> xs.DefaultIfEmpty(100).First();
         </static-method>
 
         <static-method name="GroupJoin">
-        </static-method>
-
-        <static-method name="InDocumentOrder">
         </static-method>
 
         <static-method name="Intersect">
@@ -1344,9 +1320,6 @@ csharp> xs.DefaultIfEmpty(100).Last();
         <static-method name="Min">
         </static-method>
 
-        <static-method name="Nodes">
-        </static-method>
-
         <static-method name="OfType">
         </static-method>
 
@@ -1356,7 +1329,10 @@ csharp> xs.DefaultIfEmpty(100).Last();
         <static-method name="OrderByDescending">
         </static-method>
 
-        <static-method name="Remove">
+        <static-method name="Range">
+        </static-method>
+
+        <static-method name="Repeat">
         </static-method>
 
         <static-method name="Reverse">
@@ -1432,9 +1408,6 @@ csharp> xs.Skip(12);
         <static-method name="SkipWhile">
         </static-method>
 
-        <static-method name="Subscribe">
-        </static-method>
-
         <static-method name="Sum">
             <sig>T (this IEnumerable&lt;T&gt; xs)</sig>
             <sig>U (this IEnumerable&lt;T&gt; xs, Func&lt;T, U&gt;)</sig>
@@ -1456,6 +1429,12 @@ csharp> xs.Sum(e => e + 1); // キーの指定も可能
         <static-method name="TakeWhile">
         </static-method>
 
+        <static-method name="ThenBy">
+        </static-method>
+
+        <static-method name="ThenByDescending">
+        </static-method>
+
         <static-method name="ToArray">
         </static-method>
 
@@ -1466,9 +1445,6 @@ csharp> xs.Sum(e => e + 1); // キーの指定も可能
         </static-method>
 
         <static-method name="ToLookup">
-        </static-method>
-
-        <static-method name="ToObservable">
         </static-method>
 
         <static-method name="Union">
