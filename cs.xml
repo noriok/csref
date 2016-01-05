@@ -1167,6 +1167,19 @@ true
         </method>
 
         <method name="Contains">
+            <sig>bool (IEnumerable&lt;T&gt; xs, T val)</sig>
+            <sig>bool (IEnumerable&lt;T&gt; xs, T val, IEqualityComparer&lt;T&gt; comparer)</sig>
+            <desc>
+                指定した要素がシーケンスに含まれるか判定します。
+            </desc>
+            <example>
+csharp> var xs = new[] { 1, 3, 5, 7 };
+csharp> xs.Contains(2);
+false
+csharp> xs.Contains(5);
+true
+            </example>
+
         </method>
 
         <method name="CopyToDataTable">
