@@ -1104,13 +1104,13 @@ false
     <class name="Enumerable">
         <url>https://msdn.microsoft.com/ja-jp/library/ckzcawb8(v=vs.110).aspx</url>
 
-        <method name="GetEnumerator">
-        </method>
+        <static-method name="GetEnumerator">
+        </static-method>
 
-        <method name="Aggregate">
-        </method>
+        <static-method name="Aggregate">
+        </static-method>
 
-        <method name="All">
+        <static-method name="All">
             <sig>bool (this IEnumerable&lt;T&gt; xs, Func&lt;T, bool&gt; pred)</sig>
             <desc>
                 全ての要素が pred を満たすかどうか調べます。
@@ -1123,12 +1123,12 @@ csharp> xs.All(e => e % 2 == 0); // 全ての要素は、偶数か
 false
             </example>
 
-        </method>
+        </static-method>
 
-        <method name="Ancestors">
-        </method>
+        <static-method name="Ancestors">
+        </static-method>
 
-        <method name="Any">
+        <static-method name="Any">
             <sig>bool Any()</sig>
             <sig>bool Any(this IEnumerable&lt;T&gt; xs, Func&lt;T, bool&gt; pred)</sig>
             <desc>
@@ -1146,27 +1146,27 @@ false
 csharp> new[] { 1, 3, 5 }.Any(e => e == 3);
 true
             </example>
-        </method>
+        </static-method>
 
-        <method name="AsEnumerable">
-        </method>
+        <static-method name="AsEnumerable">
+        </static-method>
 
-        <method name="AsParallel">
-        </method>
+        <static-method name="AsParallel">
+        </static-method>
 
-        <method name="AsQueryable">
-        </method>
+        <static-method name="AsQueryable">
+        </static-method>
 
-        <method name="Average">
-        </method>
+        <static-method name="Average">
+        </static-method>
 
-        <method name="Cast">
-        </method>
+        <static-method name="Cast">
+        </static-method>
 
-        <method name="Concat">
-        </method>
+        <static-method name="Concat">
+        </static-method>
 
-        <method name="Contains">
+        <static-method name="Contains">
             <sig>bool (IEnumerable&lt;T&gt; xs, T val)</sig>
             <sig>bool (IEnumerable&lt;T&gt; xs, T val, IEqualityComparer&lt;T&gt; comparer)</sig>
             <desc>
@@ -1180,12 +1180,12 @@ csharp> xs.Contains(5);
 true
             </example>
 
-        </method>
+        </static-method>
 
-        <method name="CopyToDataTable">
-        </method>
+        <static-method name="CopyToDataTable">
+        </static-method>
 
-		<method name="Count">
+		<static-method name="Count">
 			<sig>int (this IEnumerable&lt;T&gt; xs)</sig>
 			<sig>int (this IEnumerable&lt;T&gt; xs, Func&lt;T, bool&gt; pred</sig>
 			<desc>要素数を返します。</desc>
@@ -1196,9 +1196,9 @@ csharp> xs.Count();
 csharp> xs.Count(e => e == 9);
 2
 			</example>
-        </method>
+        </static-method>
 
-        <method name="DefaultIfEmpty">
+        <static-method name="DefaultIfEmpty">
             <sig>IEnumerable&lt;T&gt; (IEnumerable&lt;T&gt; xs)</sig>
             <sig>IEnumerable&lt;T&gt; (IEnumerable&lt;T&gt; xs, T defaultValue)</sig>
             <desc>
@@ -1216,15 +1216,15 @@ csharp> xs.DefaultIfEmpty(123);
 csharp> new[] { 10, 20 }.DefaultIfEmpty();
 { 10, 20 }
             </example>
-        </method>
+        </static-method>
 
-        <method name="DescendantNodes">
-        </method>
+        <static-method name="DescendantNodes">
+        </static-method>
 
-        <method name="Distinct">
-        </method>
+        <static-method name="Distinct">
+        </static-method>
 
-        <method name="ElementAt">
+        <static-method name="ElementAt">
             <sig>T (this IEnumerable&lt;T&gt; xs, int index)</sig>
             <desc>指定されたインデックスの要素を返します。</desc>
             <example>
@@ -1234,18 +1234,18 @@ csharp> xs.ElementAt(0);
 csharp> xs.ElementAt(1);
 2
             </example>
-        </method>
+        </static-method>
 
-        <method name="ElementAtOrDefault">
-        </method>
+        <static-method name="ElementAtOrDefault">
+        </static-method>
 
-        <method name="Elements">
-        </method>
+        <static-method name="Elements">
+        </static-method>
 
-        <method name="Except">
-        </method>
+        <static-method name="Except">
+        </static-method>
 
-        <method name="First">
+        <static-method name="First">
             <sig>T (this IEnumerable&lt;T&gt; xs)</sig>
             <sig>T (this IEnumerable&lt;T&gt; xs, Func&lt;T, bool&gt; pred)</sig>
             <desc>
@@ -1260,9 +1260,9 @@ csharp> xs.First();
 csharp> xs.First(e => e >= 3);
 3
             </example>
-        </method>
+        </static-method>
 
-        <method name="FirstOrDefault">
+        <static-method name="FirstOrDefault">
             <sig>T (this IEnumerable&lt;T&gt; xs)</sig>
             <sig>T (this IEnumerable&lt;T&gt; xs, Func&lt;T, bool&gt; pred)</sig>
             <desc>
@@ -1280,24 +1280,24 @@ csharp> new[] { 1, 2, 3 }.FirstOrDefault(e => e > 100);
 csharp> xs.DefaultIfEmpty(100).First();
 100
             </example>
-        </method>
+        </static-method>
 
-        <method name="GroupBy">
-        </method>
+        <static-method name="GroupBy">
+        </static-method>
 
-        <method name="GroupJoin">
-        </method>
+        <static-method name="GroupJoin">
+        </static-method>
 
-        <method name="InDocumentOrder">
-        </method>
+        <static-method name="InDocumentOrder">
+        </static-method>
 
-        <method name="Intersect">
-        </method>
+        <static-method name="Intersect">
+        </static-method>
 
-        <method name="Join">
-        </method>
+        <static-method name="Join">
+        </static-method>
 
-        <method name="Last">
+        <static-method name="Last">
             <sig>T (this IEnumerable&lt;T&gt; xs)</sig>
             <sig>T (this IEnumerable&lt;T&gt; xs, Func&lt;T, bool&gt; pred)</sig>
             <desc>
@@ -1313,9 +1313,9 @@ csharp> xs.Last(e => e &lt;= 3);
 3
             </example>
 
-        </method>
+        </static-method>
 
-        <method name="LastOrDefault">
+        <static-method name="LastOrDefault">
             <sig>T (this IEnumerable&lt;T&gt; xs)</sig>
             <sig>T (this IEnumerable&lt;T&gt; xs, Func&lt;T, bool&gt; pred)</sig>
             <desc>
@@ -1333,39 +1333,39 @@ csharp> new[] { 1, 2, 3 }.LastOrDefault(e => e > 100);
 csharp> xs.DefaultIfEmpty(100).Last();
 100
             </example>
-        </method>
+        </static-method>
 
-        <method name="LongCount">
-        </method>
+        <static-method name="LongCount">
+        </static-method>
 
-        <method name="Max">
-        </method>
+        <static-method name="Max">
+        </static-method>
 
-        <method name="Min">
-        </method>
+        <static-method name="Min">
+        </static-method>
 
-        <method name="Nodes">
-        </method>
+        <static-method name="Nodes">
+        </static-method>
 
-        <method name="OfType">
-        </method>
+        <static-method name="OfType">
+        </static-method>
 
-        <method name="OrderBy">
-        </method>
+        <static-method name="OrderBy">
+        </static-method>
 
-        <method name="OrderByDescending">
-        </method>
+        <static-method name="OrderByDescending">
+        </static-method>
 
-        <method name="Remove">
-        </method>
+        <static-method name="Remove">
+        </static-method>
 
-        <method name="Reverse">
-        </method>
+        <static-method name="Reverse">
+        </static-method>
 
-        <method name="Select">
-        </method>
+        <static-method name="Select">
+        </static-method>
 
-        <method name="SelectMany">
+        <static-method name="SelectMany">
             <sig>IEnumerable&lt;U&gt; (this IEnumerable&lt;T&gt; xs, Func&lt;T, IEnumerable&lt;U&gt;&gt; fn)</sig>
             <sig>IEnumerable&lt;U&gt; (this IEnumerable&lt;T&gt; xs, Func&lt;T, int, IEnumerable&lt;U&gt;&gt; fn)</sig>
             <sig>IEnumerable&lt;U&gt; (this IEnumerable&lt;T&gt; xs,
@@ -1404,18 +1404,18 @@ class Program {
     }
 }
             </example>
-        </method>
+        </static-method>
 
-        <method name="SequenceEqual">
-        </method>
+        <static-method name="SequenceEqual">
+        </static-method>
 
-        <method name="Single">
-        </method>
+        <static-method name="Single">
+        </static-method>
 
-        <method name="SingleOrDefault">
-        </method>
+        <static-method name="SingleOrDefault">
+        </static-method>
 
-        <method name="Skip">
+        <static-method name="Skip">
             <sig>IEnumerable&lt;T&gt; (this IEnumerable&lt;T&gt; xs, int count)</sig>
             <desc>
                 先頭の count 要素を捨てて、残りの要素を返します。
@@ -1427,15 +1427,15 @@ csharp> xs.Skip(3);
 csharp> xs.Skip(12);
 {  }
             </example>
-        </method>
+        </static-method>
 
-        <method name="SkipWhile">
-        </method>
+        <static-method name="SkipWhile">
+        </static-method>
 
-        <method name="Subscribe">
-        </method>
+        <static-method name="Subscribe">
+        </static-method>
 
-        <method name="Sum">
+        <static-method name="Sum">
             <sig>T (this IEnumerable&lt;T&gt; xs)</sig>
             <sig>U (this IEnumerable&lt;T&gt; xs, Func&lt;T, U&gt;)</sig>
             <desc>
@@ -1448,30 +1448,30 @@ csharp> xs.Sum();
 csharp> xs.Sum(e => e + 1); // キーの指定も可能
 20
             </example>
-        </method>
+        </static-method>
 
-        <method name="Take">
-        </method>
+        <static-method name="Take">
+        </static-method>
 
-        <method name="TakeWhile">
-        </method>
+        <static-method name="TakeWhile">
+        </static-method>
 
-        <method name="ToArray">
-        </method>
+        <static-method name="ToArray">
+        </static-method>
 
-        <method name="ToDictionary">
-        </method>
+        <static-method name="ToDictionary">
+        </static-method>
 
-        <method name="ToList">
-        </method>
+        <static-method name="ToList">
+        </static-method>
 
-        <method name="ToLookup">
-        </method>
+        <static-method name="ToLookup">
+        </static-method>
 
-        <method name="ToObservable">
-        </method>
+        <static-method name="ToObservable">
+        </static-method>
 
-        <method name="Union">
+        <static-method name="Union">
             <sig>IEnumerable&lt;T&gt; (this IEnumerable&lt;T&gt; xs, IEnumerable&lt;T&gt; ys)</sig>
             <sig>IEnumerable&lt;T&gt; (this IEnumerable&lt;T&gt;, IEnumerable&lt;T&gt; ys, IEqualityComparer&lt;T&gt; comparer)</sig>
             <desc>
@@ -1483,13 +1483,13 @@ csharp> var ys = new[] { 2, 3, 4 };
 csharp> xs.Union(ys);
 { 1, 2, 3, 4 }
             </example>
-        </method>
+        </static-method>
 
-        <method name="Where">
-        </method>
+        <static-method name="Where">
+        </static-method>
 
-        <method name="Zip">
-        </method>
+        <static-method name="Zip">
+        </static-method>
     </class>
 
 </cs>
