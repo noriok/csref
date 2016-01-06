@@ -947,7 +947,20 @@ false
 
 
     <class name="Stack">
+        <url>https://msdn.microsoft.com/ja-jp/library/3278tedw(v=vs.110).aspx</url>
+
         <method name="Clear">
+            <sig>void ()</sig>
+            <desc>スタックを空にします。</desc>
+            <example>
+csharp> var s = new Stack&lt;int&gt;(new[] { 1, 2, 3 });
+csharp> s
+{ 3, 2, 1 }
+csharp> s.Clear();
+csharp> s
+{  }
+            </example>
+
         </method>
 
         <method name="Contains">
