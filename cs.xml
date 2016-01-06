@@ -960,13 +960,37 @@ csharp> s.Clear();
 csharp> s
 {  }
             </example>
-
         </method>
 
         <method name="Contains">
+            <sig>bool (T item)</sig>
+            <desc>スタックに要素が存在するなら true を返します。</desc>
+            <example>
+csharp> var s = new Stack&lt;int&gt;();
+csharp> s.Contains(10);
+false
+csharp> s.Push(10);
+csharp> s.Contains(10);
+true
+            </example>
         </method>
 
         <method name="CopyTo">
+            <sig>void (T[] ary, int aryIndex)</sig>
+            <desc>
+                スタックの要素を引数 ary にコピーします。
+
+                引数 aryIndex: ary のコピー先開始位置
+            </desc>
+            <example>
+csharp> var s = new Stack&lt;int&gt;(new[] { 1, 2, 3 });
+csharp> s.CopyTo(xs, 0); // コピー先は 0 番目から。
+csharp> xs
+{ 3, 2, 1, 0, 0, 0 }
+csharp> s.CopyTo(xs, 2); // コピー先は 2 番目から。
+csharp> xs
+{ 3, 2, 3, 2, 1, 0 }
+            </example>
         </method>
 
         <method name="Equals">
