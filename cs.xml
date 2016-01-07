@@ -1373,6 +1373,15 @@ csharp> xs.DefaultIfEmpty(100).Last();
         </static-method>
 
         <static-method name="Reverse">
+            <sig>IEnumerable&lt;T&gt; &lt;T&gt;(this IEnumerable&lt;T&gt; xs)</sig>
+            <desc>
+                シーケンスを反転させて返します。
+            </desc>
+            <example>
+csharp> var xs = new[] { 1, 2, 3 };
+csharp> xs.Reverse();
+{ 3, 2, 1 }
+            </example>
         </static-method>
 
         <static-method name="Select">
