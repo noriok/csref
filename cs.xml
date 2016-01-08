@@ -1189,6 +1189,14 @@ true
         </static-method>
 
         <static-method name="Concat">
+            <sig>IEnumerable&lt;T&gt; &lt;T&gt;(this IEnumerable&lt;T&gt; xs, IEnumerable&lt;T&gt; ys)</sig>
+            <desc>シーケンスを連結します。</desc>
+            <example>
+csharp> var xs = new[] { 1, 2, 3 };
+csharp> var ys = new[] { 4, 5 };
+csharp> xs.Concat(ys);
+{ 1, 2, 3, 4, 5 }
+            </example>
         </static-method>
 
         <static-method name="Contains">
