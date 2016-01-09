@@ -1375,6 +1375,16 @@ csharp> xs.DefaultIfEmpty(100).Last();
         </static-method>
 
         <static-method name="Range">
+            <sig>IEnumerable&lt;T&gt; (int start, int count)</sig>
+            <desc>
+                指定された範囲のシーケンスを生成します。
+            </desc>
+            <example>
+csharp> Enumerable.Range(0, 10);
+{ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 }
+csharp> Enumerable.Range(-5, 5);
+{ -5, -4, -3, -2, -1 }
+            </example>
         </static-method>
 
         <static-method name="Repeat">
