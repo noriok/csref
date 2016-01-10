@@ -50,15 +50,19 @@ csharp> Math.Abs(-120.4);
         </static-method>
 
         <static-method name="Acos">
+            <sig>double (double x)</sig>
         </static-method>
 
         <static-method name="Asin">
+            <sig>double (double x)</sig>
         </static-method>
 
         <static-method name="Atan">
+            <sig>double (double x)</sig>
         </static-method>
 
         <static-method name="Atan2">
+            <sig>double (double x)</sig>
         </static-method>
 
         <static-method name="BigMul">
