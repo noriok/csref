@@ -66,6 +66,15 @@ csharp> Math.Abs(-120.4);
         </static-method>
 
         <static-method name="BigMul">
+            <sig>long (int a, int b)</sig>
+            <desc>
+                引数 a, b の積を計算します。
+                オーバーフローせず、戻り値を long で返します。
+            </desc>
+            <example>
+csharp> Math.BigMul(int.MaxValue, int.MaxValue);
+4611686014132420609
+            </example>
         </static-method>
 
         <static-method name="Celling">
@@ -79,6 +88,7 @@ csharp> Math.Abs(-120.4);
 
         <static-method name="DivRem">
             <sig>int (int a, int b, out int m)</sig>
+            <sig>long (long a, long b, out long m)</sig>
             <desc>商と余りを求めます。</desc>
             <example>
 csharp> var m = 0;
