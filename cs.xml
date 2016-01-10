@@ -31,15 +31,15 @@
         </field>
 
         <static-method name="Abs">
-            <sig>decimal (decimal val)</sig>
-            <sig>double (double val)</sig>
-            <sig>short (short val)</sig>
-            <sig>int (int val)</sig>
-            <sig>long (long val)</sig>
-            <sig>sbyte (sbyte val)</sig>
-            <sig>float (float val)</sig>
+            <sig>decimal (decimal x)</sig>
+            <sig>double (double x)</sig>
+            <sig>short (short x)</sig>
+            <sig>int (int x)</sig>
+            <sig>long (long x)</sig>
+            <sig>sbyte (sbyte x)</sig>
+            <sig>float (float x)</sig>
             <desc>
-                絶対値を計算します。
+                x の絶対値を計算します。
             </desc>
             <example>
 csharp> Math.Abs(-120);
