@@ -31,6 +31,22 @@
         </field>
 
         <static-method name="Abs">
+            <sig>decimal (decimal val)</sig>
+            <sig>double (double val)</sig>
+            <sig>short (short val)</sig>
+            <sig>int (int val)</sig>
+            <sig>long (long val)</sig>
+            <sig>sbyte (sbyte val)</sig>
+            <sig>float (float val)</sig>
+            <desc>
+                絶対値を計算します。
+            </desc>
+            <example>
+csharp> Math.Abs(-120);
+120
+csharp> Math.Abs(-120.4);
+120.4
+            </example>
         </static-method>
 
         <static-method name="Acos">
