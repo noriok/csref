@@ -149,7 +149,7 @@ csharp> m
 
     </class>
 
-    <class name="List">
+    <class name="List&lt;T&gt;">
         <url>https://msdn.microsoft.com/ja-jp/library/6sh2ey19%28v=vs.110%29.aspx</url>
 
         <property name="Capacity">
@@ -187,6 +187,18 @@ csharp> xs
         </method>
 
         <method name="Contains">
+            <sig>bool (T val)</sig>
+            <desc>
+                リストに val が含まれるなら true を返します。
+            </desc>
+            <example>
+csharp> var xs = new List&lt;int&gt;() { 1, 2, 3 };
+csharp> xs.Contains(2);
+true
+csharp> xs.Contains(10);
+false
+            </example>
+
         </method>
 
         <method name="ConvertAll">
