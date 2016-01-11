@@ -211,6 +211,17 @@ false
         </method>
 
         <method name="Exists">
+            <sig>bool (Predicate&lt;T&gt; pred)</sig>
+            <desc>
+                pred にマッチする要素がリストに含まれるなら true を返します。
+            </desc>
+            <example>
+csharp> var xs = new List&lt;int&gt;() { 1, -2, 3 };
+csharp> xs.Exists(e => e == 2);
+false
+csharp> xs.Exists(e => Math.Abs(e) == 2);
+true
+            </example>
         </method>
 
         <method name="Finalize">
