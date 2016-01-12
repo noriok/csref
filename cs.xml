@@ -393,6 +393,19 @@ csharp>
         </method>
 
         <method name="TrueForAll">
+            <sig>bool (Predicate&lt;T&gt; pred)</sig>
+            <desc>
+                リストの全ての要素が pred を満たすなら true を返します。
+            </desc>
+            <example>
+csharp> var xs = new List&lt;int&gt;() { 2, 4, 6, 8, 10 };
+csharp> xs.TrueForAll(e => e &lt;= 10);
+true
+csharp> xs.TrueForAll(e => e % 2 == 0);
+true
+csharp> xs.TrueForAll(e => e == 10);
+false
+            </example>
         </method>
     </class>
 
