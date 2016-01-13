@@ -296,6 +296,23 @@ csharp> xs.FindIndex(2, e => e &lt; 3); // xs[2] 以降で 3 より小さな要�
         </method>
 
         <method name="GetRange">
+            <sig>List&lt;T&gt; (int index, int count)</sig>
+            <desc>
+                リストのコピー(浅いコピー)を生成します。
+            </desc>
+            <example>
+csharp> var xs = new List&lt;int[]&gt;() { new[] { 1, 2 }, new[] { 3, 4 } };
+csharp> xs
+{ { 1, 2 }, { 3, 4 } }
+csharp> var ys = xs.GetRange(0, 2); // 0 番目から要素 2 つをコピー(浅いコピー)
+csharp> ys
+{ { 1, 2 }, { 3, 4 } }
+csharp> ys[0][0] = 10
+csharp> ys
+{ { 10, 2 }, { 3, 4 } }
+csharp> xs
+{ { 10, 2 }, { 3, 4 } } // 浅いコピーなので要素は共有している
+            </example>
         </method>
 
         <method name="GetType">
