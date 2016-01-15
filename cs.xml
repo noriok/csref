@@ -1268,6 +1268,21 @@ csharp> xs
         <url>https://msdn.microsoft.com/ja-jp/library/system.linq.enumerable_methods(v=vs.110).aspx</url>
 
         <static-method name="Aggregate">
+            <sig>T (this IEnumerable&lt;T&gt; xs, Func&lt;T, T, T&gt; fn)</sig>
+            <sig>U (this IEnumerable&lt;T&gt; xs, U seed, Func&lt;U, T, U&gt; fn)</sig>
+            <sig>R (this IEnumerable&lt;T&gt; xs, U seed, Func&lt;U, T, U&gt; fn, Func&lt;U, R&gt; retFn)</sig>
+            <desc>シーケンスの畳み込みを行います。</desc>
+            <example>
+csharp> var xs = new[] { 1, 2, 3, 4, 5 };
+csharp> xs.Aggregate((acc, e) => acc + e); // 和
+15
+csharp> xs.Aggregate((acc, e) => acc * e); // 積
+120
+csharp> xs.Aggregate((acc, e) => acc + e*e); // 二乗の和
+55
+csharp> xs.Aggregate(0, (acc, e) => acc + (e % 2 == 1 ? 1 : 0)); // 奇数の個数
+3
+            </example>
         </static-method>
 
         <static-method name="All">
