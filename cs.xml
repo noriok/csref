@@ -1390,6 +1390,16 @@ csharp> new[] { 10, 20 }.DefaultIfEmpty();
         </static-method>
 
         <static-method name="Distinct">
+            <sig>IEnumerable&lt;T&gt; (this IEnumerable&lt;T&gt; xs)</sig>
+            <sig>IEnumerable&lt;T&gt; (this IEnumerable&lt;T&gt; xs, IEqualityComparer&lt;T&gt; comparer)</sig>
+            <desc>
+                シーケンスから重複を除いたシーケンスを返します。
+            </desc>
+            <example>
+csharp> var xs = new[] { 1, 2, 2, 3, 3, 3, 100, 1, 1, 2, 34 };
+csharp> xs.Distinct();
+{ 1, 2, 3, 100, 34 }
+            </example>
         </static-method>
 
         <static-method name="ElementAt">
