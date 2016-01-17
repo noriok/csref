@@ -1429,6 +1429,15 @@ csharp> xs.ElementAtOrDefault(5);
             </example>
         </static-method>
 
+        <static-method name="Empty">
+            <sig>IEnumerable&lt;T&gt; &lt;T&gt;()</sig>
+            <desc>IEnumerable&lt;T&gt; 型の空シーケンスを返します。</desc>
+            <example>
+csharp> Enumerable.Empty&lt;int&gt;();
+{  }
+            </example>
+        </static-method>
+
         <static-method name="Except">
         </static-method>
 
