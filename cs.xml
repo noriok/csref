@@ -1571,6 +1571,18 @@ csharp> Enumerable.Range(-5, 5);
         </static-method>
 
         <static-method name="Repeat">
+            <sig>IEnumerable&lt;T&gt; (T x, int count)</sig>
+            <desc>x を count 個だけ含むシーケンスを生成します。</desc>
+            <example>
+csharp> Enumerable.Repeat(3, 5);
+{ 3, 3, 3, 3, 3 }
+csharp> var xs = Enumerable.Repeat(new[] { 1, 2 }, 3).ToArray();
+csharp> xs
+{ { 1, 2 }, { 1, 2 }, { 1, 2 } }
+csharp> xs[0][0] = 10; // 要素は共有されます
+csharp> xs
+{ { 10, 2 }, { 10, 2 }, { 10, 2 } }
+            </example>
         </static-method>
 
         <static-method name="Reverse">
