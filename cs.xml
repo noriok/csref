@@ -1439,6 +1439,15 @@ csharp> Enumerable.Empty&lt;int&gt;();
         </static-method>
 
         <static-method name="Except">
+            <sig>IEnumerable&lt;T&gt; (this IEnumerable&lt;T&gt; xs, IEnumerable&lt;T&gt; ys)</sig>
+            <sig>IEnumerable&lt;T&gt; (this IEnumerable&lt;T&gt; xs, IEnumerable&lt;T&gt; ys, IEqualityComparer&lt;T&gt; comparer)</sig>
+            <desc>二つのシーケンスの差集合を返します。</desc>
+            <example>
+csharp> var xs = new[] { 1, 2, 2, 3, 3, 4 };
+csharp> var ys = new[] { 2, 4, 5, 5 };
+csharp> xs.Except(ys);
+{ 1, 3 }
+            </example>
         </static-method>
 
         <static-method name="First">
