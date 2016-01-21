@@ -1659,7 +1659,7 @@ class Program {
             <desc>
                 シーケンスに含まれる唯一の要素を返します。
 
-                もしシーケンスに複数の要素が含まれているなら
+                もしシーケンスに複数の要素が含まれるなら
                 InvalidOperationException 例外を生成します。
             </desc>
             <example>
@@ -1676,6 +1676,28 @@ csharp> new[] { 1, 3, 5, 222 }.Single(e => e % 2 == 0);
         </static-method>
 
         <static-method name="SingleOrDefault">
+            <sig>T (this IEnumerable&lt;T&gt; xs)</sig>
+            <sig>T (this IEnumerable&lt;T&gt; xs, Func&lt;T, bool&gt; pred)</sig>
+            <desc>
+                シーケンスに含まれる唯一の要素を返します。
+
+                シーケンスが空であれば、既定値 default(T) を返します。
+                もしシーケンスに複数の要素が含まれるなら
+                InvalidOperationException 例外を生成します。
+            </desc>
+            <example>
+csharp> var xs = new int[0];
+csharp> xs.SingleOrDefault();
+0
+csharp> var ys = new[] { 1, 2 };
+csharp> ys.SingleOrDefault();
+//=> System.InvalidOperationException: Sequence contains more than one element
+
+csharp> new[] { 1, 2, 3 }.SingleOrDefault(e => e % 2 == 0);
+2
+csharp> new[] { 1, 3, 5 }.SingleOrDefault(e => e % 2 == 0);
+0
+            </example>
         </static-method>
 
         <static-method name="Skip">
