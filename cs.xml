@@ -722,6 +722,18 @@ csharp> s.Substring(3, 2);
         </method>
 
         <method name="ToCharArray">
+            <sig>char[] ()</sig>
+            <sig>char[] (int startIndex, int length)</sig>
+            <desc>
+                文字の配列を返します。
+            </desc>
+            <example>
+csharp> s.ToCharArray();
+{ 'a', 'b', 'c', 'd', 'e' }
+csharp> s.ToCharArray(1, 2);
+{ 'b', 'c' }
+            </example>
+
         </method>
 
         <method name="ToLower">
