@@ -418,6 +418,16 @@ csharp> xs
         </method>
 
         <method name="RemoveRange">
+            <sig>void (int index, int count)</sig>
+            <desc>
+                リストの index 番目から count 個の要素を削除します。
+            </desc>
+            <example>
+csharp> var xs = new List&lt;int&gt;() { 1, 2, 3, 4, 5 };
+csharp> xs.RemoveRange(1, 3);
+csharp> xs
+{ 1, 5 }
+            </example>
         </method>
 
         <method name="Reverse">
