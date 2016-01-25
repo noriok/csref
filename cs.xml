@@ -431,6 +431,14 @@ csharp> xs
         </method>
 
         <method name="Reverse">
+            <sig>void ()</sig>
+            <desc>リストを反転します。</desc>
+            <example>
+csharp> var xs = new List&lt;int&gt;() { 1, 2, 3};
+csharp> xs.Reverse();
+csharp> xs
+{ 3, 2, 1 }
+            </example>
         </method>
 
         <method name="Sort">
