@@ -184,6 +184,16 @@ csharp> xs
         </method>
 
         <method name="Clear">
+            <sig>void ()</sig>
+            <desc>リストを空にします。</desc>
+            <example>
+csharp> var xs = new List&lt;int&gt;() { 1, 2, 3 };
+csharp> xs.Count
+3
+csharp> xs.Clear();
+csharp> xs.Count
+0
+            </example>
         </method>
 
         <method name="Contains">
