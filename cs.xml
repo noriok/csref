@@ -297,6 +297,15 @@ csharp> xs.FindIndex(2, e => e &lt; 3); // xs[2] 以降で 3 より小さな要�
         </method>
 
         <method name="ForEach">
+            <sig>void (Action&lt;T&gt; action)</sig>
+            <desc>リストのそれぞれの要素に action を適用します。</desc>
+            <example>
+csharp> var xs = new List&lt;int&gt;() { 10, 20, 30 };
+csharp> xs.ForEach(Console.WriteLine);
+10
+20
+30
+            </example>
         </method>
 
         <method name="GetEnumerator">
