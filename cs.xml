@@ -374,6 +374,17 @@ csharp> xs
         </method>
 
         <method name="InsertRange">
+            <sig>void (int index, IEnumerable&lt;T&gt; xs)</sig>
+            <desc>指定したインデックスにシーケンス xs を挿入します。</desc>
+            <example>
+csharp> var xs = new List&lt;int&gt;() { 1, 2, 3 };
+csharp> xs.InsertRange(0, new[] { 10, 20 });
+csharp> xs
+{ 10, 20, 1, 2, 3 }
+csharp> xs.InsertRange(1, new[] { 55 });
+csharp> xs
+{ 10, 55, 20, 1, 2, 3 }
+            </example>
         </method>
 
         <method name="LastIndexOf">
