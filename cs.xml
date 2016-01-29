@@ -445,6 +445,16 @@ csharp> xs
 
         <method name="RemoveAt">
             <sig>void (int index)</sig>
+            <desc>リストの index 番目の要素を削除します。</desc>
+            <example>
+csharp> var xs = new List&lt;int&gt;() { 1, 2, 3 };
+csharp> xs.RemoveAt(0);
+csharp> xs
+{ 2, 3 }
+csharp> xs.RemoveAt(1);
+csharp> xs
+{ 2 }
+            </example>
         </method>
 
         <method name="RemoveRange">
