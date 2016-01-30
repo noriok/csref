@@ -643,9 +643,9 @@ csharp> s.IndexOf('a');
             <sig>int (char[] anyOf, int startIndex)</sig>
             <sig>int (char[] anyOf, int startIndex, int count)</sig>
             <desc>
-                引数の文字配列のいずれかの文字を検索する。
-                最初に見つかった文字のインデックスを返す。
-                見つからなければ、-1 を返す。
+                引数の文字配列のいずれかの文字を検索します。
+                最初に見つかった文字のインデックスを返します。
+                見つからなければ、-1 を返します。
             </desc>
             <example>
 sharp> var s = "hello world";
