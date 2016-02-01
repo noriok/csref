@@ -1142,7 +1142,7 @@ false
     </class>
 
 
-    <class name="Stack">
+    <class name="Stack&lt;T&gt;">
         <url>https://msdn.microsoft.com/ja-jp/library/3278tedw(v=vs.110).aspx</url>
 
         <method name="Clear">
@@ -1208,12 +1208,53 @@ csharp> xs
         </method>
 
         <method name="Peek">
+            <sig>T Peek()</sig>
+            <desc>
+                スタックのトップのオブジェクトを返します。
+                オブジェクトはスタックから削除されません。
+            </desc>
+            <example>
+csharp> var s = new Stack&lt;int&gt;(new[] { 1, 2, 3 });
+csharp> s
+{ 3, 2, 1 }
+csharp> s.Peek();
+3
+csharp> s
+{ 3, 2, 1 }
+            </example>
         </method>
 
         <method name="Pop">
+            <sig>T Pop()</sig>
+            <desc>スタックからトップのオブジェクトを削除して返します。</desc>
+            <example>
+csharp> var s = new Stack&lt;int&gt;(new[] { 1, 2, 3});
+csharp> s
+{ 3, 2, 1 }
+csharp> s.Pop();
+3
+csharp> s
+{ 2, 1 }
+csharp> s.Pop();
+2
+            </example>
+
         </method>
 
         <method name="Push">
+            <sig>void (T item)</sig>
+            <desc>スタックにオブジェクトを追加します。</desc>
+            <example>
+csharp> var s = new Stack&lt;in&gt;>();
+csharp> s
+{  }
+csharp> s.Push(1);
+csharp> s
+{ 1 }
+csharp> s.Push(2);
+csharp> s
+{ 2, 1 }
+            </example>
         </method>
 
         <method name="ToArray">
