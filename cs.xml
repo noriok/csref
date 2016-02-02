@@ -830,6 +830,18 @@ csharp> s.ToCharArray(1, 2);
         </static-method>
 
         <static-method name="Clear">
+            <sig>void (Array ar, int index, int length)</sig>
+            <desc>配列の指定範囲に型の既定値を格納します。</desc>
+            <example>
+csharp> var xs = new[] { 1, 2, 3 };
+csharp> Array.Clear(xs, 0, xs.Length);
+csharp> xs
+{ 0, 0, 0 }
+csharp> var ys = new[] { 1, 2, 3, 4, 5 };
+csharp> Array.Clear(ys, 2, 1);
+csharp> ys
+{ 1, 2, 0, 4, 5 }
+            </example>
         </static-method>
 
         <static-method name="Clone">
