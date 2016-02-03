@@ -971,6 +971,23 @@ csharp> xs.CopyTo(zs, 2); // System.ArgumentException が発生する(要素数�
         </method>
 
         <static-method name="Resize">
+            <sig>void &lt;T&gt;(ref T[] ar, int newSize)</sig>
+            <desc>1 次元配列のサイズを newSize に変更します。</desc>
+            <example>
+csharp> var xs = new[] { 1, 2, 3 };
+csharp> Array.Resize(ref xs, 5);
+csharp> xs
+{ 1, 2, 3, 0, 0 }
+csharp> Array.Resize(ref xs, 2);
+csharp> xs
+{ 1, 2 }
+csharp> int[] ys = null;
+csharp> Array.Resize(ref ys, 3);
+csharp> ys
+{ 0, 0, 0 }
+            </example>
+
+
         </static-method>
 
         <static-method name="Reverse">
