@@ -578,6 +578,15 @@ csharp> string.Concat(new[] { 1, 2, 3 });
         </static-method>
 
         <method name="Contains">
+            <sig>bool (string s)</sig>
+            <desc>文字列に部分文字列 s が含まれるなら true を返します。</desc>
+            <example>
+csharp> var s = "foo bar baz";
+csharp> s.Contains("bar");
+true
+csharp> s.Contains("foobar");
+false
+            </example>
         </method>
 
         <method name="Copy">
