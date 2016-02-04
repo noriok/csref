@@ -819,12 +819,48 @@ csharp> s.ToCharArray(1, 2);
         </method>
 
         <method name="Trim">
+            <sig>string ()</sig>
+            <sig>string (params char[] trimChars)</sig>
+            <desc>文字列の先頭と末尾の空白文字を取り除いた文字列を生成して返します。</desc>
+            <example>
+csharp> var s = "  abc  ";
+csharp> s.Trim();
+"abc"
+csharp> s
+"  abc  "
+csharp> " \n\t foo \n".Trim();
+"foo"
+csharp> "-- foo --".Trim(new[] { '-' });
+" foo "
+            </example>
         </method>
 
         <method name="TrimEnd">
+            <sig>string (params char[] trimChars)</sig>
+            <desc>文字列の末尾の空白文字を取り除いた文字列を生成して返します。</desc>
+            <example>
+csharp> var s = "  foo  ";
+csharp> s.TrimEnd();
+"  foo"
+csharp> s
+"  foo  "
+csharp> "-- foo --".TrimEnd(new[] { '-' });
+"-- foo "
+            </example>
         </method>
 
         <method name="TrimStart">
+            <sig>string (params char[] trimChars)</sig>
+            <desc>文字列の先頭の空白文字を取り除いた文字列を生成して返します。</desc>
+            <example>
+csharp> var s = "  foo  ";
+csharp> s.TrimStart();
+"foo  "
+csharp> s
+"  foo  "
+csharp> "-- foo --".TrimStart(new[] { '-' });
+" foo --"
+            </example>
         </method>
 
     </class>
