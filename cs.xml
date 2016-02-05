@@ -988,7 +988,7 @@ csharp> xs.CopyTo(zs, 2); // System.ArgumentException が発生する(要素数�
         <method name="GetLength">
         </method>
 
-        <method name="GetongLength">
+		<method name="GetLongLength">
         </method>
 
         <method name="GetLowerBound">
