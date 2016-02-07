@@ -1031,8 +1031,6 @@ csharp> Array.Resize(ref ys, 3);
 csharp> ys
 { 0, 0, 0 }
             </example>
-
-
         </static-method>
 
         <static-method name="Reverse">
@@ -1978,6 +1976,112 @@ csharp> xs.Union(ys);
         <static-method name="Zip">
         </static-method>
     </class>
+
+    <struct name="Complex">
+        <url>https://msdn.microsoft.com/ja-jp/library/system.numerics.complex(v=vs.110).aspx</url>
+
+        <property name="Imaginary">
+        </property>
+
+        <property name="Magnitude">
+        </property>
+
+        <property name="Phase">
+        </property>
+
+        <property name="Real">
+        </property>
+
+        <static-method name="Abs">
+        </static-method>
+
+        <static-method name="Acos">
+        </static-method>
+
+        <static-method name="Add">
+        </static-method>
+
+        <static-method name="Asin">
+        </static-method>
+
+        <static-method name="Atan">
+        </static-method>
+
+        <static-method name="Conjugate">
+        </static-method>
+
+        <static-method name="Cos">
+        </static-method>
+
+        <static-method name="Cosh">
+        </static-method>
+
+        <static-method name="Divide">
+        </static-method>
+
+        <method name="Equals">
+        </method>
+
+        <static-method name="Exp">
+        </static-method>
+
+        <static-method name="FromPolarCoordinates">
+        </static-method>
+
+        <method name="GetHashCode">
+        </method>
+
+        <method name="GetType">
+        </method>
+
+        <static-method name="Log">
+        </static-method>
+
+        <static-method name="Log10">
+        </static-method>
+
+        <static-method name="Multiply">
+        </static-method>
+
+        <static-method name="Negate">
+        </static-method>
+
+        <static-method name="Pow">
+        </static-method>
+
+        <static-method name="Reciprocal">
+        </static-method>
+
+        <static-method name="Sin">
+        </static-method>
+
+        <static-method name="Sinh">
+        </static-method>
+
+        <static-method name="Sqrt">
+        </static-method>
+
+        <static-method name="Subtract">
+        </static-method>
+
+        <static-method name="Tan">
+        </static-method>
+
+        <static-method name="Tanh">
+        </static-method>
+
+        <method name="ToString">
+        </method>
+
+        <field name="ImaginaryOne">
+        </field>
+
+        <field name="One">
+        </field>
+
+        <field name="Zero">
+        </field>
+    </struct>
 
 </cs>
 
