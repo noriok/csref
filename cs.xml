@@ -2092,5 +2092,8 @@ csharp> xs.Union(ys);
         </field>
     </struct>
 
+    <struct name="Char">
+        <url>https://msdn.microsoft.com/ja-jp/library/system.char.aspx</url>
+    </struct>
 </cs>
 
