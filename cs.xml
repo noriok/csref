@@ -2094,6 +2094,96 @@ csharp> xs.Union(ys);
 
     <struct name="Char">
         <url>https://msdn.microsoft.com/ja-jp/library/system.char.aspx</url>
+
+        <method name="CompareTo">
+        </method>
+
+        <static-method name="ConvertFromUtf32">
+        </static-method>
+
+        <static-method name="ConvertToUtf32">
+        </static-method>
+
+        <method name="Equals">
+        </method>
+
+        <method name="GetHashCode">
+        </method>
+
+        <static-method name="GetNumericValue">
+        </static-method>
+
+        <method name="GetType">
+        </method>
+
+        <method name="GetTypeCode">
+        </method>
+
+        <static-method name="etUnicodeCategory">
+        </static-method>
+
+        <static-method name="IsControl">
+        </static-method>
+
+        <static-method name="IsDigit">
+        </static-method>
+
+        <static-method name="IsHighSurrogate">
+        </static-method>
+
+        <static-method name="IsLetter">
+        </static-method>
+
+        <static-method name="IsLetterOrDigit">
+        </static-method>
+
+        <static-method name="IsLower">
+        </static-method>
+
+        <static-method name="IsLowSurrogate">
+        </static-method>
+
+        <static-method name="IsNumber">
+        </static-method>
+
+        <static-method name="IsPunctuation">
+        </static-method>
+
+        <static-method name="IsSeparator">
+        </static-method>
+
+        <static-method name="IsSurrogate">
+        </static-method>
+
+        <static-method name="IsSurrogatePair">
+        </static-method>
+
+        <static-method name="IsSymbol">
+        </static-method>
+
+        <static-method name="IsUpper">
+        </static-method>
+
+        <static-method name="IsWhiteSpace">
+        </static-method>
+
+        <static-method name="Parse">
+        </static-method>
+
+        <static-method name="ToLower">
+        </static-method>
+
+        <method name="ToString">
+        </method>
+
+        <static-method name="ToUpper">
+        </static-method>
+
+        <static-method name="ToUpperInvariant">
+        </static-method>
+
+        <static-method name="TryParse">
+        </static-method>
     </struct>
 </cs>
 
