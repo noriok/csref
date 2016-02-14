@@ -2185,5 +2185,93 @@ csharp> xs.Union(ys);
         <static-method name="TryParse">
         </static-method>
     </struct>
+
+    <class name="Regex">
+        <url>https://msdn.microsoft.com/ja-jp/library/system.text.regularexpressions.regex(v=vs.110).aspx</url>
+
+        <property name="CacheSize"></property>
+        <property name="MatchTimeout"></property>
+        <property name="Options"></property>
+        <property name="RightToLeft"></property>
+
+        <static-method name="CompileToAssembly">
+        </static-method>
+
+        <method name="Equals">
+        </method>
+
+        <static-method name="Escape">
+        </static-method>
+
+        <method name="Finalize">
+        </method>
+
+        <method name="GetGroupNames">
+        </method>
+
+        <method name="GetGroupNumbers">
+        </method>
+
+        <method name="GetHashCode">
+        </method>
+
+        <method name="GetType">
+        </method>
+
+        <method name="GroupNameFromNumber">
+        </method>
+
+        <method name="GroupNumberFromName">
+        </method>
+
+        <method name="IsMatch">
+        </method>
+
+        <!-- TODO:インスタンスメソッドと静的メソッドが同じ場合の対応
+        <static-method name="IsMatch">
+        </static-method>
+          -->
+
+        <method name="Match">
+        </method>
+
+        <!--
+        <static-method name="Match">
+        </static-method>
+          -->
+
+        <method name="Matches">
+        </method>
+
+        <!--
+        <static-method name="Matches">
+        </static-method>
+          -->
+
+        <method name="MemberwiseClone">
+        </method>
+
+        <method name="Replace">
+        </method>
+
+        <!--
+        <static-method name="Replace">
+        </static-method>
+          -->
+
+        <method name="Split">
+        </method>
+
+        <!--
+        <static-method name="Split">
+        </static-method>
+          -->
+
+        <method name="ToString">
+        </method>
+
+        <static-method name="Unescape">
+        </static-method>
+    </class>
 </cs>
 
