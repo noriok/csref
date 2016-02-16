@@ -16,7 +16,7 @@
 
     <!--
 
-    TODO: SortedSet, BigInteger, Regex
+    TODO: SortedSet
 
       -->
 
@@ -2273,5 +2273,105 @@ csharp> xs.Union(ys);
         <static-method name="Unescape">
         </static-method>
     </class>
+
+    <struct name="BigInteger">
+        <url>https://msdn.microsoft.com/ja-jp/library/system.numerics.biginteger(v=vs.110).aspx</url>
+
+        <property name="IsEven">
+        </property>
+
+        <property name="IsOne">
+        </property>
+
+        <property name="IsPowerOfTwo">
+        </property>
+
+        <property name="IsZero">
+        </property>
+
+        <property name="MinusOne">
+        </property>
+
+        <property name="One">
+        </property>
+
+        <property name="Sign">
+        </property>
+
+        <property name="Zero">
+        </property>
+
+        <static-method name="Abs">
+        </static-method>
+
+        <static-method name="Add">
+        </static-method>
+
+        <static-method name="Compare">
+        </static-method>
+
+        <method name="CompareTo">
+        </method>
+
+        <static-method name="Divide">
+        </static-method>
+
+        <static-method name="DivRem">
+        </static-method>
+
+        <method name="Equals">
+        </method>
+
+        <method name="GetHashCode">
+        </method>
+
+        <method name="GetType">
+        </method>
+
+        <static-method name="GreatestCommonDivisor">
+        </static-method>
+
+        <static-method name="Log">
+        </static-method>
+
+        <static-method name="Log10">
+        </static-method>
+
+        <static-method name="Max">
+        </static-method>
+
+        <static-method name="Min">
+        </static-method>
+
+        <static-method name="ModPow">
+        </static-method>
+
+        <static-method name="Multiply">
+        </static-method>
+
+        <static-method name="Negate">
+        </static-method>
+
+        <static-method name="Parse">
+        </static-method>
+
+        <static-method name="Pow">
+        </static-method>
+
+        <static-method name="Remainder">
+        </static-method>
+
+        <static-method name="Subtract">
+        </static-method>
+
+        <method name="ToByteArray">
+        </method>
+
+        <method name="ToString">
+        </method>
+
+        <static-method name="TryParse">
+        </static-method>
+    </struct>
 </cs>
 
