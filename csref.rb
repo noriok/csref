@@ -1,8 +1,6 @@
 require 'nokogiri'
 
 # -----
-# TODO:大文字小文字は区別しない
-#
 # $ csref
 # => クラス名一覧を表示
 #
@@ -279,23 +277,7 @@ def main
   end
 end
 
-def test1
-  doc = parse_xml()
-  p collect_class_names(doc)
-
-  csref_class(doc, 'Array')
-  # csref_method(doc, 'String', 'la')
-  csref_method(doc, 'Mat', 'sin')
-
-  puts '----'
-  csref_method(doc, 'Mat', 'atan2')
-
-  puts '----'
-  csref_method(doc, 'str', 'indexof')
-end
-
 if $0 == __FILE__
   main
-  # test1
 end
 
