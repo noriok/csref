@@ -2373,5 +2373,81 @@ csharp> xs.Union(ys);
         <static-method name="TryParse">
         </static-method>
     </struct>
+
+    <class name="LinkedList&lt;T&gt;">
+        <url>https://msdn.microsoft.com/ja-jp/library/he2s3bh7%28v=vs.110%29.aspx</url>
+
+        <property name="Count">
+        </property>
+
+        <property name="First">
+        </property>
+
+        <property name="Last">
+        </property>
+
+        <method name="AddAfter">
+        </method>
+
+        <method name="AddBefore">
+        </method>
+
+        <method name="AddFirst">
+        </method>
+
+        <method name="AddLast">
+        </method>
+
+        <method name="Clear">
+        </method>
+
+        <method name="Contains">
+        </method>
+
+        <method name="CopyTo">
+        </method>
+
+        <method name="Equals">
+        </method>
+
+        <method name="Finalize">
+        </method>
+
+        <method name="Find">
+        </method>
+
+        <method name="FindLast">
+        </method>
+
+        <method name="GetEnumerator">
+        </method>
+
+        <method name="GetHashCode">
+        </method>
+
+        <method name="GetObjectData">
+        </method>
+
+        <method name="GetType">
+        </method>
+
+        <method name="MemberwiseClone">
+        </method>
+
+        <method name="OnDeserialization">
+        </method>
+
+        <method name="Remove">
+        </method>
+
+        <method name="RemoveFirst">
+        </method>
+
+        <method name="RemoveLast">
+        </method>
+
+        <method name="ToString">
+        </method>
+    </class>
 </cs>
 
