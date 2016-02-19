@@ -2451,6 +2451,8 @@ csharp> xs.Union(ys);
     </class>
 
     <class name="SortedSet&lt;T&gt;">
+        <url>https://msdn.microsoft.com/ja-jp/library/dd412070(v=vs.110).aspx</url>
+
         <property name="Comparer">
         </property>
 
