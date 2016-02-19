@@ -2449,5 +2449,103 @@ csharp> xs.Union(ys);
         <method name="ToString">
         </method>
     </class>
+
+    <class name="SortedSet&lt;T&gt;">
+        <property name="Comparer">
+        </property>
+
+        <property name="Count">
+        </property>
+
+        <property name="Max">
+        </property>
+
+        <property name="Min">
+        </property>
+
+        <method name="Add">
+        </method>
+
+        <method name="Clear">
+        </method>
+
+        <method name="Contains">
+        </method>
+
+        <method name="CopyTo">
+        </method>
+
+        <static-method name="CreateSetComparer">
+        </static-method>
+
+        <method name="Equals">
+        </method>
+
+        <method name="ExceptWith">
+        </method>
+
+        <method name="Finalize">
+        </method>
+
+        <method name="GetEnumerator">
+        </method>
+
+        <method name="GetHashCode">
+        </method>
+
+        <method name="GetObjectData">
+        </method>
+
+        <method name="GetType">
+        </method>
+
+        <method name="GetViewBetween">
+        </method>
+
+        <method name="IntersectWith">
+        </method>
+
+        <method name="IsProperSubsetOf">
+        </method>
+
+        <method name="IsProperSupersetOf">
+        </method>
+
+        <method name="IsSubsetOf">
+        </method>
+
+        <method name="IsSupersetOf">
+        </method>
+
+        <method name="MemberwiseClone">
+        </method>
+
+        <method name="OnDeserialization">
+        </method>
+
+        <method name="Overlaps">
+        </method>
+
+        <method name="Remove">
+        </method>
+
+        <method name="RemoveWhere">
+        </method>
+
+        <method name="Reverse">
+        </method>
+
+        <method name="SetEquals">
+        </method>
+
+        <method name="SymmetricExceptWith">
+        </method>
+
+        <method name="ToString">
+        </method>
+
+        <method name="UnionWith">
+        </method>
+    </class>
 </cs>
 
