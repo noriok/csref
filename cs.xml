@@ -2344,6 +2344,8 @@ csharp> xs.Union(ys);
         </static-method>
 
         <static-method name="ModPow">
+            <sig>BigInteger (BigInteger val, BigInteger exponent, BigInteger modulus)</sig>
+            <desc>val の exponent 乗を modulus で割った余りを求めます。</desc>
         </static-method>
 
         <static-method name="Multiply">
