@@ -1127,7 +1127,7 @@ csharp> ys
 
     </class>
 
-    <class name="HashSet">
+    <class name="HashSet&lt;T&gt;">
         <method name="Add">
         </method>
 
@@ -1359,7 +1359,7 @@ csharp> s
         </property>
     </class>
 
-    <class name="Queue">
+    <class name="Queue&lt;T&gt;">
         <method name="Clear">
         </method>
 
