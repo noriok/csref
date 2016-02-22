@@ -2551,5 +2551,96 @@ csharp> xs.Union(ys);
         <method name="UnionWith">
         </method>
     </class>
+
+    <struct name="Vector2">
+        <url>https://msdn.microsoft.com/ja-jp/library/system.numerics.vector2(v=vs.110).aspx</url>
+
+        <property name="One">
+        </property>
+
+        <property name="UnitX">
+        </property>
+
+        <property name="UnitY">
+        </property>
+
+        <property name="Zero">
+        </property>
+
+        <static-method name="Abs">
+        </static-method>
+
+        <static-method name="Add">
+        </static-method>
+
+        <static-method name="Clamp">
+        </static-method>
+
+        <method name="CopyTo">
+        </method>
+
+        <static-method name="Distance">
+        </static-method>
+
+        <static-method name="Divide">
+        </static-method>
+
+        <static-method name="Dot">
+        </static-method>
+
+        <method name="Equals">
+        </method>
+
+        <method name="GetHashCode">
+        </method>
+
+        <method name="GetType">
+        </method>
+
+        <method name="Length">
+        </method>
+
+        <method name="LengthSquared">
+        </method>
+
+        <static-method name="Lerp">
+        </static-method>
+
+        <static-method name="Max">
+        </static-method>
+
+        <static-method name="Min">
+        </static-method>
+
+        <static-method name="Multiply">
+        </static-method>
+
+        <static-method name="Negate">
+        </static-method>
+
+        <static-method name="Normalize">
+        </static-method>
+
+        <static-method name="Reflect">
+        </static-method>
+
+        <static-method name="SquareRoot">
+        </static-method>
+
+        <static-method name="Subtract">
+        </static-method>
+
+        <method name="ToString">
+        </method>
+
+        <static-method name="Transform">
+        </static-method>
+
+        <static-method name="TransformNormal">
+        </static-method>
+
+        <field name="X"></field>
+        <field name="Y"></field>
+    </struct>
 </cs>
 
