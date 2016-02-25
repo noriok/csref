@@ -22,6 +22,7 @@
 
     <class name="Math">
         <url>https://msdn.microsoft.com/ja-jp/library/system.math%28v=vs.110%29.aspx</url>
+        <namespace>System</namespace>
 
         <field name="E">
             <desc></desc>
@@ -151,6 +152,7 @@ csharp> m
 
     <class name="List&lt;T&gt;">
         <url>https://msdn.microsoft.com/ja-jp/library/6sh2ey19%28v=vs.110%29.aspx</url>
+        <namespace>System.Collections.Generic</namespace>
 
         <property name="Capacity">
         </property>
@@ -529,6 +531,7 @@ false
 
     <class name="String">
         <url>https://msdn.microsoft.com/ja-jp/library/system.string(v=vs.110).aspx</url>
+        <namespace>System</namespace>
 
         <constructor>
         </constructor>
@@ -867,6 +870,7 @@ csharp> "-- foo --".TrimStart(new[] { '-' });
 
     <class name="Array">
         <url>https://msdn.microsoft.com/ja-jp/library/system.array(v=vs.110).aspx</url>
+        <namespace>System</namespace>
 
         <static-method name="AsReadOnly">
         </static-method>
@@ -1064,7 +1068,10 @@ csharp> ys
         </static-method>
     </class>
 
-    <class name="Dictionary">
+    <class name="Dictionary&lt;TKey, TValue&gt;">
+        <url>https://msdn.microsoft.com/ja-jp/library/xfhwa508(v=vs.110).aspx</url>
+        <namespace>System.Collections.Generic</namespace>
+
         <method name="Add">
         </method>
 
@@ -1128,6 +1135,9 @@ csharp> ys
     </class>
 
     <class name="HashSet&lt;T&gt;">
+        <url>https://msdn.microsoft.com/ja-jp/library/bb359438(v=vs.110).aspx</url>
+        <namespace>System.Collections.Generic</namespace>
+
         <method name="Add">
         </method>
 
@@ -1233,6 +1243,7 @@ false
 
     <class name="Stack&lt;T&gt;">
         <url>https://msdn.microsoft.com/ja-jp/library/3278tedw(v=vs.110).aspx</url>
+        <namespace>System.Collections.Generic</namespace>
 
         <method name="Clear">
             <sig>void ()</sig>
@@ -1360,6 +1371,9 @@ csharp> s
     </class>
 
     <class name="Queue&lt;T&gt;">
+        <url>https://msdn.microsoft.com/ja-jp/library/7977ey2c(v=vs.110).aspx</url>
+        <namespace>System.Collections.Generic</namespace>
+
         <method name="Clear">
         </method>
 
@@ -1410,6 +1424,9 @@ csharp> s
     </class>
 
     <class name="Random">
+        <url>https://msdn.microsoft.com/ja-jp/library/system.random(v=vs.110).aspx</url>
+        <namespace>System</namespace>
+
         <method name="Equals">
         </method>
 
@@ -1466,6 +1483,7 @@ csharp> s
 
     <class name="Enumerable">
         <url>https://msdn.microsoft.com/ja-jp/library/system.linq.enumerable_methods(v=vs.110).aspx</url>
+        <namespace>System.Linq</namespace>
 
         <static-method name="Aggregate">
             <sig>T (this IEnumerable&lt;T&gt; xs, Func&lt;T, T, T&gt; fn)</sig>
@@ -1988,6 +2006,7 @@ csharp> xs.Union(ys);
 
     <struct name="Complex">
         <url>https://msdn.microsoft.com/ja-jp/library/system.numerics.complex(v=vs.110).aspx</url>
+        <namespace>System.Numerics</namespace>
 
         <property name="Imaginary">
         </property>
@@ -2094,6 +2113,7 @@ csharp> xs.Union(ys);
 
     <struct name="Char">
         <url>https://msdn.microsoft.com/ja-jp/library/system.char.aspx</url>
+        <namespace>System</namespace>
 
         <method name="CompareTo">
         </method>
@@ -2188,6 +2208,7 @@ csharp> xs.Union(ys);
 
     <class name="Regex">
         <url>https://msdn.microsoft.com/ja-jp/library/system.text.regularexpressions.regex(v=vs.110).aspx</url>
+        <namespace>System.Text.RegularExpressions</namespace>
 
         <property name="CacheSize"></property>
         <property name="MatchTimeout"></property>
@@ -2276,6 +2297,7 @@ csharp> xs.Union(ys);
 
     <struct name="BigInteger">
         <url>https://msdn.microsoft.com/ja-jp/library/system.numerics.biginteger(v=vs.110).aspx</url>
+        <namespace>System.Numerics</namespace>
 
         <property name="IsEven">
         </property>
@@ -2378,6 +2400,7 @@ csharp> xs.Union(ys);
 
     <class name="LinkedList&lt;T&gt;">
         <url>https://msdn.microsoft.com/ja-jp/library/he2s3bh7%28v=vs.110%29.aspx</url>
+        <namespace>System.Collections.Generic</namespace>
 
         <property name="Count">
         </property>
@@ -2454,6 +2477,7 @@ csharp> xs.Union(ys);
 
     <class name="SortedSet&lt;T&gt;">
         <url>https://msdn.microsoft.com/ja-jp/library/dd412070(v=vs.110).aspx</url>
+        <namespace>System.Collections.Generic</namespace>
 
         <property name="Comparer">
         </property>
@@ -2554,6 +2578,7 @@ csharp> xs.Union(ys);
 
     <struct name="Vector2">
         <url>https://msdn.microsoft.com/ja-jp/library/system.numerics.vector2(v=vs.110).aspx</url>
+        <namespace>System.Numerics</namespace>
 
         <property name="One">
         </property>
