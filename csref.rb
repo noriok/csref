@@ -85,8 +85,14 @@ def csref_class_or_struct(doc, word)
     tagname = parent.name # class or struct
     kname = parent.attribute('name').value
     puts "#{tagname} #{kname}"
-    puts
 
+    # namespace
+    if parent.xpath('namespace').size > 0
+      x = parent.xpath('namespace')[0].text
+      puts "namespace #{x}"
+    end
+
+    puts
 
     s_methods = parent.xpath('static-method')
     if s_methods.size > 0
