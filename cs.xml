@@ -214,6 +214,13 @@ false
         </method>
 
         <method name="ConvertAll">
+            <sig>List&lt;TOutput&gt; &lt;TOutput&gt;(Converter&lt;T, TOutput&gt; converter)</sig>
+            <desc>リストの要素を変換します。</desc>
+            <example>
+csharp> var xs = new List&lt;int&gt; { 1, 3, 5 };
+csharp> xs.ConvertAll(e => e.ToString());
+{ "1", "3", "5" }
+            </example>
         </method>
 
         <method name="CopyTo">
