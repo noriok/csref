@@ -183,6 +183,9 @@ csharp> xs
         </method>
 
         <method name="BinarySearch">
+            <sig>int (T item)</sig>
+            <sig>int (T item, IComparer&lt;T&gt; comparer)</sig>
+            <sig>int (int index, int count, T item, IComparer&lt;T&gt; comparer)</sig>
         </method>
 
         <method name="Clear">
@@ -224,6 +227,9 @@ csharp> xs.ConvertAll(e => e.ToString());
         </method>
 
         <method name="CopyTo">
+            <sig>void (T[] dst)</sig>
+            <sig>void (T[] dst, int dstIndex)</sig>
+            <sig>void (int index, T[] dst, int dstIndex, int count)</sig>
         </method>
 
         <method name="Equals">
@@ -300,9 +306,13 @@ csharp> xs.FindIndex(2, e => e &lt; 3); // xs[2] 以降で 3 より小さな要�
         </method>
 
         <method name="FindLast">
+            <sig>T (Predicate&lt;T&gt; pred)</sig>
         </method>
 
         <method name="FindLastIndex">
+            <sig>int (int startIndex, int count, Predicate&lt;T&gt; pred)</sig>
+            <sig>int (int startIndex, Predicate&lt;T&gt; pred)</sig>
+            <sig>int (Predicate&lt;T&gt; pred)</sig>
         </method>
 
         <method name="ForEach">
@@ -397,6 +407,9 @@ csharp> xs
         </method>
 
         <method name="LastIndexOf">
+            <sig>int (T item)</sig>
+            <sig>int (T item, int index)</sig>
+            <sig>int (T item, int index, int count)</sig>
         </method>
 
         <method name="MemberwiseClone">
@@ -511,12 +524,15 @@ csharp>
         </method>
 
         <method name="ToArray">
+            <sig>T[] ()</sig>
         </method>
 
         <method name="ToString">
+            <sig>string ()</sig>
         </method>
 
         <method name="TrimExcess">
+            <sig>void ()</sig>
         </method>
 
         <method name="TrueForAll">
