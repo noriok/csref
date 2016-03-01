@@ -1319,6 +1319,7 @@ csharp> xs
         </method>
 
         <method name="GetEnumerator">
+            <sig>Stack&lt;T&gt;.Enumerator ()</sig>
         </method>
 
         <method name="GetHashCode">
@@ -1381,12 +1382,15 @@ csharp> s
         </method>
 
         <method name="ToArray">
+            <sig>T[] ()</sig>
         </method>
 
         <method name="ToString">
+            <sig>string ()</sig>
         </method>
 
         <method name="TrimExcess">
+            <sig>void ()</sig>
         </method>
 
         <property name="Count">
