@@ -1402,18 +1402,23 @@ csharp> s
         <namespace>System.Collections.Generic</namespace>
 
         <method name="Clear">
+            <sig>void ()</sig>
         </method>
 
         <method name="Contains">
+            <sig>bool (T item)</sig>
         </method>
 
         <method name="CopyTo">
+            <sig>void (T[] dst, int dstIndex)</sig>
         </method>
 
         <method name="Dequeue">
+            <sig>T ()</sig>
         </method>
 
         <method name="Enqueue">
+            <sig>void (T item)</sig>
         </method>
 
         <method name="Equals">
@@ -1423,6 +1428,7 @@ csharp> s
         </method>
 
         <method name="GetEnumerator">
+            <sig>Queue&lt;T&gt;.Enumerator ()</sig>
         </method>
 
         <method name="GetHashCode">
@@ -1435,15 +1441,18 @@ csharp> s
         </method>
 
         <method name="Peek">
+            <sig>T ()</sig>
         </method>
 
         <method name="ToArray">
+            <sig>T[] ()</sig>
         </method>
 
         <method name="ToString">
         </method>
 
         <method name="TrimExcess">
+            <sig>void ()</sig>
         </method>
 
         <property name="Count">
