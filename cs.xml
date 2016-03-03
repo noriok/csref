@@ -1096,15 +1096,19 @@ csharp> ys
         <namespace>System.Collections.Generic</namespace>
 
         <method name="Add">
+            <sig>void (TKey key, TValue value)</sig>
         </method>
 
         <method name="Clear">
+            <sig>void ()</sig>
         </method>
 
         <method name="ContainsKey">
+            <sig>bool (TKey key)</sig>
         </method>
 
         <method name="ContainsValue">
+            <sig>bool (TValue value)</sig>
         </method>
 
         <method name="Equals">
@@ -1114,12 +1118,14 @@ csharp> ys
         </method>
 
         <method name="GetEnumerator">
+            <sig>Dictionary&lt;TKey, TValue&gt;.Enumerator ()</sig>
         </method>
 
         <method name="GetHashCode">
         </method>
 
         <method name="GetObjectData">
+            <sig>void (SerializationInfo info, StreamingContext context)</sig>
         </method>
 
         <method name="GetType">
@@ -1129,15 +1135,19 @@ csharp> ys
         </method>
 
         <method name="OnDeserialization">
+            <sig>void (object sender)</sig>
         </method>
 
         <method name="Remove">
+            <sig>bool (TKey key)</sig>
         </method>
 
         <method name="ToString">
+            <sig>string ()</sig>
         </method>
 
         <method name="TryGetValue">
+            <sig>bool (TKey key, out TValue value)</sig>
         </method>
 
         <property name="Comparer">
