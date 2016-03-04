@@ -1172,69 +1172,88 @@ csharp> ys
         <namespace>System.Collections.Generic</namespace>
 
         <method name="Add">
+            <sig>bool (T item)</sig>
         </method>
 
         <method name="Clear">
+            <sig>void ()</sig>
         </method>
 
         <method name="Contains">
+            <sig>bool (T item)</sig>
         </method>
 
         <method name="CopyTo">
+            <sig>void (T[] dst)</sig>
+            <sig>void (T[] dst, int dstIndex)</sig>
+            <sig>void (T[] dst, int dstIndex, int count)</sig>
         </method>
 
         <static-method name="CreateSetComparer">
+            <sig>IEqualityComparer&lt;HashSet&lt;T&gt;&gt; ()</sig>
         </static-method>
 
         <method name="Equals">
         </method>
 
         <method name="ExceptWith">
+            <sig>void (IEnumerable&lt;T&gt; other)</sig>
         </method>
 
         <method name="Finalize">
         </method>
 
         <method name="GetEnumerator">
+            <sig>HashSet&lt;T&gt;.Enumerator ()</sig>
         </method>
 
         <method name="GetHashCode">
         </method>
 
         <method name="GetObjectData">
+            <sig>void (SerializationInfo info, StreamingContext context)</sig>
         </method>
 
         <method name="GetType">
         </method>
 
         <method name="IntersectWith">
+            <sig>void (IEnumerable&lt;T&gt; other)</sig>
         </method>
 
         <method name="IsProperSubsetOf">
+            <sig>bool (IEnumerable&lt;T&gt; other)</sig>
         </method>
 
         <method name="IsProperSupersetOf">
+            <sig>bool (IEnumerable&lt;T&gt; other)</sig>
         </method>
 
         <method name="IsSubsetOf">
+            <sig>bool (IEnumerable&lt;T&gt; other)</sig>
         </method>
 
         <method name="IsSupersetOf">
+            <sig>bool (IEnumerable&lt;T&gt; other)</sig>
         </method>
 
         <method name="MemberwiseClone">
         </method>
 
         <method name="OnDeserialization">
+            <sig>void (object sender)</sig>
         </method>
 
         <method name="Overlaps">
+            <sig>bool (IEnumerable&lt;T&gt; other)</sig>
         </method>
 
         <method name="Remove">
+            <sig>bool (T item)</sig>
         </method>
 
         <method name="RemoveWhere">
+            <sig>int (Predicate&lt;T&gt; pred)</sig>
         </method>
 
 		<method name="SetEquals">
@@ -1254,15 +1273,18 @@ false
         </method>
 
         <method name="SymmetricExceptWith">
+            <sig>void (IEnumerable&lt;T&gt; other)</sig>
         </method>
 
         <method name="ToString">
         </method>
 
         <method name="TrimExcess">
+            <sig>void ()</sig>
         </method>
 
         <method name="UnionWith">
+            <sig>void (IEnumerable&lt;T&gt; other)</sig>
         </method>
 
         <property name="Comparer">
