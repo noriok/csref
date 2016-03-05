@@ -2480,24 +2480,35 @@ csharp> xs.Union(ys);
         </property>
 
         <method name="AddAfter">
+            <sig>LinkedListNode&lt;T&gt; (LinkedListNode&lt;T&gt; node, T value)</sig>
+            <sig>void (LinkedListNode&lt;T&gt; node, LinkedListNode&lt;T&gt; newNode)</sig>
         </method>
 
         <method name="AddBefore">
+            <sig>LinkedListNode&lt;T&gt; (LinkedListNode&lt;T&gt; node, T value)</sig>
+            <sig>void (LinkedListNode&lt;T&gt; node, LinkedListNode&lt;T&gt; newNode)</sig>
         </method>
 
         <method name="AddFirst">
+            <sig>LinkedListNode&lt;T&gt; (T value)</sig>
+            <sig>void (LinkedListNode&lt;T&gt; node)</sig>
         </method>
 
         <method name="AddLast">
+            <sig>LinkedListNode&lt;T&gt; (T value)</sig>
+            <sig>void (LinkedListNode&lt;T&gt; node)</sig>
         </method>
 
         <method name="Clear">
+            <sig>void ()</sig>
         </method>
 
         <method name="Contains">
+            <sig>bool (T value)</sig>
         </method>
 
         <method name="CopyTo">
+            <sig>void (T[] dst, int dstIndex)</sig>
         </method>
 
         <method name="Equals">
@@ -2507,18 +2518,22 @@ csharp> xs.Union(ys);
         </method>
 
         <method name="Find">
+            <sig>LinkedListNode&lt;T&gt; (T value)</sig>
         </method>
 
         <method name="FindLast">
+            <sig>LinkedListNode&lt;T&gt; (T value)</sig>
         </method>
 
         <method name="GetEnumerator">
+            <sig>LinkedList&lt;T&gt;.Enumerator ()</sig>
         </method>
 
         <method name="GetHashCode">
         </method>
 
         <method name="GetObjectData">
+            <sig>void (SerializationInfo info, StreamingContext context)</sig>
         </method>
 
         <method name="GetType">
@@ -2528,15 +2543,20 @@ csharp> xs.Union(ys);
         </method>
 
         <method name="OnDeserialization">
+            <sig>void (object sender)</sig>
         </method>
 
         <method name="Remove">
+            <sig>bool (T value)</sig>
+            <sig>void (LinkedListNode&lt;T&gt; node)</sig>
         </method>
 
         <method name="RemoveFirst">
+            <sig>void ()</sig>
         </method>
 
         <method name="RemoveLast">
+            <sig>void ()</sig>
         </method>
 
         <method name="ToString">
