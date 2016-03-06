@@ -2669,7 +2669,7 @@ csharp> xs.Union(ys);
             <sig>int (Predicate&lt;T&gt; pred)</sig>
         </method>
 
-        <method name="Reverse">]
+        <method name="Reverse">
             <sig>IEnumerable&lt;T&gt; ()</sig>
         </method>
 
