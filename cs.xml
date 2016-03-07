@@ -2392,24 +2392,36 @@ csharp> xs.Union(ys);
         </property>
 
         <static-method name="Abs">
+            <sig>BigInteger (BigInteger value)</sig>
         </static-method>
 
         <static-method name="Add">
+            <sig>BigInteger (BigInteger a, BigInteger b)</sig>
         </static-method>
 
         <static-method name="Compare">
+            <sig>int (BigInteger a, BigInteger b)</sig>
         </static-method>
 
         <method name="CompareTo">
+            <sig>int (long other)</sig>
+            <sig>int (Object obj)</sig>
+            <sig>int (ulong other)</sig>
         </method>
 
         <static-method name="Divide">
+            <sig>BigInteger (BigInteger dividend, BigInteger divisor)</sig>
         </static-method>
 
         <static-method name="DivRem">
+            <sig>BigInteger (BigInteger dividend, BigInteger divisor, out BigInteger remainder)</sig>
         </static-method>
 
         <method name="Equals">
+            <sig>bool (BigInteger other)</sig>
+            <sig>bool (long other)</sig>
+            <sig>bool (object obj)</sig>
+            <sig>bool (ulong other)</sig>
         </method>
 
         <method name="GetHashCode">
@@ -2419,50 +2431,72 @@ csharp> xs.Union(ys);
         </method>
 
         <static-method name="GreatestCommonDivisor">
+            <sig>BigInteger (BigInteger a, BigInteger b)</sig>
         </static-method>
 
         <static-method name="Log">
+            <sig>double (BigInteger value)</sig>
+            <sig>double (BigInteger value, double baseValue)</sig>
         </static-method>
 
         <static-method name="Log10">
+            <sig>double (BigInteger value)</sig>
         </static-method>
 
         <static-method name="Max">
+            <sig>BigInteger (BigInteger a, BigInteger b)</sig>
         </static-method>
 
         <static-method name="Min">
+            <sig>BigInteger (BigInteger a, BigInteger b)</sig>
         </static-method>
 
         <static-method name="ModPow">
-            <sig>BigInteger (BigInteger val, BigInteger exponent, BigInteger modulus)</sig>
-            <desc>val の exponent 乗を modulus で割った余りを求めます。</desc>
+            <sig>BigInteger (BigInteger value, BigInteger exponent, BigInteger modulus)</sig>
+            <desc>value の exponent 乗を modulus で割った余りを求めます。</desc>
         </static-method>
 
         <static-method name="Multiply">
+            <sig>BigInteger (BigInteger a, BigInteger b)</sig>
         </static-method>
 
         <static-method name="Negate">
+            <sig>BigInteger (BigInteger value)</sig>
         </static-method>
 
         <static-method name="Parse">
+            <sig>BigInteger (string value)</sig>
+            <sig>BigInteger (string value, IFormatProvider provider)</sig>
+            <sig>BigInteger (string value, NumberStyles style)</sig>
+            <sig>BigInteger (string value, NumberStyles style, IFormatProvider provider)</sig>
         </static-method>
 
         <static-method name="Pow">
+            <sig>BigInteger (BigInteger value, int exponent)</sig>
         </static-method>
 
         <static-method name="Remainder">
+            <sig>BigInteger (BigInteger dividend, BigInteger divisor)</sig>
         </static-method>
 
         <static-method name="Subtract">
+            <sig>BigInteger (BigInteger a, BigInteger b)</sig>
         </static-method>
 
         <method name="ToByteArray">
+            <sig>byte[] ()</sig>
         </method>
 
         <method name="ToString">
+            <sig>string ()</sig>
+            <sig>string (IFormatProvider provider)</sig>
+            <sig>string (string format)</sig>
+            <sig>string (string format, IFormatProvider provider)</sig>
         </method>
 
         <static-method name="TryParse">
+            <sig>bool (string value, out BigInteger result)</sig>
+            <sig>bool (string value, NumberStyles style, IFormatProvider provider, out BigInteger result)</sig>
         </static-method>
     </struct>
 
