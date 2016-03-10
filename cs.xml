@@ -2089,39 +2089,52 @@ csharp> xs.Union(ys);
         </property>
 
         <static-method name="Abs">
+            <sig>double (Complex value)</sig>
         </static-method>
 
         <static-method name="Acos">
+            <sig>Complex (Complex value)</sig>
         </static-method>
 
         <static-method name="Add">
+            <sig>Complex (Complex a, Complex b)</sig>
         </static-method>
 
         <static-method name="Asin">
+            <sig>Complex (Complex value)</sig>
         </static-method>
 
         <static-method name="Atan">
+            <sig>Complex (Complex value)</sig>
         </static-method>
 
         <static-method name="Conjugate">
+            <sig>Complex (Complex value)</sig>
         </static-method>
 
         <static-method name="Cos">
+            <sig>Complex (Complex value)</sig>
         </static-method>
 
         <static-method name="Cosh">
+            <sig>Complex (Complex value)</sig>
         </static-method>
 
         <static-method name="Divide">
+            <sig>Complex (Complex dividend, Complex divisor)</sig>
         </static-method>
 
         <method name="Equals">
+            <sig>bool (Complex value)</sig>
+            <sig>bool (object obj)</sig>
         </method>
 
         <static-method name="Exp">
+            <sig>Complex (Complex value)</sig>
         </static-method>
 
         <static-method name="FromPolarCoordinates">
+            <sig>Complex (double magnitude, double phase)</sig>
         </static-method>
 
         <method name="GetHashCode">
@@ -2131,42 +2144,60 @@ csharp> xs.Union(ys);
         </method>
 
         <static-method name="Log">
+            <sig>Complex (Complex value)</sig>
+            <sig>Complex (Complex value, double baseValue)</sig>
         </static-method>
 
         <static-method name="Log10">
+            <sig>Complex (Complex value)</sig>
         </static-method>
 
         <static-method name="Multiply">
+            <sig>Complex (Complex a, Complex b)</sig>
         </static-method>
 
         <static-method name="Negate">
+            <sig>Complex (Complex value)</sig>
         </static-method>
 
         <static-method name="Pow">
+            <sig>Complex (Complex value, Complex power)</sig>
+            <sig>Complex (Complex value, double power)</sig>
         </static-method>
 
         <static-method name="Reciprocal">
+            <sig>Complex (Complex value)</sig>
         </static-method>
 
         <static-method name="Sin">
+            <sig>Complex (Complex value)</sig>
         </static-method>
 
         <static-method name="Sinh">
+            <sig>Complex (Complex value)</sig>
         </static-method>
 
         <static-method name="Sqrt">
+            <sig>Complex (Complex value)</sig>
         </static-method>
 
         <static-method name="Subtract">
+            <sig>Complex (Complex a, Complex b)</sig>
         </static-method>
 
         <static-method name="Tan">
+            <sig>Complex (Complex value)</sig>
         </static-method>
 
         <static-method name="Tanh">
+            <sig>Complex (Complex value)</sig>
         </static-method>
 
         <method name="ToString">
+            <sig>string ()</sig>
+            <sig>string (IFormatProvider provider)</sig>
+            <sig>string (string format)</sig>
+            <sig>string (string format, IFormatProvider provider)</sig>
         </method>
 
         <field name="ImaginaryOne">
