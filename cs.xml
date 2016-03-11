@@ -14,12 +14,6 @@
 
       -->
 
-    <!--
-
-    TODO: SortedSet
-
-      -->
-
     <class name="Math">
         <url>https://msdn.microsoft.com/ja-jp/library/system.math%28v=vs.110%29.aspx</url>
         <namespace>System</namespace>
@@ -896,9 +890,18 @@ csharp> "-- foo --".TrimStart(new[] { '-' });
         <namespace>System</namespace>
 
         <static-method name="AsReadOnly">
+            <sig>ReadOnlyCollection&lt;T&gt; &lt;T&gt;(T[] ar)</sig>
         </static-method>
 
         <static-method name="BinarySearch">
+            <sig>int (Array ar, int index, int length, object value)</sig>
+            <sig>int (Array ar, int index, int length, object value, IComparer comparer)</sig>
+            <sig>int (Array ar, object value)</sig>
+            <sig>int (Array ar, object value, IComparer comparer)</sig>
+            <sig>int &lt;T&gt;(T[] ar, T value)</sig>
+            <sig>int &lt;T&gt;(T[] ar, T value, IComparer&lt;T&gt; comparer)</sig>
+            <sig>int &lt;T&gt;(T[] ar, int index, int length, T value)</sig>
+            <sig>int &lt;T&gt;(T[] ar, int index, int length, T value, IComparer&lt;T&gt; comparer)</sig>
         </static-method>
 
         <static-method name="Clear">
@@ -917,12 +920,15 @@ csharp> ys
         </static-method>
 
         <static-method name="Clone">
+            <sig>object ()</sig>
         </static-method>
 
         <static-method name="ConstrainedCopy">
+            <sig>void (Array src, int srcIndex, Array dst, int dstIndex, int length)</sig>
         </static-method>
 
         <static-method name="ConvertAll">
+            <sig>TOutput[] &lt;TInput, TOutput&gt;(TInput[] ar, Converter&lt;TInput, TOutput&gt; converter)</sig>
         </static-method>
 
 		<static-method name="Copy">
@@ -977,54 +983,80 @@ csharp> xs.CopyTo(zs, 2); // System.ArgumentException が発生する(要素数�
         </method>
 
         <static-method name="CreateInstance">
+            <sig>Array (Type elementType, int length)</sig>
+            <sig>Array (Type elementType, int length1, int length2)</sig>
+            <sig>Array (Type elementType, int length1, int length2, int length3)</sig>
+            <sig>Array (Type elementType, params int[] lengths)</sig>
+            <sig>Array (Type elementType, int[] lengths, int[] lowerBounds)</sig>
+            <sig>Array (Type elementType, params long[] lengths)</sig>
+        </static-method>
+
+        <static-method name="Empty">
+            <sig>T[] &lt;T&gt;()</sig>
         </static-method>
 
         <static-method name="Equals">
         </static-method>
 
         <static-method name="Exists">
+            <sig>bool &lt;T&gt;(T[] ar, Predicate&lt;T&gt; pred)</sig>
         </static-method>
 
         <static-method name="Finalize">
         </static-method>
 
         <static-method name="Find">
+            <sig>T &lt;T&gt;(T[] ar, Predicate&lt;T&gt; pred)</sig>
         </static-method>
 
         <static-method name="FindAll">
+            <sig>T[] &lt;T&gt;(T[] ar, Predicate&lt;T&gt; pred)</sig>
         </static-method>
 
         <static-method name="FindIndex">
+            <sig>int &lt;T&gt;(T[] ar, int startIndex, int count, Predicate&lt;T&gt; pred)</sig>
+            <sig>int &lt;T&gt;(T[] ar, int startIndex, Predicate&lt;T&gt; pred)</sig>
+            <sig>int &lt;T&gt;(T[] ar, Predicate&lt;T&gt; pred)</sig>
         </static-method>
 
         <static-method name="FindLast">
+            <sig>T &lt;T&gt;(T[] ar, Predicate&lt;T&gt; pred)</sig>
         </static-method>
 
         <static-method name="FindLastIndex">
+            <sig>int &lt;T&gt;(T[] ar, int startIndex, int count, Predicate&lt;T&gt; pred)</sig>
+            <sig>int &lt;T&gt;(T[] ar, int startIndex, Predicate&lt;T&gt; pred)</sig>
+            <sig>int &lt;T&gt;(T[] ar, Predicate&lt;T&gt; pred)</sig>
         </static-method>
 
         <static-method name="ForEach">
+            <sig>void &lt;T&gt;(T[] ar, Action&lt;T&gt; action)</sig>
         </static-method>
 
         <method name="GetEnumerator">
+            <sig>IEnumerator ()</sig>
         </method>
 
         <method name="GetHashCode">
         </method>
 
         <method name="GetLength">
+            <sig>int (int dimension)</sig>
         </method>
 
-		<method name="GetLongLength">
+        <method name="GetLongLength">
+            <sig>long (int dimension)</sig>
         </method>
 
         <method name="GetLowerBound">
+            <sig>int (int dimension)</sig>
         </method>
 
         <method name="GetType">
         </method>
 
         <method name="GetUpperBound">
+            <sig>int (int dimension)</sig>
         </method>
 
         <method name="GetValue">
