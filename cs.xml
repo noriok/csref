@@ -1060,15 +1060,36 @@ csharp> xs.CopyTo(zs, 2); // System.ArgumentException が発生する(要素数�
         </method>
 
         <method name="GetValue">
+            <sig>object (int index)</sig>
+            <sig>object (int index1, int index2)</sig>
+            <sig>object (int index1, int index2, int index3)</sig>
+            <sig>object (params int[] indices)</sig>
+            <sig>object (long index)</sig>
+            <sig>object (long index1, long index2)</sig>
+            <sig>object (long index1, long index2, long index3)</sig>
+            <sig>object (params long[] indices)</sig>
         </method>
 
         <static-method name="IndexOf">
+            <sig>int (Array ar, object value)</sig>
+            <sig>int (Array ar, object value, int startIndex)</sig>
+            <sig>int (Array ar, object value, int startIndex, int count)</sig>
+            <sig>int &lt;T&gt;(T[] ar, T value)</sig>
+            <sig>int &lt;T&gt;(T[] ar, T value, int startIndex)</sig>
+            <sig>int &lt;T&gt;(T[] ar, T value, int startIndex, int count)</sig>
         </static-method>
 
         <method name="Initialize">
+            <sig>void ()</sig>
         </method>
 
         <static-method name="LastIndexOf">
+            <sig>int (Array ar, object value)</sig>
+            <sig>int (Array ar, object value, int startIndex)</sig>
+            <sig>int (Array ar, object value, int startIndex, int count)</sig>
+            <sig>int &lt;T&gt;(T[] ar, T value)</sig>
+            <sig>int &lt;T&gt;(T[] ar, T value, int startIndex)</sig>
+            <sig>int &lt;T&gt;(T[] ar, T value, int startIndex, int count)</sig>
         </static-method>
 
         <method name="MemberwiseClone">
@@ -1111,15 +1132,41 @@ csharp> ys
         </static-method>
 
         <method name="SetValue">
+            <sig>void (object value, int index)</sig>
+            <sig>void (object value, int index1, int index2)</sig>
+            <sig>void (object value, int index1, int index2, int index3)</sig>
+            <sig>void (object value, params int[] indices)</sig>
+            <sig>void (object value, long index)</sig>
+            <sig>void (object value, long index1, long index2)</sig>
+            <sig>void (object value, long index1, long index2, long index3)</sig>
+            <sig>void (object value, params long[] indices)</sig>
         </method>
 
         <static-method name="Sort">
+            <sig>void (Array ar)</sig>
+            <sig>void (Array keys, Array items)</sig>
+            <sig>void (Array keys, Array items, IComparer comparer)</sig>
+            <sig>void (Array keys, Array items, int index, int length)</sig>
+            <sig>void (Array keys, Array items, int index, int length, IComparer comparer)</sig>
+            <sig>void (Array ar, IComparer comparer)</sig>
+            <sig>void (Array ar, int index, int length)</sig>
+            <sig>void (Array ar, int index, int length, IComparer comparer)</sig>
+            <sig>void &lt;T&gt;(T[] ar)</sig>
+            <sig>void &lt;T&gt;(T[] ar, Comparison&lt;T&gt; comparison)</sig>
+            <sig>void &lt;T&gt;(T[] ar, IComparer&lt;T&gt; comparer)</sig>
+            <sig>void &lt;T&gt;(T[] ar, int index, int length)</sig>
+            <sig>void &lt;T&gt;(T[] ar, int index, int length, IComparer&lt;T&gt; comparer)</sig>
+            <sig>void &lt;TKey, TValue&gt;(TKey[] keys, TValue[] items)</sig>
+            <sig>void &lt;TKey, TValue&gt;(TKey[] keys, TValue[] items, IComparer&lt;TKey&gt; comparer</sig>
+            <sig>void &lt;TKey, TValue&gt;(TKey[] keys, TValue[] items, int index, int length)</sig>
+            <sig>void &lt;TKey, TValue&gt;(TKey[] keys, TValue[] items, int index, int length, IComparer&lt;TKey&gt; comparer)</sig>
         </static-method>
 
         <method name="ToString">
         </method>
 
         <static-method name="TrueForAll">
+            <sig>bool &lt;T&gt;(T[] ar, Predicate&lt;T&gt; pred)</sig>
         </static-method>
     </class>
 
