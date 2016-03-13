@@ -1,6 +1,32 @@
 require 'nokogiri'
+require 'optparse'
 
 XML_FILENAME = 'cs.xml'
+
+def oporder
+  table =<<EOS
+演算子の優先順位(優先順位の高いものから低いものの順)
+基本式:         x.y f(x) a[x] x++ x-- new typeof checked unchecked
+単項式:         + - ! ~ ++x --x (T)x
+乗法式:         * / %
+加法式:         + / %
+シフト:         << >>
+関係式と型検査: < > <= >= is as
+等値式:         == !=
+論理 AND:       &
+論理 XOR:       ^
+論理 OR:        |
+条件 AND:       &&
+条件 OR:        ||
+条件:           ?:
+代入:           = *= /= %= += -= <<= >>= &= ^= |=
+
+代入演算子と条件演算子(?:)の結合規則は、右から左。
+それ以外のすべての二項演算子の結合規則は、左から右。
+EOS
+
+puts table
+end
 
 def check(e)
   raise unless e
@@ -235,6 +261,12 @@ def csref_search(doc, word, subword)
 end
 
 def main
+  params = ARGV.getopts('o')
+  if params['o']
+    oporder
+    exit
+  end
+
   doc = parse_xml()
 
   case ARGV.size
