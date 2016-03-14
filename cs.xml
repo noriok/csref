@@ -2294,93 +2294,153 @@ csharp> xs.Union(ys);
         <namespace>System</namespace>
 
         <method name="CompareTo">
+            <sig>int (char value)</sig>
+            <sig>int (object value)</sig>
         </method>
 
         <static-method name="ConvertFromUtf32">
+            <sig>string (int utf32)</sig>
         </static-method>
 
         <static-method name="ConvertToUtf32">
+            <sig>int (char highSurrogate, char lowSurrogate)</sig>
+            <sig>int (string s, int index)</sig>
         </static-method>
 
         <method name="Equals">
+            <sig>bool (char obj)</sig>
+            <sig>bool (object obj)</sig>
         </method>
 
         <method name="GetHashCode">
         </method>
 
         <static-method name="GetNumericValue">
+            <sig>double (char c)</sig>
+            <sig>double (string s, int index)</sig>
         </static-method>
 
         <method name="GetType">
         </method>
 
         <method name="GetTypeCode">
+            <sig>TypeCode ()</sig>
         </method>
 
-        <static-method name="etUnicodeCategory">
+        <static-method name="GetUnicodeCategory">
+            <sig>UnicodeCategory (char c)</sig>
+            <sig>UnicodeCategory (string s, int index)</sig>
         </static-method>
 
         <static-method name="IsControl">
+            <sig>bool (char c)</sig>
+            <sig>bool (string s, int index)</sig>
         </static-method>
 
         <static-method name="IsDigit">
+            <sig>bool (char c)</sig>
+            <sig>bool (string s, int index)</sig>
         </static-method>
 
         <static-method name="IsHighSurrogate">
+            <sig>bool (char c)</sig>
+            <sig>bool (string s, int index)</sig>
         </static-method>
 
         <static-method name="IsLetter">
+            <sig>bool (char c)</sig>
+            <sig>bool (string s, int index)</sig>
         </static-method>
 
         <static-method name="IsLetterOrDigit">
+            <sig>bool (char c)</sig>
+            <sig>bool (string s, int index)</sig>
         </static-method>
 
         <static-method name="IsLower">
+            <sig>bool (char c)</sig>
+            <sig>bool (string s, int index)</sig>
         </static-method>
 
         <static-method name="IsLowSurrogate">
+            <sig>bool (char c)</sig>
+            <sig>bool (string s, int index)</sig>
         </static-method>
 
         <static-method name="IsNumber">
+            <sig>bool (char c)</sig>
+            <sig>bool (string s, int index)</sig>
         </static-method>
 
         <static-method name="IsPunctuation">
+            <sig>bool (char c)</sig>
+            <sig>bool (string s, int index)</sig>
         </static-method>
 
         <static-method name="IsSeparator">
+            <sig>bool (char c)</sig>
+            <sig>bool (string s, int index)</sig>
         </static-method>
 
         <static-method name="IsSurrogate">
+            <sig>bool (char c)</sig>
+            <sig>bool (string s, int index)</sig>
         </static-method>
 
         <static-method name="IsSurrogatePair">
+            <sig>bool (char highSurrogate, char lowSurrogate)</sig>
+            <sig>bool (string s, int index)</sig>
         </static-method>
 
         <static-method name="IsSymbol">
+            <sig>bool (char c)</sig>
+            <sig>bool (string s, int index)</sig>
         </static-method>
 
         <static-method name="IsUpper">
+            <sig>bool (char c)</sig>
+            <sig>bool (string s, int index)</sig>
         </static-method>
 
         <static-method name="IsWhiteSpace">
+            <sig>bool (char c)</sig>
+            <sig>bool (string s, int index)</sig>
         </static-method>
 
         <static-method name="Parse">
+            <sig>char (string s)</sig>
         </static-method>
 
         <static-method name="ToLower">
+            <sig>char (char c)</sig>
+            <sig>char (char c, CultureInfo culture)</sig>
+        </static-method>
+
+        <static-method name="ToLowerInvariant">
+            <sig>char (char c)</sig>
         </static-method>
 
         <method name="ToString">
+            <sig>string ()</sig>
+            <sig>string (IFormatProvider provider)</sig>
         </method>
 
+        <!--
+        <static-method name="ToString">
+        </static-method>
+          -->
+
         <static-method name="ToUpper">
+            <sig>char (char c)</sig>
+            <sig>char (char c, CultureInfo culture)</sig>
         </static-method>
 
         <static-method name="ToUpperInvariant">
+            <sig>char (char c)</sig>
         </static-method>
 
         <static-method name="TryParse">
+            <sig>bool (string s, out char result)</sig>
         </static-method>
     </struct>
 
