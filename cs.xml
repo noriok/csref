@@ -1574,6 +1574,11 @@ csharp> s
         <url>https://msdn.microsoft.com/ja-jp/library/system.random(v=vs.110).aspx</url>
         <namespace>System</namespace>
 
+        <constructor>
+            <sig>()</sig>
+            <sig>(int seed)</sig>
+        </constructor>
+
         <method name="Equals">
         </method>
 
