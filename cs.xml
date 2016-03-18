@@ -1518,6 +1518,12 @@ csharp> s
         <url>https://msdn.microsoft.com/ja-jp/library/7977ey2c(v=vs.110).aspx</url>
         <namespace>System.Collections.Generic</namespace>
 
+        <constructor>
+            <sig>()</sig>
+            <sig>(IEnumerable&lt;T&gt; xs)</sig>
+            <sig>(int capacity)</sig>
+        </constructor>
+
         <method name="Clear">
             <sig>void ()</sig>
         </method>
