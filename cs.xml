@@ -2574,6 +2574,17 @@ csharp> xs.Union(ys);
         <url>https://msdn.microsoft.com/ja-jp/library/system.numerics.biginteger(v=vs.110).aspx</url>
         <namespace>System.Numerics</namespace>
 
+        <constructor>
+            <sig>(byte[] value)</sig>
+            <sig>(decimal value)</sig>
+            <sig>(double value)</sig>
+            <sig>(int value)</sig>
+            <sig>(long value)</sig>
+            <sig>(float value)</sig>
+            <sig>(uint value)</sig>
+            <sig>(ulong value)</sig>
+        </constructor>
+
         <property name="IsEven">
         </property>
 
