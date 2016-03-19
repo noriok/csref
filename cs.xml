@@ -557,6 +557,14 @@ false
         <namespace>System</namespace>
 
         <constructor>
+            <sig>(char* value)</sig>
+            <sig>(char* value, int startIndex, int length)</sig>
+            <sig>(char c, int count)</sig>
+            <sig>(char[] value)</sig>
+            <sig>(char[] value, int startIndex, int length)</sig>
+            <sig>(sbyte* value)</sig>
+            <sig>(sbyte* value, int startIndex, int length)</sig>
+            <sig>(sbyte* value, int startIndex, int length, Encoding enc)</sig>
         </constructor>
 
         <field name="Empty">
