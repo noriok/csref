@@ -2825,6 +2825,14 @@ csharp> xs.Union(ys);
         <url>https://msdn.microsoft.com/ja-jp/library/dd412070(v=vs.110).aspx</url>
         <namespace>System.Collections.Generic</namespace>
 
+        <constructor>
+            <sig>()</sig>
+            <sig>(IComparer&lt;T&gt; comparer)</sig>
+            <sig>(IEnumerable&lt;T&gt; xs)</sig>
+            <sig>(IEnumerable&lt;T&gt; xs, IComparer&lt;T&gt; comparer)</sig>
+            <sig>(SerializationInfo info, StreamingContext context)</sig>
+        </constructor>
+
         <property name="Comparer">
         </property>
 
