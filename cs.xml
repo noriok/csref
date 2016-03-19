@@ -148,6 +148,12 @@ csharp> m
         <url>https://msdn.microsoft.com/ja-jp/library/6sh2ey19%28v=vs.110%29.aspx</url>
         <namespace>System.Collections.Generic</namespace>
 
+        <constructor>
+            <sig>()</sig>
+            <sig>(IEnumerable&lt;T&gt; xs)</sig>
+            <sig>(int capacity)</sig>
+        </constructor>
+
         <property name="Capacity">
         </property>
 
