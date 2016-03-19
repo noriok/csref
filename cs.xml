@@ -1250,6 +1250,14 @@ csharp> ys
         <url>https://msdn.microsoft.com/ja-jp/library/bb359438(v=vs.110).aspx</url>
         <namespace>System.Collections.Generic</namespace>
 
+        <constructor>
+            <sig>()</sig>
+            <sig>(IEnumerable&lt;T&gt; xs)</sig>
+            <sig>(IEnumerable&lt;T&gt; xs, IEqualityComparer&lt;T&gt; comparer)</sig>
+            <sig>(IEqualityComparer&lt;T&gt; comparer)</sig>
+            <sig>(SerializationInfo info, StreamingContext context)</sig>
+        </constructor>
+
         <method name="Add">
             <sig>bool (T item)</sig>
         </method>
