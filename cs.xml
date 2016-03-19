@@ -2477,6 +2477,14 @@ csharp> xs.Union(ys);
         <url>https://msdn.microsoft.com/ja-jp/library/system.text.regularexpressions.regex(v=vs.110).aspx</url>
         <namespace>System.Text.RegularExpressions</namespace>
 
+        <constructor>
+            <sig>()</sig>
+            <sig>(SerializationInfo info, StreamingContext context)</sig>
+            <sig>(string pattern)</sig>
+            <sig>(string pattern, RegexOptions options)</sig>
+            <sig>(string pattern, RegexOptions options, TimeSpan matchTimeout)</sig>
+        </constructor>
+
         <property name="CacheSize"></property>
         <property name="MatchTimeout"></property>
         <property name="Options"></property>
