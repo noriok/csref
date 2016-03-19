@@ -2180,6 +2180,10 @@ csharp> xs.Union(ys);
         <url>https://msdn.microsoft.com/ja-jp/library/system.numerics.complex(v=vs.110).aspx</url>
         <namespace>System.Numerics</namespace>
 
+        <constructor>
+            <sig>(double real, double imaginary)</sig>
+        </constructor>
+
         <property name="Imaginary">
         </property>
 
