@@ -104,9 +104,12 @@ csharp> m
         </static-method>
 
         <static-method name="Log">
+            <sig>double (double d)</sig>
+            <sig>double (double d, double base)</sig>
         </static-method>
 
         <static-method name="Log10">
+            <sig>double (double d)</sig>
         </static-method>
 
         <static-method name="Max">
