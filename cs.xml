@@ -1188,6 +1188,16 @@ csharp> ys
         <url>https://msdn.microsoft.com/ja-jp/library/xfhwa508(v=vs.110).aspx</url>
         <namespace>System.Collections.Generic</namespace>
 
+        <constructor>
+            <sig>()</sig>
+            <sig>(IDictionary&lt;TKey, TValue&gt; dict)</sig>
+            <sig>(IDictionary&lt;TKey, TValue&gt; dict, IEqualityComparer&lt;TKey&gt; comparer)</sig>
+            <sig>(IEqualityComparer&lt;TKey&gt; comparer)</sig>
+            <sig>(int capacity)</sig>
+            <sig>(int capacity, IEqualityComparer&lt;TKey&gt; comparer)</sig>
+            <sig>(SerializationInfo info, StreamingContext context)</sig>
+        </constructor>
+
         <method name="Add">
             <sig>void (TKey key, TValue value)</sig>
         </method>
