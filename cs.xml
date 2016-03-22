@@ -110,7 +110,7 @@ csharp> m
         <static-method name="Exp">
             <sig>double (double d)</sig>
             <desc>
-                e の d 乗の値を返します。
+                自然対数の底 e の d 乗の値を返します。
             </desc>
             <example>
 csharp> Math.Exp(1.0);
