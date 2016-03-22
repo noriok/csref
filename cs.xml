@@ -108,6 +108,16 @@ csharp> m
         </static-method>
 
         <static-method name="Exp">
+            <sig>double (double d)</sig>
+            <desc>
+                e の d 乗の値を返します。
+            </desc>
+            <example>
+csharp> Math.Exp(1.0);
+2.71828182845905
+csharp> Math.Exp(2.0);
+7.38905609893065
+            </example>
         </static-method>
 
         <static-method name="Floor">
