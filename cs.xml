@@ -74,7 +74,7 @@ csharp> Math.BigMul(int.MaxValue, int.MaxValue);
 
         <static-method name="Ceiling">
             <sig>decimal (decimal d)</sig>
-            <sig>double (double a)</sig>
+            <sig>double (double d)</sig>
             <desc>
                 自身と等しいかより大きな整数のうち、最小のものを返します。
             </desc>
