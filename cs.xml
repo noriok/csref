@@ -1,19 +1,5 @@
 <?xml version="1.0"?>
 <cs>
-    <!--
-
-    class : クラス名
-    interface : インターフェース名
-    url : MSDN の URL
-
-    constructor : コンストラクタ
-    field : フィールド
-    property : プロパティ
-    static-method : static メソッド
-    method : インスタンスメソッド
-
-      -->
-
     <class name="Math">
         <url>https://msdn.microsoft.com/ja-jp/library/system.math%28v=vs.110%29.aspx</url>
         <namespace>System</namespace>
