@@ -4,7 +4,7 @@ require 'optparse'
 XML_FILENAME = 'cs.xml'
 
 def oporder
-  table =<<EOS
+  puts <<EOS
 演算子の優先順位(優先順位の高いものから低いものの順)
 基本式:         x.y f(x) a[x] x++ x-- new typeof checked unchecked
 単項式:         + - ! ~ ++x --x (T)x
@@ -24,8 +24,6 @@ def oporder
 代入演算子と条件演算子(?:)の結合規則は、右から左。
 それ以外のすべての二項演算子の結合規則は、左から右。
 EOS
-
-puts table
 end
 
 def check(e)
@@ -73,7 +71,6 @@ def find_structs(doc, word)
   ns.each {|e|
     name = e.attribute('name').value.downcase
     if name.start_with?(word.downcase)
-      # puts "found: #{name}"
       ret << e
     end
   }
@@ -133,21 +130,21 @@ def csref_class_or_struct(doc, word)
     s_methods = parent.xpath('static-method')
     if s_methods.size > 0
       puts '--- static method ---'
-      display_list(s_methods.map {|e| e.attribute('name').value }.sort)
+      display_list s_methods.map {|e| e.attribute('name').value }.sort
       puts
     end
 
     methods = parent.xpath('method')
     if methods.size > 0
       puts '--- method ---'
-      display_list(methods.map {|e| e.attribute('name').value }.sort)
+      display_list methods.map {|e| e.attribute('name').value }.sort
       puts
     end
 
     properties = parent.xpath('property')
     if properties.size > 0
       puts '--- property ---'
-      display_list(properties.map {|e| e.attribute('name').value }.sort)
+      display_list properties.map {|e| e.attribute('name').value }.sort
       puts
     end
   else
@@ -166,7 +163,6 @@ def display_method(element, parent)
   element.children.each {|e|
     case e.name # タグ名
     when 'sig'
-      # puts "sig=> #{e.text}"
       sigs << e.text
 
     when 'desc'
@@ -188,7 +184,6 @@ def display_method(element, parent)
       end
 
     when 'example'
-      # puts "example=> #{e.text}"
       example = e.text
     end
   }
@@ -219,14 +214,10 @@ def display_content(element, parent)
 
   case element.name
   when "method"
-    # puts "method ->"
     display_method(element, parent)
-
   when "static-method"
-    # puts "static method ->"
     display_method(element, parent)
   when "property"
-    # puts "property ->"
     puts "プロパティは未実装"
   else
     fail
