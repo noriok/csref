@@ -120,16 +120,26 @@ def csref_class_or_struct(doc, word)
 
     puts
 
+    # constructor
+    ctors = parent.xpath('constructor')
+    if ctors.size > 0
+      puts '--- constructor ---'
+      ctors.xpath('sig').each {|e|
+        puts e.text
+      }
+      puts
+    end
+
     s_methods = parent.xpath('static-method')
     if s_methods.size > 0
-      puts '--- static methods ---'
+      puts '--- static method ---'
       display_list(s_methods.map {|e| e.attribute('name').value }.sort)
       puts
     end
 
     methods = parent.xpath('method')
     if methods.size > 0
-      puts '--- methods ---'
+      puts '--- method ---'
       display_list(methods.map {|e| e.attribute('name').value }.sort)
       puts
     end
@@ -167,11 +177,11 @@ def display_method(element, parent)
         # 一行目の先頭空白文字分だけ各行から取り除く(マッチする場合のみ)
         ret = ss[0].scan(/^ +/)
         if ret.size > 0
-          desc = ss.map {|e|
-            if e.start_with?(ret[0])
-              e.slice(ret[0].size, e.length)
+          desc = ss.map {|x|
+            if x.start_with?(ret[0])
+              x.slice(ret[0].size, x.length)
             else
-              e
+              x
             end
           }.join("\n")
         end
