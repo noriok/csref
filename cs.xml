@@ -183,12 +183,16 @@ csharp> Math.Sqrt(3);
         </static-method>
 
         <static-method name="Tan">
+            <sig>double (double d)</sig>
         </static-method>
 
         <static-method name="Tanh">
+            <sig>double (double d)</sig>
         </static-method>
 
         <static-method name="Truncate">
+            <sig>decimal (decimal d)</sig>
+            <sig>double (double d)</sig>
         </static-method>
 
     </class>
