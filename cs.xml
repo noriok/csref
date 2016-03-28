@@ -159,12 +159,21 @@ csharp> Math.Pow(2, -1);
         </static-method>
 
         <static-method name="Sign">
+            <sig>int (decimal value)</sig>
+            <sig>int (double value)</sig>
+            <sig>int (short value)</sig>
+            <sig>int (int value)</sig>
+            <sig>int (long value)</sig>
+            <sig>int (sbyte value)</sig>
+            <sig>int (float value)</sig>
         </static-method>
 
         <static-method name="Sin">
+            <sig>double (double d)</sig>
         </static-method>
 
         <static-method name="Sinh">
+            <sig>double (double d)</sig>
         </static-method>
 
         <static-method name="Sqrt">
