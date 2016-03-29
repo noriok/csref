@@ -59,8 +59,8 @@ csharp> Math.BigMul(int.MaxValue, int.MaxValue);
         </static-method>
 
         <static-method name="Ceiling">
-            <sig>decimal (decimal d)</sig>
-            <sig>double (double d)</sig>
+            <sig>decimal (decimal x)</sig>
+            <sig>double (double x)</sig>
             <desc>
                 自身と等しいかより大きな整数のうち、最小のものを返します。
             </desc>
@@ -94,9 +94,9 @@ csharp> m
         </static-method>
 
         <static-method name="Exp">
-            <sig>double (double d)</sig>
+            <sig>double (double x)</sig>
             <desc>
-                自然対数の底 e の d 乗の値を返します。
+                自然対数の底 e の x 乗の値を返します。
             </desc>
             <example>
 csharp> Math.Exp(1.0);
@@ -107,8 +107,8 @@ csharp> Math.Exp(2.0);
         </static-method>
 
         <static-method name="Floor">
-            <sig>decimal (decimal d)</sig>
-            <sig>double (double d)</sig>
+            <sig>decimal (decimal x)</sig>
+            <sig>double (double x)</sig>
             <desc>
                 自身と等しいか、より小さな整数のうち最大のものを返します。
             </desc>
@@ -126,12 +126,12 @@ csharp> Math.Floor(-1.3);
         </static-method>
 
         <static-method name="Log">
-            <sig>double (double d)</sig>
-            <sig>double (double d, double base)</sig>
+            <sig>double (double x)</sig>
+            <sig>double (double x, double base)</sig>
         </static-method>
 
         <static-method name="Log10">
-            <sig>double (double d)</sig>
+            <sig>double (double x)</sig>
         </static-method>
 
         <static-method name="Max">
@@ -159,27 +159,27 @@ csharp> Math.Pow(2, -1);
         </static-method>
 
         <static-method name="Sign">
-            <sig>int (decimal value)</sig>
-            <sig>int (double value)</sig>
-            <sig>int (short value)</sig>
-            <sig>int (int value)</sig>
-            <sig>int (long value)</sig>
-            <sig>int (sbyte value)</sig>
-            <sig>int (float value)</sig>
+            <sig>int (decimal x)</sig>
+            <sig>int (double x)</sig>
+            <sig>int (short x)</sig>
+            <sig>int (int x)</sig>
+            <sig>int (long x)</sig>
+            <sig>int (sbyte x)</sig>
+            <sig>int (float x)</sig>
         </static-method>
 
         <static-method name="Sin">
-            <sig>double (double d)</sig>
+            <sig>double (double x)</sig>
         </static-method>
 
         <static-method name="Sinh">
-            <sig>double (double d)</sig>
+            <sig>double (double x)</sig>
         </static-method>
 
         <static-method name="Sqrt">
-            <sig>double (double d)</sig>
+            <sig>double (double x)</sig>
             <desc>
-                d の平方根を返します。
+                x の平方根を返します。
             </desc>
             <example>
 csharp> Math.Sqrt(9);
@@ -192,16 +192,16 @@ csharp> Math.Sqrt(3);
         </static-method>
 
         <static-method name="Tan">
-            <sig>double (double d)</sig>
+            <sig>double (double x)</sig>
         </static-method>
 
         <static-method name="Tanh">
-            <sig>double (double d)</sig>
+            <sig>double (double x)</sig>
         </static-method>
 
         <static-method name="Truncate">
-            <sig>decimal (decimal d)</sig>
-            <sig>double (double d)</sig>
+            <sig>decimal (decimal x)</sig>
+            <sig>double (double x)</sig>
         </static-method>
 
     </class>
