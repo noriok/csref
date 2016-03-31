@@ -825,6 +825,11 @@ csharp> s
         </static-method>
 
         <static-method name="Join">
+            <sig>string (string separator, IEnumerable&lt;string&gt; xs)</sig>
+            <sig>string (string separator, params object[] xs)</sig>
+            <sig>string (string separator, params string[] xs)</sig>
+            <sig>string (string separator, string[] xs, int startIndex, int count)</sig>
+            <sig>string (string separator, IEnumerable&lt;T&gt; xs)</sig>
         </static-method>
 
         <method name="LastIndexOf">
