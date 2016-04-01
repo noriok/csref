@@ -833,6 +833,15 @@ csharp> s
         </static-method>
 
         <method name="LastIndexOf">
+            <sig>int (char c)</sig>
+            <sig>int (char c, int startIndex)</sig>
+            <sig>int (char c, int startIndex, int count)</sig>
+            <sig>int (string s)</sig>
+            <sig>int (string s, int startIndex)</sig>
+            <sig>int (string s, int startIndex, int count)</sig>
+            <sig>int (string s, int startIndex, int count, StringComparison comparison)</sig>
+            <sig>int (string s, int startIndex, StringComparison comparison)</sig>
+            <sig>int (string s, StringComparison comparison)</sig>
             <desc>
                 IndexOf() と同じだが、最後に見つかった文字、文字列のインデックスを返す。
                 見つからなければ、-1 を返す。
@@ -840,8 +849,11 @@ csharp> s
         </method>
 
         <method name="LastIndexOfAny">
+            <sig>int (char[] anyOf)</sig>
+            <sig>int (char[] anyOf, int startIndex)</sig>
+            <sig>int (char[] anyOf, int startIndex, int count)</sig>
             <desc>
-                IndexOfAny() と同じだが、再顔に見つかった文字、文字列のインデックスを返す。
+                IndexOfAny() と同じだが、最後に見つかった文字、文字列のインデックスを返す。
                 見つからなければ、-1 を返す。
             </desc>
         </method>
