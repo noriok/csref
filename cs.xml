@@ -3488,5 +3488,20 @@ csharp> xs.Union(ys);
         <static-method name="Zip">
         </static-method>
     </class>
+
+    <class name="BehaviorSubject&lt;T&gt;">
+        <url>https://msdn.microsoft.com/en-us/library/hh211949%28v=vs.103%29.aspx</url>
+        <namespace>System.Reactive.Subjects</namespace>
+    </class>
+
+    <class name="ReplaySubject&lt;T&gt;">
+        <url>https://msdn.microsoft.com/en-us/library/hh211810%28v=vs.103%29.aspx</url>
+        <namespace>System.Reactive.Subjects</namespace>
+    </class>
+
+    <class name="AsyncSubject&lt;T&gt;">
+        <url>https://msdn.microsoft.com/en-us/library/system.reactive.subjects%28v=vs.103%29.aspx</url>
+        <namespace>System.Reactive.Subjects</namespace>
+    </class>
 </cs>
 
