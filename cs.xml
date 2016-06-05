@@ -3090,5 +3090,33 @@ csharp> xs.Union(ys);
             <sig>void (IEnumerable&lt;T&gt; other)</sig>
         </method>
     </class>
+
+    <!-- Rx -->
+
+    <interface name="IObservable&lt;T&gt;">
+        <url>https://msdn.microsoft.com/ja-jp/library/dd990377(v=vs.110).aspx</url>
+        <namespace>System</namespace>
+
+        <method name="Subscribe">
+            <sig>IDisposable (IObserver&lt;T&gt;> observer</sig>
+        </method>
+    </interface>
+
+    <interface name="IObserver&lt;T&gt;">
+        <url>https://msdn.microsoft.com/ja-jp/library/dd783449(v=vs.110).aspx</url>
+        <namespace>System</namespace>
+
+        <method name="OnCompleted">
+            <sig>void ()</sig>
+        </method>
+
+        <method name="OnError">
+            <sig>void (Exception error)</sig>
+        </method>
+
+        <method name="OnNext">
+            <sig>void (T value)</sig>
+        </method>
+    </interface>
 </cs>
 
