@@ -3118,5 +3118,375 @@ csharp> xs.Union(ys);
             <sig>void (T value)</sig>
         </method>
     </interface>
+
+    <class name="Subject&lt;T&gt;">
+        <url>https://msdn.microsoft.com/en-us/library/hh229173(v=vs.103).aspx</url>
+        <namespace>System.Reactive.Subjects</namespace>
+
+        <method name="Dispose">
+            <sig>void ()</sig>
+        </method>
+
+        <method name="Equals">
+        </method>
+
+        <method name="Finalize">
+        </method>
+
+        <method name="GetHashCode">
+        </method>
+
+        <method name="GetType">
+        </method>
+
+        <method name="MemberwiseClone">
+        </method>
+
+        <method name="OnCompleted">
+            <sig>void ()</sig>
+        </method>
+
+        <method name="OnError">
+            <sig>void (Exception error)</sig>
+        </method>
+
+        <method name="OnNext">
+            <sig>void (T value)</sig>
+        </method>
+
+        <method name="Subscribe">
+            <sig>IDisposable (IObserver&lt;T&gt; observer)</sig>
+        </method>
+
+        <method name="ToString">
+        </method>
+
+    </class>
+
+    <class name="Observable">
+        <url>https://msdn.microsoft.com/en-us/library/system.reactive.linq.observable(v=vs.103).aspx</url>
+        <namespace>System.Reactive.Linq</namespace>
+
+        <static-method name="Aggregate">
+        </static-method>
+
+        <static-method name="All">
+        </static-method>
+
+        <static-method name="Amb">
+        </static-method>
+
+        <static-method name="And">
+        </static-method>
+
+        <static-method name="Any">
+        </static-method>
+
+        <static-method name="AsObservable">
+        </static-method>
+
+        <static-method name="Average">
+        </static-method>
+
+        <static-method name="Buffer">
+        </static-method>
+
+        <static-method name="Cast">
+        </static-method>
+
+        <static-method name="Catch">
+        </static-method>
+
+        <static-method name="CombineLatest">
+        </static-method>
+
+        <static-method name="Concat">
+        </static-method>
+
+        <static-method name="Contains">
+        </static-method>
+
+        <static-method name="Count">
+        </static-method>
+
+        <static-method name="Create">
+        </static-method>
+
+        <static-method name="DefaultIfEmpty">
+        </static-method>
+
+        <static-method name="Defer">
+        </static-method>
+
+        <static-method name="Delay">
+        </static-method>
+
+        <static-method name="Dematerialize">
+        </static-method>
+
+        <static-method name="Distinct">
+        </static-method>
+
+        <static-method name="DistinctUntilChanged">
+        </static-method>
+
+        <static-method name="Do">
+        </static-method>
+
+        <static-method name="ElementAt">
+        </static-method>
+
+        <static-method name="ElementAtOrDefault">
+        </static-method>
+
+        <static-method name="Empty">
+        </static-method>
+
+        <static-method name="Finally">
+        </static-method>
+
+        <static-method name="First">
+        </static-method>
+
+        <static-method name="FirstOrDefault">
+        </static-method>
+
+        <static-method name="ForEach">
+        </static-method>
+
+        <static-method name="FromAsyncPattern">
+        </static-method>
+
+        <static-method name="FromEvent">
+        </static-method>
+
+        <static-method name="FromEventPattern">
+        </static-method>
+
+        <static-method name="Generate">
+        </static-method>
+
+        <static-method name="GetEnumerator">
+        </static-method>
+
+        <static-method name="GroupBy">
+        </static-method>
+
+        <static-method name="GroupByUntil">
+        </static-method>
+
+        <static-method name="GroupJoin">
+        </static-method>
+
+        <static-method name="IgnoreElements">
+        </static-method>
+
+        <static-method name="Interval">
+        </static-method>
+
+        <static-method name="Join">
+        </static-method>
+
+        <static-method name="Last">
+        </static-method>
+
+        <static-method name="LastOfDefault">
+        </static-method>
+
+        <static-method name="Latest">
+        </static-method>
+
+        <static-method name="LongCount">
+        </static-method>
+
+        <static-method name="Materialize">
+        </static-method>
+
+        <static-method name="Max">
+        </static-method>
+
+        <static-method name="MaxBy">
+        </static-method>
+
+        <static-method name="Merge">
+        </static-method>
+
+        <static-method name="Min">
+        </static-method>
+
+        <static-method name="MinBy">
+        </static-method>
+
+        <static-method name="MostRecent">
+        </static-method>
+
+        <static-method name="Multicast">
+        </static-method>
+
+        <static-method name="Never">
+        </static-method>
+
+        <static-method name="Next">
+        </static-method>
+
+        <static-method name="ObserveOn">
+        </static-method>
+
+        <static-method name="OfType">
+        </static-method>
+
+        <static-method name="OnErrorResumeNext">
+        </static-method>
+
+        <static-method name="Publish">
+        </static-method>
+
+        <static-method name="Range">
+        </static-method>
+
+        <static-method name="RefCount">
+        </static-method>
+
+        <static-method name="Repeat">
+        </static-method>
+
+        <static-method name="Replay">
+        </static-method>
+
+        <static-method name="Retry">
+        </static-method>
+
+        <static-method name="Return">
+        </static-method>
+
+        <static-method name="Sample">
+        </static-method>
+
+        <static-method name="Scan">
+        </static-method>
+
+        <static-method name="Select">
+        </static-method>
+
+        <static-method name="SelectMany">
+        </static-method>
+
+        <static-method name="SequenceEqual">
+        </static-method>
+
+        <static-method name="Single">
+        </static-method>
+
+        <static-method name="SingleOrDefault">
+        </static-method>
+
+        <static-method name="Skip">
+        </static-method>
+
+        <static-method name="SkipLast">
+        </static-method>
+
+        <static-method name="SkipUntil">
+        </static-method>
+
+        <static-method name="SkipWhile">
+        </static-method>
+
+        <static-method name="Start">
+        </static-method>
+
+        <static-method name="StartWith">
+        </static-method>
+
+        <static-method name="Subscribe">
+        </static-method>
+
+        <static-method name="SubscribeOn">
+        </static-method>
+
+        <static-method name="Sum">
+        </static-method>
+
+        <static-method name="Switch">
+        </static-method>
+
+        <static-method name="Synchronize">
+        </static-method>
+
+        <static-method name="Take">
+        </static-method>
+
+        <static-method name="TakeLast">
+        </static-method>
+
+        <static-method name="TakeUntil">
+        </static-method>
+
+        <static-method name="TakeWhile">
+        </static-method>
+
+        <static-method name="Then">
+        </static-method>
+
+        <static-method name="Throttle">
+        </static-method>
+
+        <static-method name="Throw">
+        </static-method>
+
+        <static-method name="TimeInterval">
+        </static-method>
+
+        <static-method name="Timeout">
+        </static-method>
+
+        <static-method name="Timer">
+        </static-method>
+
+        <static-method name="Timestamp">
+        </static-method>
+
+        <static-method name="ToArray">
+        </static-method>
+
+        <static-method name="ToAsync">
+        </static-method>
+
+        <static-method name="ToDictionary">
+        </static-method>
+
+        <static-method name="ToEnumerable">
+        </static-method>
+
+        <static-method name="ToEvent">
+        </static-method>
+
+        <static-method name="ToEventPattern">
+        </static-method>
+
+        <static-method name="ToList">
+        </static-method>
+
+        <static-method name="ToLookup">
+        </static-method>
+
+        <static-method name="ToObservable">
+        </static-method>
+
+        <static-method name="Using">
+        </static-method>
+
+        <static-method name="When">
+        </static-method>
+
+        <static-method name="Where">
+        </static-method>
+
+        <static-method name="Window">
+        </static-method>
+
+        <static-method name="Zip">
+        </static-method>
+    </class>
 </cs>
 
