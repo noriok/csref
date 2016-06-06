@@ -3503,5 +3503,10 @@ csharp> xs.Union(ys);
         <url>https://msdn.microsoft.com/en-us/library/system.reactive.subjects%28v=vs.103%29.aspx</url>
         <namespace>System.Reactive.Subjects</namespace>
     </class>
+
+    <class name="CompositeDisposable">
+        <url>https://msdn.microsoft.com/en-us/library/system.reactive.disposables.compositedisposable(v=vs.103).aspx</url>
+        <namespace>System.Reactive.Disposables</namespace>
+    </class>
 </cs>
 
