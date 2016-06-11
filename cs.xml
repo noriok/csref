@@ -3091,6 +3091,115 @@ csharp> xs.Union(ys);
         </method>
     </class>
 
+    <class name="Task">
+        <url>https://msdn.microsoft.com/ja-jp/library/system.threading.tasks.task(v=vs.110).aspx</url>
+        <namespace>System.Threading.Tasks</namespace>
+
+        <property name="AsyncState">
+        </property>
+
+        <property name="CompleteTask">
+        </property>
+
+        <property name="CreationOptions">
+        </property>
+
+        <property name="CurrentId">
+        </property>
+
+        <property name="Exception">
+        </property>
+
+        <property name="Factory">
+        </property>
+
+        <property name="Id">
+        </property>
+
+        <property name="IsCanceled">
+        </property>
+
+        <property name="IsCompleted">
+        </property>
+
+        <property name="IsFaulted">
+        </property>
+
+        <property name="Status">
+        </property>
+
+        <method name="ConfigureAwait">
+        </method>
+
+        <method name="ContinueWith">
+        </method>
+
+        <method name="Delay">
+        </method>
+
+        <method name="Dispose">
+        </method>
+
+        <method name="Equals">
+        </method>
+
+        <method name="Finalize">
+        </method>
+
+        <static-method name="FromCanceled">
+        </static-method>
+
+        <static-method name="FromException">
+        </static-method>
+
+        <static-method name="FromResult">
+        </static-method>
+
+        <method name="GetAwaiter">
+        </method>
+
+        <method name="GetHashCode">
+        </method>
+
+        <method name="GetType">
+        </method>
+
+        <method name="MemberwiseClone">
+        </method>
+
+        <static-method name="Run">
+        </static-method>
+
+        <method name="RunSynchronously">
+        </method>
+
+        <method name="Start">
+        </method>
+
+        <method name="ToString">
+        </method>
+
+        <method name="Wait">
+        </method>
+
+        <static-method name="WaitAll">
+        </static-method>
+
+        <static-method name="WaitAny">
+        </static-method>
+
+        <static-method name="WhenAll">
+        </static-method>
+
+        <static-method name="WhenAny">
+        </static-method>
+
+        <static-method name="Yield">
+        </static-method>
+
+
+    </class>
+
     <!-- Rx -->
 
     <interface name="IObservable&lt;T&gt;">
