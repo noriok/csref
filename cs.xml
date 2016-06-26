@@ -2309,6 +2309,15 @@ csharp> xs.Union(ys);
         </static-method>
 
         <static-method name="Zip">
+            <sig>IEnumerable&lt;TResult&gt; &lt;T, U, TResult&gt;(this IEnumerable&lt;T&gt; xs, IEnumerable&lt;U&gt; ys, Func&lt;T, U, TResult&gt; fn)</sig>
+            <desc>
+            </desc>
+            <example>
+csharp> var xs = new[] { 1, 2, 3, 4 };
+csharp> var ys = new[] { 10, 20, 30 };
+csharp> xs.Zip(ys, (a, b) => a + b);
+{ 11, 22, 33 }
+            </example>
         </static-method>
     </class>
 
