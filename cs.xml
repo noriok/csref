@@ -2014,6 +2014,16 @@ csharp> xs.DefaultIfEmpty(100).First();
         </static-method>
 
         <static-method name="GroupBy">
+            <sig>IEnumerable&lt;IGrouping&lt;T, U&gt;&gt; &lt;TSource, T, U&gt;(
+                this IEnumerable&lt;TSource&gt; xs,
+                Func&lt;TSource, T&gt; keySelector,
+                Func&lt;TSource, U&gt; elementSelector)
+            </sig>
+            <example>
+csharp> var xs = new[] { 1, 2, 3, 7, 8, 9, 12 };
+csharp> xs.Select((x, i) => new { i, x }).GroupBy(e => e.x - e.i, e => e.x);
+{ { 1, 2, 3 }, { 7, 8, 9 }, { 12 } }
+            </example>
         </static-method>
 
         <static-method name="GroupJoin">
