@@ -2094,6 +2094,12 @@ csharp> xs.DefaultIfEmpty(100).Last();
         </static-method>
 
         <static-method name="OfType">
+            <sig>IEnumerable&lt;T&gt; &lt;T&gt;(this IEnumerable xs)</sig>
+            <example>
+csharp> var xs = new object[] { 1, 2, 3, "foo", "bar" };
+csharp> xs.OfType&lt;string&gt;();
+{ "foo", "bar" }
+            </example>
         </static-method>
 
         <static-method name="OrderBy">
