@@ -2305,6 +2305,30 @@ csharp> xs.Take(2);
         </static-method>
 
         <static-method name="ToLookup">
+            <sig>ILookup&lt;TKey, T&gt; &lt;T, TKey&gt;(this IEnumerable&lt;T&gt; xs, Func&lt;T, TKey&gt; key)</sig>
+            <sig>ILookup&lt;TKey, T&gt; &lt;T, TKey&gt;(this IEnumerable&lt;T&gt; xs, Func&lt;T, TKey&gt; key, IEqualityComparer&lt;TKey&gt; comparer)</sig>
+            <sig>ILookup&lt;TKey, U&gt; ToLookup&lt;T, TKey, U&gt;(
+                this IEnumerable&lt;T&gt; xs,
+                Func&lt;T, TKey&gt; key,
+                Func&lt;T, U&gt; selector)
+            </sig>
+            <sig>ILookup&lt;TKey, U&gt; ToLookup&lt;T, TKey, U&gt;(
+                this IEnumerable&lt;T&gt; xs,
+                Func&lt;T, TKey&gt; key,
+                Func&lt;T, U&gt; selector,
+                IEqualityComparer&lt;TKey&gt; comparer)
+            </sig>
+            <example>
+csharp> var xs = new[] { "one", "two", "three", "four" };
+csharp> var a = xs.ToLookup(e => e.Length);
+csharp> a
+{ { "one", "two" }, { "three" }, { "four" } }
+csharp> a[3];
+{ "one", "two" }
+csharp> a[4];
+{ "four" }
+            </example>
+
         </static-method>
 
         <static-method name="Union">
