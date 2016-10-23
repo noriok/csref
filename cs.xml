@@ -1827,7 +1827,7 @@ false
         </static-method>
 
         <static-method name="Any">
-            <sig>bool ()</sig>
+            <sig>bool (this IEnumerable&lt;T&gt; xs)</sig>
             <sig>bool (this IEnumerable&lt;T&gt; xs, Func&lt;T, bool&gt; pred)</sig>
             <desc>
                 シーケンスに要素が含まれるか調べます。
