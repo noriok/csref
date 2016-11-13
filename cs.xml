@@ -2299,6 +2299,10 @@ csharp> xs.Take(2);
         </static-method>
 
         <static-method name="ToDictionary">
+            <sig>Dictionary&lt;T, U&gt; &lt;T, U&gt;(this IEnumerable&lt;T&gt; xs, Func&lt;T, U&gt; key)</sig>
+            <sig>Dictionary&lt;T, U&gt; &lt;T, U&gt;(this IEnumerable&lt;T&gt; xs, Func&lt;T, U&gt; key, IEqualityComparer&lt;U&gt; comp)</sig>
+            <sig>Dictionary&lt;T, V&gt; &lt;T, U, V&gt;(this IEnumerable&lt;T&gt; xs, Func&lt;T, U&gt; key, Func&lt;T, V&gt; val)</sig>
+            <sig>Dictionary&lt;T, V&gt; &lt;T, U, V&gt;(this IEnumerable&lt;T&gt; xs, Func&lt;T, U&gt; key, Func&lt;T, V&gt; val, IEqualityComparer&lt;U&gt; comp)</sig>
         </static-method>
 
         <static-method name="ToList">
